@@ -1,0 +1,27 @@
+plugins:
+  npn_weekly_challenges_enabled:
+    default: false
+    client: true
+
+  npn_weekly_challenge_tag_name:
+    default: "weekly-challenge"
+    type: tag_list
+    client: false
+
+  npn_weekly_challenge_category_ids:
+    default: ""
+    type: list
+    list_type: category
+    client: false
+
+  npn_weekly_challenge_registry_json:
+    default: "[]"
+    textarea: true
+    client: false
+
+  npn_weekly_challenge_page_size:
+    default: 30
+    type: integer
+    client: false
+    min: 5
+    max: 100

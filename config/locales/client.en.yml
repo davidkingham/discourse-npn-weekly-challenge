@@ -1,0 +1,14 @@
+en:
+  js:
+    npn_weekly_challenge:
+      title: "Weekly challenges"
+      list_description: "Browse entries from past weekly challenges."
+      view_prompt: "View challenge prompt"
+      date_range: "%{start} – %{end}"
+      entry_count:
+        one: "%{count} entry"
+        other: "%{count} entries"
+      no_entries: "No entries were found for this challenge."
+      no_challenges: "No weekly challenges have been published yet."
+      load_more: "Load more"
+      back_to_list: "All weekly challenges"

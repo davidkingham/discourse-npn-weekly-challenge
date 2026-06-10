@@ -1,0 +1,90 @@
+.npn-weekly-challenges {
+  &__description {
+    color: var(--primary-medium);
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    border-bottom: 1px solid var(--primary-low);
+  }
+
+  &__link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space-2);
+    padding: var(--space-3) 0;
+    color: var(--primary);
+
+    &:hover {
+      .npn-weekly-challenges__item-title {
+        color: var(--tertiary);
+      }
+    }
+  }
+
+  &__item-title {
+    font-weight: 700;
+  }
+
+  &__item-dates {
+    color: var(--primary-medium);
+  }
+
+  &__empty {
+    color: var(--primary-medium);
+  }
+}
+
+.npn-weekly-challenge {
+  &__breadcrumb {
+    margin-bottom: var(--space-2);
+    font-size: var(--font-down-1);
+  }
+
+  &__header {
+    margin-bottom: var(--space-4);
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-3);
+    color: var(--primary-medium);
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+  }
+
+  &__nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+
+    &.--next {
+      margin-left: auto;
+    }
+  }
+}
+
+.npn-challenge-entries {
+  &__load-more {
+    margin-top: var(--space-3);
+  }
+
+  &__empty {
+    padding: var(--space-4) 0;
+    color: var(--primary-medium);
+  }
+}
