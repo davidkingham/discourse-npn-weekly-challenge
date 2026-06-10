@@ -1,0 +1,26 @@
+name: Plugin tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  schedule:
+    # Run weekly on Sunday at 00:00 UTC so we catch incompatibilities with
+    # Discourse `main` even when nobody is actively pushing here.
+    - cron: "0 0 * * 0"
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    # The NPN site runs Discourse `tests-passed` (the branch the reusable
+    # workflow calls `latest`), so we test against that only — no `stable`
+    # matrix leg. If the plugin is ever shared with another site on a
+    # different Discourse branch, add the branch back as a matrix entry.
+    uses: discourse/.github/.github/workflows/discourse-plugin.yml@v1
+    with:
+      core_ref: latest
