@@ -7,7 +7,11 @@ import challengeDateRange from "../../lib/challenge-date-range";
 export default <template>
   <section class="npn-weekly-challenge">
     <nav class="npn-weekly-challenge__breadcrumb">
-      <LinkTo @route="weekly-challenges.index">
+      <LinkTo
+        @route="weekly-challenges.index"
+        class="npn-weekly-challenge__back-link"
+      >
+        {{dIcon "arrow-left"}}
         {{i18n "npn_weekly_challenge.back_to_list"}}
       </LinkTo>
     </nav>

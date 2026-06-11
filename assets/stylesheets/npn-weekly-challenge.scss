@@ -44,14 +44,23 @@
 }
 
 .npn-weekly-challenge {
-  max-width: 52em;
-
+  // No max-width on the block itself: the entries topic list must span the
+  // full content width so the site theme's masonry grid gets the same column
+  // count as topic lists elsewhere. Only the text areas stay readable-width.
   &__breadcrumb {
+    max-width: 52em;
     margin-bottom: var(--space-2);
     font-size: var(--font-down-1);
   }
 
+  &__back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+  }
+
   &__header {
+    max-width: 52em;
     margin-bottom: var(--space-4);
   }
 
@@ -64,7 +73,7 @@
   }
 
   &__description {
-    margin: var(--space-3) 0 0;
+    margin: var(--space-1) 0 0;
     max-width: 40em;
     white-space: pre-line;
     line-height: var(--line-height-large);
