@@ -1,4 +1,6 @@
 .npn-weekly-challenges {
+  max-width: 52em;
+
   &__description {
     color: var(--primary-medium);
   }
@@ -42,6 +44,8 @@
 }
 
 .npn-weekly-challenge {
+  max-width: 52em;
+
   &__breadcrumb {
     margin-bottom: var(--space-2);
     font-size: var(--font-down-1);
