@@ -117,9 +117,10 @@ Each object in `npn_weekly_challenge_registry_json` (and each seed record) uses:
 - `description` is the challenge prompt shown on the challenge page. The
   WordPress sync pulls it from `acf.wc_description`; the seed uses WordPress's
   text where available and the topic's one-liner otherwise (the oldest
-  challenges have none and fall back to showing the `url` link).
-- `url` links to the original challenge prompt; shown only when there's no
-  `description`. Omit if there isn't one.
+  challenges have none).
+- `url` links to the original WordPress prompt. It's only shown when a challenge
+  has no `description` **and** has a `wordpress_challenge_id` (i.e. a real
+  WordPress post) — challenges without a WordPress post never render a link.
 - Malformed JSON disables only the override layer (it logs a warning); the seed
   and sync still render.
 

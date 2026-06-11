@@ -32,15 +32,17 @@ export default <template>
         <p class="npn-weekly-challenge__description">
           {{@controller.model.challenge.description}}
         </p>
-      {{else if @controller.model.challenge.url}}
-        <a
-          href={{@controller.model.challenge.url}}
-          class="npn-weekly-challenge__prompt-link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {{i18n "npn_weekly_challenge.view_prompt"}}
-        </a>
+      {{else if @controller.model.challenge.wordpress_challenge_id}}
+        {{#if @controller.model.challenge.url}}
+          <a
+            href={{@controller.model.challenge.url}}
+            class="npn-weekly-challenge__prompt-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{i18n "npn_weekly_challenge.view_prompt"}}
+          </a>
+        {{/if}}
       {{/if}}
     </header>
 
