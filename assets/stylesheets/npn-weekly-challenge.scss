@@ -89,19 +89,24 @@
   }
 }
 
+// Lives inside .navigation-container (a stretch-aligned flex row), so stay a
+// single compact line and center vertically — a taller item here stretches the
+// adjacent nav buttons.
 .npn-challenge-selector {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  align-self: center;
   gap: var(--space-2);
-  margin-bottom: var(--space-2);
 
   &__label {
     margin: 0;
     font-weight: 700;
+    white-space: nowrap;
   }
 
   &__select {
+    // Core's .d-select is width: 100%, which would swallow the whole nav row.
+    width: auto;
     max-width: 100%;
   }
 }
