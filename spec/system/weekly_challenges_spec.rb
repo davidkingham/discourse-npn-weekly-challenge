@@ -91,8 +91,9 @@ describe "Weekly challenges" do
       weekly_challenges_page.visit_tag("weekly-challenge")
 
       expect(weekly_challenges_page).to have_challenge_selector
-      expect(weekly_challenges_page.challenge_selector_options).to eq(
-        ["Quiet Geometry", "Empty Week"],
+      # Date text depends on the browser timezone, so match title + dash only.
+      expect(weekly_challenges_page.challenge_selector_options).to match(
+        [a_string_matching(/\AQuiet Geometry – /), a_string_matching(/\AEmpty Week – /)],
       )
 
       weekly_challenges_page.select_challenge("Quiet Geometry")

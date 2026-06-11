@@ -5,6 +5,7 @@ import { service } from "@ember/service";
 import { ajax } from "discourse/lib/ajax";
 import DSelect from "discourse/ui-kit/d-select";
 import { i18n } from "discourse-i18n";
+import challengeDateRange from "../../lib/challenge-date-range";
 
 export default class NpnChallengeSelector extends Component {
   // Only on the plain tag page (tag.show and its /l/ filter variants) — not
@@ -74,7 +75,11 @@ export default class NpnChallengeSelector extends Component {
         >
           {{#each this.challenges as |challenge|}}
             <select.Option @value={{challenge.slug}}>
-              {{challenge.title}}
+              {{i18n
+                "npn_weekly_challenge.challenge_selector.option"
+                title=challenge.title
+                range=(challengeDateRange challenge)
+              }}
             </select.Option>
           {{/each}}
         </DSelect>
