@@ -11,14 +11,24 @@ require "json"
 require "date"
 
 ROOT = File.expand_path("../../..", __dir__) # discourse repo root
-RAW  = File.join(ROOT, "tmp/wc-403-raw.md")
-WP   = "/tmp/wc-challenges.json"
-OUT  = File.expand_path("../config/weekly_challenge_seed.json", __dir__)
+RAW = File.join(ROOT, "tmp/wc-403-raw.md")
+WP = "/tmp/wc-challenges.json"
+OUT = File.expand_path("../config/weekly_challenge_seed.json", __dir__)
 COMMUNITY_BASE = "https://community.naturephotographers.network"
 
 MONTHS = {
-  "jan" => 1, "feb" => 2, "mar" => 3, "apr" => 4, "may" => 5, "jun" => 6,
-  "jul" => 7, "aug" => 8, "sep" => 9, "oct" => 10, "nov" => 11, "dec" => 12
+  "jan" => 1,
+  "feb" => 2,
+  "mar" => 3,
+  "apr" => 4,
+  "may" => 5,
+  "jun" => 6,
+  "jul" => 7,
+  "aug" => 8,
+  "sep" => 9,
+  "oct" => 10,
+  "nov" => 11,
+  "dec" => 12,
 }
 
 # 8:00 local America/Denver for the given Date, as UTC. MDT (UTC-6) from the 2nd
@@ -26,7 +36,7 @@ MONTHS = {
 def denver_8am_utc(date)
   y = date.year
   march = (1..31).map { |d| Date.new(y, 3, d) }.select(&:sunday?)[1]
-  nov   = (1..30).map { |d| Date.new(y, 11, d) }.select(&:sunday?)[0]
+  nov = (1..30).map { |d| Date.new(y, 11, d) }.select(&:sunday?)[0]
   dst = date >= march && date < nov
   Time.utc(y, date.month, date.day, 8 + (dst ? 6 : 7), 0, 0)
 end
@@ -39,10 +49,19 @@ end
 # descriptions and collapse whitespace. Stdlib only, so this covers the common
 # cases rather than every named entity. Returns nil for blank input.
 ENTITIES = {
-  "&amp;" => "&", "&#038;" => "&", "&#38;" => "&",
-  "&lt;" => "<", "&gt;" => ">", "&quot;" => '"',
-  "&#8217;" => "’", "&#8216;" => "‘", "&#8211;" => "–", "&#8212;" => "—",
-  "&#8230;" => "…", "&nbsp;" => " ", "&#160;" => " "
+  "&amp;" => "&",
+  "&#038;" => "&",
+  "&#38;" => "&",
+  "&lt;" => "<",
+  "&gt;" => ">",
+  "&quot;" => '"',
+  "&#8217;" => "’",
+  "&#8216;" => "‘",
+  "&#8211;" => "–",
+  "&#8212;" => "—",
+  "&#8230;" => "…",
+  "&nbsp;" => " ",
+  "&#160;" => " ",
 }.freeze
 
 def clean_text(value)
@@ -83,9 +102,11 @@ lines.each do |line|
     next if cells[0].downcase == "dates" || cells[0].start_with?("-")
     start_token = cells[0].split(/[–-]/).first
     entries << {
-      number: nil, title: cells[1].strip,
-      start_date: parse_mon_day(start_token, 2026), url: nil,
-      description: clean_text(cells[2])
+      number: nil,
+      title: cells[1].strip,
+      start_date: parse_mon_day(start_token, 2026),
+      url: nil,
+      description: clean_text(cells[2]),
     }
   elsif line.start_with?("|")
     # Format B: |Dates | Challenge | [num](/tag/..) | [desc text](url)|  (4 columns)
@@ -94,12 +115,14 @@ lines.each do |line|
     next if cells[0].downcase == "dates" || cells[0].start_with?("-")
     start_token = cells[0].split(/[–-]/).first
     num = cells[2][/\[(\d+)\]/, 1]
-    url = cells[3][/\((https?:\/\/[^)]+|\/t\/[^)]+)\)/, 1]
+    url = cells[3][%r{\((https?://[^)]+|/t/[^)]+)\)}, 1]
     # The description cell's link *text* is the actual description.
     entries << {
-      number: num&.to_i, title: cells[1].strip,
-      start_date: parse_md_y(start_token), url: url,
-      description: clean_text(cells[3][/\[([^\]]*)\]/, 1])
+      number: num&.to_i,
+      title: cells[1].strip,
+      start_date: parse_md_y(start_token),
+      url: url,
+      description: clean_text(cells[3][/\[([^\]]*)\]/, 1]),
     }
   elsif line.start_with?("[#")
     # Format C: [# 1069 (12/11/22 - 12/31/22) Title](/tags/..) - [description](url)
@@ -110,10 +133,13 @@ lines.each do |line|
     num = m[1].to_i
     start_token = m[2].split(/[–-]/).first
     title = m[3].strip
-    url = line[/-\s*\[[Dd]escription\]\((https?:\/\/[^)]+|\/t\/[^)]+)\)/, 1]
+    url = line[%r{-\s*\[[Dd]escription\]\((https?://[^)]+|/t/[^)]+)\)}, 1]
     entries << {
-      number: num, title: title, start_date: parse_md_y(start_token), url: url,
-      description: nil
+      number: num,
+      title: title,
+      start_date: parse_md_y(start_token),
+      url: url,
+      description: nil,
     }
   end
 end
@@ -121,16 +147,17 @@ end
 # Dedup by week (start_date); first occurrence wins. Reports dups.
 seen = {}
 dups = []
-deduped = entries.reject do |e|
-  key = e[:start_date]
-  if seen[key]
-    dups << e
-    true
-  else
-    seen[key] = e
-    false
+deduped =
+  entries.reject do |e|
+    key = e[:start_date]
+    if seen[key]
+      dups << e
+      true
+    else
+      seen[key] = e
+      false
+    end
   end
-end
 
 deduped.sort_by! { |e| e[:start_date] }
 
@@ -149,20 +176,22 @@ end
 # Reconcile WordPress post ids by matching start_date.
 wp_by_date = {}
 if File.exist?(WP)
-  JSON.parse(File.read(WP)).each do |post|
-    dates = post.dig("acf", "wc_dates").to_s
-    start_token = dates.split(/[–-]/).first
-    next if start_token.to_s.strip.empty?
-    begin
-      wp_by_date[parse_md_y(start_token)] = {
-        id: post["id"],
-        link: post["link"],
-        description: clean_text(post.dig("acf", "wc_description"))
-      }
-    rescue StandardError
-      next
+  JSON
+    .parse(File.read(WP))
+    .each do |post|
+      dates = post.dig("acf", "wc_dates").to_s
+      start_token = dates.split(/[–-]/).first
+      next if start_token.to_s.strip.empty?
+      begin
+        wp_by_date[parse_md_y(start_token)] = {
+          id: post["id"],
+          link: post["link"],
+          description: clean_text(post.dig("acf", "wc_description")),
+        }
+      rescue StandardError
+        next
+      end
     end
-  end
 end
 
 # Build final records: starts_at, ends_at (= next week's start, exclusive), slug,
@@ -182,12 +211,12 @@ deduped.each_with_index do |e, i|
     "wordpress_challenge_id" => wp ? wp[:id].to_s : nil,
     "number" => e[:number],
     "title" => e[:title],
-    "slug" => "#{e[:start_date].strftime('%Y-%m-%d')}-#{slugify(e[:title])}",
+    "slug" => "#{e[:start_date].strftime("%Y-%m-%d")}-#{slugify(e[:title])}",
     "starts_at" => starts.strftime("%Y-%m-%dT%H:%M:%SZ"),
     "ends_at" => ends.strftime("%Y-%m-%dT%H:%M:%SZ"),
     "url" => url,
     # WordPress carries the fuller prompt; fall back to the topic's one-liner.
-    "description" => wp&.dig(:description) || e[:description]
+    "description" => wp&.dig(:description) || e[:description],
   }
   seed << rec
 end
@@ -201,19 +230,19 @@ warn "duplicate weeks:    #{dups.size}"
 dups.each { |d| warn "  dup week #{d[:start_date]} -> ##{d[:number]} #{d[:title]}" }
 warn "final records:      #{seed.size}"
 warn "date range:         #{deduped.first[:start_date]} .. #{deduped.last[:start_date]}"
-warn "with WP post id:    #{seed.count { |r| r['wordpress_challenge_id'] }}"
-warn "with description:   #{seed.count { |r| r['description'] }}"
-warn "missing number:     #{seed.count { |r| r['number'].nil? }}"
-warn "numbers assigned:   #{assigned.size}#{assigned.empty? ? '' : " (#{assigned.min}..#{assigned.max})"}"
+warn "with WP post id:    #{seed.count { |r| r["wordpress_challenge_id"] }}"
+warn "with description:   #{seed.count { |r| r["description"] }}"
+warn "missing number:     #{seed.count { |r| r["number"].nil? }}"
+warn "numbers assigned:   #{assigned.size}#{assigned.empty? ? "" : " (#{assigned.min}..#{assigned.max})"}"
 
 nums = deduped.map { |e| e[:number] }.compact
 warn "\n== number sequence =="
 warn "numbered range:     #{nums.min} .. #{nums.max}  (#{nums.size} numbered)"
 full = (nums.min..nums.max).to_a
 missing = full - nums
-warn "missing numbers:    #{missing.empty? ? 'none' : missing.join(', ')}"
+warn "missing numbers:    #{missing.empty? ? "none" : missing.join(", ")}"
 dupe_nums = nums.tally.select { |_, c| c > 1 }.keys
-warn "duplicate numbers:  #{dupe_nums.empty? ? 'none' : dupe_nums.join(', ')}"
+warn "duplicate numbers:  #{dupe_nums.empty? ? "none" : dupe_nums.join(", ")}"
 
 warn "\n== weekly cadence (gaps != 7 days) =="
 deduped.each_cons(2) do |a, b|

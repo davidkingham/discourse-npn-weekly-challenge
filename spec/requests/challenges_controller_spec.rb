@@ -191,8 +191,16 @@ describe DiscourseNpnWeeklyChallenge::ChallengesController do
   describe "upcoming challenges that have not started" do
     before do
       SiteSetting.npn_weekly_challenge_registry_json = [
-        { title: "Started Week", slug: "2026-06-01-started-week", starts_at: "2026-06-01T00:00:00Z" },
-        { title: "Upcoming Week", slug: "2999-01-06-upcoming-week", starts_at: "2999-01-06T00:00:00Z" },
+        {
+          title: "Started Week",
+          slug: "2026-06-01-started-week",
+          starts_at: "2026-06-01T00:00:00Z",
+        },
+        {
+          title: "Upcoming Week",
+          slug: "2999-01-06-upcoming-week",
+          starts_at: "2999-01-06T00:00:00Z",
+        },
       ].to_json
       DiscourseNpnWeeklyChallenge::Registry.clear_cache
     end

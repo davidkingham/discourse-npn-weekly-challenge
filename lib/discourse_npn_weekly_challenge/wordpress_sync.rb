@@ -77,11 +77,11 @@ module DiscourseNpnWeeklyChallenge
       {
         "wordpress_challenge_id" => (id.positive? ? id.to_s : nil),
         "title" => title,
-        "slug" => "#{date.strftime('%Y-%m-%d')}-#{slugify(title)}",
+        "slug" => "#{date.strftime("%Y-%m-%d")}-#{slugify(title)}",
         "starts_at" => starts_at.utc.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "ends_at" => ChallengeTime.default_end(starts_at)&.utc&.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "url" => clean_url(post["link"]),
-        "description" => clean(acf["wc_description"], MAX_DESCRIPTION)
+        "description" => clean(acf["wc_description"], MAX_DESCRIPTION),
       }
     end
 

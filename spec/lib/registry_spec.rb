@@ -144,9 +144,7 @@ describe DiscourseNpnWeeklyChallenge::Registry do
 
       expect(described_class.all.map(&:title)).to eq(["From store"])
 
-      set_registry(
-        [entry(slug: "shared", starts_at: "2026-01-01T00:00:00Z", title: "From manual")],
-      )
+      set_registry([entry(slug: "shared", starts_at: "2026-01-01T00:00:00Z", title: "From manual")])
 
       expect(described_class.all.map(&:title)).to eq(["From manual"])
     end
