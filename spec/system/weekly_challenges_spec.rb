@@ -51,6 +51,10 @@ describe "Weekly challenges" do
       },
     ].to_json
     DiscourseNpnWeeklyChallenge::Registry.clear_cache
+    # Drive the archive purely from the fixture registry: neutralize the shipped
+    # seed and the WordPress store so adjacency and listing assertions are stable.
+    allow(DiscourseNpnWeeklyChallenge::Registry).to receive(:seed_challenges).and_return([])
+    allow(DiscourseNpnWeeklyChallenge::ChallengeStore).to receive(:all).and_return([])
   end
 
   it "browses from the challenge list to a challenge's entries" do

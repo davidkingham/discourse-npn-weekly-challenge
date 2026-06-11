@@ -33,6 +33,10 @@ describe DiscourseNpnWeeklyChallenge::ChallengesController do
     SiteSetting.npn_weekly_challenge_tag_name = "weekly-challenge"
     SiteSetting.npn_weekly_challenge_registry_json = registry.to_json
     DiscourseNpnWeeklyChallenge::Registry.clear_cache
+    # Drive these specs purely from the registry setting: neutralize the shipped
+    # seed and the WordPress store so assertions see only the fixture challenges.
+    allow(DiscourseNpnWeeklyChallenge::Registry).to receive(:seed_challenges).and_return([])
+    allow(DiscourseNpnWeeklyChallenge::ChallengeStore).to receive(:all).and_return([])
   end
 
   describe "#index" do

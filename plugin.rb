@@ -19,17 +19,21 @@ require_relative "lib/discourse_npn_weekly_challenge/engine"
 
 after_initialize do
   require_relative "lib/discourse_npn_weekly_challenge/challenge"
+  require_relative "lib/discourse_npn_weekly_challenge/challenge_time"
+  require_relative "lib/discourse_npn_weekly_challenge/challenge_store"
   require_relative "lib/discourse_npn_weekly_challenge/registry"
+  require_relative "lib/discourse_npn_weekly_challenge/wordpress_sync"
   require_relative "lib/discourse_npn_weekly_challenge/topic_finder"
   require_relative "lib/discourse_npn_weekly_challenge/topic_query_extension"
   require_relative "app/serializers/discourse_npn_weekly_challenge/challenge_serializer"
   require_relative "app/controllers/discourse_npn_weekly_challenge/challenges_controller"
+  require_relative "app/jobs/scheduled/npn_weekly_challenge_sync"
 
   reloadable_patch { TopicQuery.prepend(DiscourseNpnWeeklyChallenge::TopicQueryExtension) }
 
-  # The parsed registry is memoized keyed on the raw setting string, so this
-  # hook is belt-and-suspenders — it keeps the per-process cache from holding
-  # stale entries for old setting values indefinitely.
+  # Registry memoizes its merged result keyed on the mutable layers, so this is
+  # belt-and-suspenders: drop the cache (and the parsed seed) when the manual
+  # override changes so the next request rebuilds from scratch.
   on(:site_setting_changed) do |name, _old_value, _new_value|
     DiscourseNpnWeeklyChallenge::Registry.clear_cache if name == :npn_weekly_challenge_registry_json
   end

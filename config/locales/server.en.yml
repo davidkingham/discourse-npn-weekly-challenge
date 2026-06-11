@@ -3,5 +3,6 @@ en:
     npn_weekly_challenges_enabled: "Enable the Weekly Challenge archive pages at /weekly-challenges."
     npn_weekly_challenge_tag_name: "Tags that identify Weekly Challenge submission topics. Topics with any of these tags match."
     npn_weekly_challenge_category_ids: "Only include topics from these categories. Leave blank to search all categories."
-    npn_weekly_challenge_registry_json: "JSON array of Weekly Challenge records. Each entry supports wordpress_challenge_id, title, slug, starts_at, ends_at, and url. See the plugin README for the full format."
+    npn_weekly_challenge_wordpress_api_url: "WordPress REST endpoint for the Weekly Challenge post type (e.g. https://example.com/wp-json/wp/v2/weekly-challenge). When set, a daily job adds newly published challenges to the archive. Leave blank to disable the sync and rely only on the shipped seed and the manual registry below."
+    npn_weekly_challenge_registry_json: "JSON array of manual Weekly Challenge overrides, merged on top of the shipped seed and the WordPress sync (matched by slug). Each entry supports wordpress_challenge_id, title, slug, starts_at, ends_at, and url. See the plugin README for the full format."
     npn_weekly_challenge_page_size: "Number of entries shown per page on a challenge's archive page."

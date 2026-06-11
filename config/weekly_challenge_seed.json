@@ -1,0 +1,3566 @@
+[
+  {
+    "wordpress_challenge_id": null,
+    "number": 855,
+    "title": "Swamp Inhabitants",
+    "slug": "2018-09-02-swamp-inhabitants",
+    "starts_at": "2018-09-02T14:00:00Z",
+    "ends_at": "2018-09-16T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-855-09-02-18-09-15-18-swamp-inhabitants/206/4"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 856,
+    "title": "Panoramas",
+    "slug": "2018-09-16-panoramas",
+    "starts_at": "2018-09-16T14:00:00Z",
+    "ends_at": "2018-09-23T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-856-9-16-18-9-22-18-panorama/718"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 857,
+    "title": "Backlight",
+    "slug": "2018-09-23-backlight",
+    "starts_at": "2018-09-23T14:00:00Z",
+    "ends_at": "2018-09-30T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-857-backlight/872"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 858,
+    "title": "A Waterfall",
+    "slug": "2018-09-30-a-waterfall",
+    "starts_at": "2018-09-30T14:00:00Z",
+    "ends_at": "2018-10-07T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-858-09-30-18-10-06-18-a-waterfall/956"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 859,
+    "title": "A Waterway",
+    "slug": "2018-10-07-a-waterway",
+    "starts_at": "2018-10-07T14:00:00Z",
+    "ends_at": "2018-10-14T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-859-10-07-18-10-13-18-a-waterway/957"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 860,
+    "title": "On the beach",
+    "slug": "2018-10-14-on-the-beach",
+    "starts_at": "2018-10-14T14:00:00Z",
+    "ends_at": "2018-10-21T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-860-10-14-18-10-20-18-on-the-beach/958"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 861,
+    "title": "Reflections",
+    "slug": "2018-10-21-reflections",
+    "starts_at": "2018-10-21T14:00:00Z",
+    "ends_at": "2018-10-28T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-861-10-21-18-10-27-18-reflections/959"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 862,
+    "title": "An Icon",
+    "slug": "2018-10-28-an-icon",
+    "starts_at": "2018-10-28T14:00:00Z",
+    "ends_at": "2018-11-04T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-862-10-28-18-11-03-18-an-icon/960"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 863,
+    "title": "Signs of Fall",
+    "slug": "2018-11-04-signs-of-fall",
+    "starts_at": "2018-11-04T15:00:00Z",
+    "ends_at": "2018-11-11T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-863-11-04-18-11-10-18-signs-of-fall/961"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 864,
+    "title": "The Color of Light",
+    "slug": "2018-11-11-the-color-of-light",
+    "starts_at": "2018-11-11T15:00:00Z",
+    "ends_at": "2018-11-18T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-864-11-11-18-11-17-18-the-color-of-light/1822"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 865,
+    "title": "Leading Lines",
+    "slug": "2018-11-18-leading-lines",
+    "starts_at": "2018-11-18T15:00:00Z",
+    "ends_at": "2018-11-25T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-865-11-18-18-11-24-18-leading-lines/1821"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 866,
+    "title": "Fog",
+    "slug": "2018-11-25-fog",
+    "starts_at": "2018-11-25T15:00:00Z",
+    "ends_at": "2018-12-02T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-866-11-25-18-12-01-18-fog/1820"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 867,
+    "title": "Mostly Sky",
+    "slug": "2018-12-02-mostly-sky",
+    "starts_at": "2018-12-02T15:00:00Z",
+    "ends_at": "2018-12-09T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-867-12-02-18-12-08-18-mostly-sky/1819"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 868,
+    "title": "Trees",
+    "slug": "2018-12-09-trees",
+    "starts_at": "2018-12-09T15:00:00Z",
+    "ends_at": "2018-12-16T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-868-12-09-18-12-15-18-festivals/1818"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 869,
+    "title": "2018 Favorites",
+    "slug": "2018-12-16-2018-favorites",
+    "starts_at": "2018-12-16T15:00:00Z",
+    "ends_at": "2019-01-06T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-869-12-16-18-01-05-19-2018-favorites/1817"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 870,
+    "title": "Snowscapes",
+    "slug": "2019-01-06-snowscapes",
+    "starts_at": "2019-01-06T15:00:00Z",
+    "ends_at": "2019-01-13T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-870-01-06-19-01-12-19-snowscapes/1816"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 871,
+    "title": "Close to home",
+    "slug": "2019-01-13-close-to-home",
+    "starts_at": "2019-01-13T15:00:00Z",
+    "ends_at": "2019-01-20T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-871-01-13-19-01-19-19-close-to-home/1829"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 872,
+    "title": "Snowless Winter",
+    "slug": "2019-01-20-snowless-winter",
+    "starts_at": "2019-01-20T15:00:00Z",
+    "ends_at": "2019-01-27T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-872-01-20-19-01-26-19-snowless-winter/1828"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 873,
+    "title": "Black and White",
+    "slug": "2019-01-27-black-and-white",
+    "starts_at": "2019-01-27T15:00:00Z",
+    "ends_at": "2019-02-03T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-873-01-27-19-02-02-19-black-and-white/1827"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 874,
+    "title": "The Past",
+    "slug": "2019-02-03-the-past",
+    "starts_at": "2019-02-03T15:00:00Z",
+    "ends_at": "2019-02-10T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-874-02-03-19-02-09-19-the-past/1826"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 875,
+    "title": "Layers",
+    "slug": "2019-02-10-layers",
+    "starts_at": "2019-02-10T15:00:00Z",
+    "ends_at": "2019-02-17T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-875-02-10-19-02-16-19-layers/1825"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 876,
+    "title": "Stormy Weather",
+    "slug": "2019-02-17-stormy-weather",
+    "starts_at": "2019-02-17T15:00:00Z",
+    "ends_at": "2019-02-24T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-876-02-17-19-02-23-19-stormy-weather/4003"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 877,
+    "title": "Open spaces",
+    "slug": "2019-02-24-open-spaces",
+    "starts_at": "2019-02-24T15:00:00Z",
+    "ends_at": "2019-03-03T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-877-02-24-19-03-02-19-open-spaces/4004"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 878,
+    "title": "A beautiful day",
+    "slug": "2019-03-03-a-beautiful-day",
+    "starts_at": "2019-03-03T15:00:00Z",
+    "ends_at": "2019-03-10T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/878-03-03-19-03-09-19-a-beautiful-day/4005"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 879,
+    "title": "Complementary colors",
+    "slug": "2019-03-10-complementary-colors",
+    "starts_at": "2019-03-10T14:00:00Z",
+    "ends_at": "2019-03-17T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/879-03-10-19-03-16-19-complementary-colors/4006"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 880,
+    "title": "Abstracts",
+    "slug": "2019-03-17-abstracts",
+    "starts_at": "2019-03-17T14:00:00Z",
+    "ends_at": "2019-03-24T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/880-03-17-19-03-23-19-abstracts/4007"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 881,
+    "title": "Back Again",
+    "slug": "2019-03-24-back-again",
+    "starts_at": "2019-03-24T14:00:00Z",
+    "ends_at": "2019-03-31T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/881-03-24-19-03-30-19-back-again/4008"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 882,
+    "title": "Grab shot",
+    "slug": "2019-03-31-grab-shot",
+    "starts_at": "2019-03-31T14:00:00Z",
+    "ends_at": "2019-04-07T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/882-03-31-19-04-06-19-grab-shot/4009"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 883,
+    "title": "New beginnings",
+    "slug": "2019-04-07-new-beginnings",
+    "starts_at": "2019-04-07T14:00:00Z",
+    "ends_at": "2019-04-14T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/883-04-07-19-04-13-19-new-beginnings/4010"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 884,
+    "title": "Rock art",
+    "slug": "2019-04-14-rock-art",
+    "starts_at": "2019-04-14T14:00:00Z",
+    "ends_at": "2019-04-21T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/884-04-14-19-04-20-19-rock-art/4011"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 885,
+    "title": "Sunflares",
+    "slug": "2019-04-21-sunflares",
+    "starts_at": "2019-04-21T14:00:00Z",
+    "ends_at": "2019-04-28T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/885-04-21-19-04-27-19-sunflares/4013"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 886,
+    "title": "Small in the frame.",
+    "slug": "2019-04-28-small-in-the-frame",
+    "starts_at": "2019-04-28T14:00:00Z",
+    "ends_at": "2019-05-05T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/886-04-28-19-05-04-19-small-in-the-frame/5809"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 887,
+    "title": "Lone Tree",
+    "slug": "2019-05-05-lone-tree",
+    "starts_at": "2019-05-05T14:00:00Z",
+    "ends_at": "2019-05-12T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/887-05-05-19-05-11-19-lone-tree/5791"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 888,
+    "title": "Moving Water",
+    "slug": "2019-05-12-moving-water",
+    "starts_at": "2019-05-12T14:00:00Z",
+    "ends_at": "2019-05-19T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/888-05-12-19-05-18-19-moving-water/5792"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 889,
+    "title": "Multitudes",
+    "slug": "2019-05-19-multitudes",
+    "starts_at": "2019-05-19T14:00:00Z",
+    "ends_at": "2019-05-26T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/889-05-19-19-05-25-19-multitudes/5793"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 890,
+    "title": "Low down",
+    "slug": "2019-05-26-low-down",
+    "starts_at": "2019-05-26T14:00:00Z",
+    "ends_at": "2019-06-02T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/890-05-26-19-06-01-19-low-down/5795"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 891,
+    "title": "Single color",
+    "slug": "2019-06-02-single-color",
+    "starts_at": "2019-06-02T14:00:00Z",
+    "ends_at": "2019-06-09T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/891-06-02-19-06-08-19-single-color/5796"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 892,
+    "title": "Nature imperfect",
+    "slug": "2019-06-09-nature-imperfect",
+    "starts_at": "2019-06-09T14:00:00Z",
+    "ends_at": "2019-06-16T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/892-06-09-19-06-15-19-nature-imperfect/5797"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 893,
+    "title": "Leading lines",
+    "slug": "2019-06-16-leading-lines",
+    "starts_at": "2019-06-16T14:00:00Z",
+    "ends_at": "2019-06-23T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/893-06-16-19-06-22-19-leading-lines/5798"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 894,
+    "title": "Cell phone masterpieces",
+    "slug": "2019-06-23-cell-phone-masterpieces",
+    "starts_at": "2019-06-23T14:00:00Z",
+    "ends_at": "2019-06-30T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/894-06-23-19-06-29-19-cell-phone-masterpieces/5799"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 895,
+    "title": "Think local",
+    "slug": "2019-06-30-think-local",
+    "starts_at": "2019-06-30T14:00:00Z",
+    "ends_at": "2019-07-07T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/895-06-30-19-07-06-19-think-local/5800"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 896,
+    "title": "Large and small",
+    "slug": "2019-07-07-large-and-small",
+    "starts_at": "2019-07-07T14:00:00Z",
+    "ends_at": "2019-07-14T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/896-07-07-19-07-13-19-large-and-small/5801"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 897,
+    "title": "Movement",
+    "slug": "2019-07-14-movement",
+    "starts_at": "2019-07-14T14:00:00Z",
+    "ends_at": "2019-07-21T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/897-07-14-19-07-20-19-movement/5802"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 898,
+    "title": "Lunacy",
+    "slug": "2019-07-21-lunacy",
+    "starts_at": "2019-07-21T14:00:00Z",
+    "ends_at": "2019-07-28T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/898-07-21-19-07-27-19-lunacy/5803"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 899,
+    "title": "Inspired by others",
+    "slug": "2019-07-28-inspired-by-others",
+    "starts_at": "2019-07-28T14:00:00Z",
+    "ends_at": "2019-08-04T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/899-07-28-19-08-03-19-inspired-by-others/5804"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 900,
+    "title": "Backlight",
+    "slug": "2019-08-04-backlight",
+    "starts_at": "2019-08-04T14:00:00Z",
+    "ends_at": "2019-08-11T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/900-08-04-19-08-10-19-backlight/5805"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 901,
+    "title": "Humans are natural",
+    "slug": "2019-08-11-humans-are-natural",
+    "starts_at": "2019-08-11T14:00:00Z",
+    "ends_at": "2019-08-18T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/901-08-11-19-08-17-19-humans-are-natural/5806"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 902,
+    "title": "Reprocessed",
+    "slug": "2019-08-18-reprocessed",
+    "starts_at": "2019-08-18T14:00:00Z",
+    "ends_at": "2019-08-25T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/902-08-18-19-08-24-19-reprocessed/5807"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 903,
+    "title": "Slow",
+    "slug": "2019-08-25-slow",
+    "starts_at": "2019-08-25T14:00:00Z",
+    "ends_at": "2019-09-01T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/903-08-25-19-08-31-19-slow/5808"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 904,
+    "title": "Conflict in Nature",
+    "slug": "2019-09-01-conflict-in-nature",
+    "starts_at": "2019-09-01T14:00:00Z",
+    "ends_at": "2019-09-08T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-904-09-01-19-09-07-19-conflict-in-nature/8309"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 905,
+    "title": "Jigsaw Puzzles",
+    "slug": "2019-09-08-jigsaw-puzzles",
+    "starts_at": "2019-09-08T14:00:00Z",
+    "ends_at": "2019-09-15T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-905-09-08-19-09-14-19-jigsaw-puzzles/8310"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 906,
+    "title": "Heat",
+    "slug": "2019-09-15-heat",
+    "starts_at": "2019-09-15T14:00:00Z",
+    "ends_at": "2019-09-22T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-906-09-15-19-09-21-19-heat/8311"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 907,
+    "title": "Beach Scenes",
+    "slug": "2019-09-22-beach-scenes",
+    "starts_at": "2019-09-22T14:00:00Z",
+    "ends_at": "2019-09-29T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-907-09-22-19-09-28-19-beach-scenes/8312"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 908,
+    "title": "Breaking out",
+    "slug": "2019-09-29-breaking-out",
+    "starts_at": "2019-09-29T14:00:00Z",
+    "ends_at": "2019-10-06T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-908-09-29-19-10-05-19-breaking-out/8313"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 909,
+    "title": "White",
+    "slug": "2019-10-06-white",
+    "starts_at": "2019-10-06T14:00:00Z",
+    "ends_at": "2019-10-13T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-909-10-06-19-10-12-19-white/8314"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 910,
+    "title": "Grounded",
+    "slug": "2019-10-13-grounded",
+    "starts_at": "2019-10-13T14:00:00Z",
+    "ends_at": "2019-10-20T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-910-10-13-19-10-19-19-grounded-view/8315"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 911,
+    "title": "Analagous Colors",
+    "slug": "2019-10-20-analagous-colors",
+    "starts_at": "2019-10-20T14:00:00Z",
+    "ends_at": "2019-10-27T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-911-10-20-19-10-26-19-analogous-colors/8316"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 912,
+    "title": "Shadow patterns",
+    "slug": "2019-10-27-shadow-patterns",
+    "starts_at": "2019-10-27T14:00:00Z",
+    "ends_at": "2019-11-03T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-912-10-27-19-11-02-19-shadow-patterns/8317"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 913,
+    "title": "It's fall",
+    "slug": "2019-11-03-it-s-fall",
+    "starts_at": "2019-11-03T15:00:00Z",
+    "ends_at": "2019-11-10T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-913-11-03-19-11-09-19-its-fall/8318"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 914,
+    "title": "From the water",
+    "slug": "2019-11-10-from-the-water",
+    "starts_at": "2019-11-10T15:00:00Z",
+    "ends_at": "2019-11-17T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-914-11-10-19-11-16-19-from-the-water/8320"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 915,
+    "title": "Stormy",
+    "slug": "2019-11-17-stormy",
+    "starts_at": "2019-11-17T15:00:00Z",
+    "ends_at": "2019-11-24T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-915-11-17-19-11-23-19-stormy/8321"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 916,
+    "title": "Catching the action",
+    "slug": "2019-11-24-catching-the-action",
+    "starts_at": "2019-11-24T15:00:00Z",
+    "ends_at": "2019-12-01T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-916-11-24-19-11-30-19-catching-the-action/8322"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 917,
+    "title": "Blurred motion",
+    "slug": "2019-12-01-blurred-motion",
+    "starts_at": "2019-12-01T15:00:00Z",
+    "ends_at": "2019-12-08T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-917-12-01-19-12-07-19-blurred-motion/8323"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 918,
+    "title": "Holiday Greetings",
+    "slug": "2019-12-08-holiday-greetings",
+    "starts_at": "2019-12-08T15:00:00Z",
+    "ends_at": "2019-12-15T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-918-12-08-19-12-14-19-holiday-greetings/8324"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 919,
+    "title": "2019's Favorites",
+    "slug": "2019-12-15-2019-s-favorites",
+    "starts_at": "2019-12-15T15:00:00Z",
+    "ends_at": "2020-01-05T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/919-12-15-19-01-04-20-2019s-favorites/8325"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 920,
+    "title": "Flat light",
+    "slug": "2020-01-05-flat-light",
+    "starts_at": "2020-01-05T15:00:00Z",
+    "ends_at": "2020-01-12T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-920-01-05-20-01-11-20-flat-light/10619"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 921,
+    "title": "Ice",
+    "slug": "2020-01-12-ice",
+    "starts_at": "2020-01-12T15:00:00Z",
+    "ends_at": "2020-01-19T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-921-01-12-20-01-18-20-ice/10620"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 922,
+    "title": "Back again",
+    "slug": "2020-01-19-back-again",
+    "starts_at": "2020-01-19T15:00:00Z",
+    "ends_at": "2020-01-26T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-922-01-19-20-01-25-20-back-again/10621"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 923,
+    "title": "Those eyes",
+    "slug": "2020-01-26-those-eyes",
+    "starts_at": "2020-01-26T15:00:00Z",
+    "ends_at": "2020-02-02T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-923-01-26-20-02-01-20-those-eyes/10622"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 924,
+    "title": "Snow Scene",
+    "slug": "2020-02-02-snow-scene",
+    "starts_at": "2020-02-02T15:00:00Z",
+    "ends_at": "2020-02-09T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-924-02-02-20-02-08-20-snow-scene/10623"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 925,
+    "title": "Busy",
+    "slug": "2020-02-09-busy",
+    "starts_at": "2020-02-09T15:00:00Z",
+    "ends_at": "2020-02-16T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-925-02-09-20-02-15-20-busy/10624"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 926,
+    "title": "One",
+    "slug": "2020-02-16-one",
+    "starts_at": "2020-02-16T15:00:00Z",
+    "ends_at": "2020-02-23T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-926-02-16-20-02-22-20-one/10625"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 927,
+    "title": "Snowless winter",
+    "slug": "2020-02-23-snowless-winter",
+    "starts_at": "2020-02-23T15:00:00Z",
+    "ends_at": "2020-03-01T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-927-02-23-20-02-29-20-snowless-winter/10626"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 928,
+    "title": "Damaged goods",
+    "slug": "2020-03-01-damaged-goods",
+    "starts_at": "2020-03-01T15:00:00Z",
+    "ends_at": "2020-03-08T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-928-03-01-20-03-07-20-damaged-goods/10628"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 929,
+    "title": "Signs of spring",
+    "slug": "2020-03-08-signs-of-spring",
+    "starts_at": "2020-03-08T14:00:00Z",
+    "ends_at": "2020-03-15T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-929-03-08-20-03-14-20-signs-of-spring/10629"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 930,
+    "title": "Humanoid",
+    "slug": "2020-03-15-humanoid",
+    "starts_at": "2020-03-15T14:00:00Z",
+    "ends_at": "2020-03-22T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-930-03-15-20-03-21-20-humanoids/10630"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 931,
+    "title": "Silhouettes",
+    "slug": "2020-03-22-silhouettes",
+    "starts_at": "2020-03-22T14:00:00Z",
+    "ends_at": "2020-03-29T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-931-03-22-20-03-28-20-silhouettes/10631"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 932,
+    "title": "Layers",
+    "slug": "2020-03-29-layers",
+    "starts_at": "2020-03-29T14:00:00Z",
+    "ends_at": "2020-04-05T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-932-03-29-20-04-04-20-layers/10632"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 933,
+    "title": "In a forest",
+    "slug": "2020-04-05-in-a-forest",
+    "starts_at": "2020-04-05T14:00:00Z",
+    "ends_at": "2020-04-12T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-933-04-05-20-04-11-20-in-a-forest/10633"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 934,
+    "title": "At the edge",
+    "slug": "2020-04-12-at-the-edge",
+    "starts_at": "2020-04-12T14:00:00Z",
+    "ends_at": "2020-04-19T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-934-04-12-20-04-18-20-at-the-edge/10634"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 935,
+    "title": "Blended",
+    "slug": "2020-04-19-blended",
+    "starts_at": "2020-04-19T14:00:00Z",
+    "ends_at": "2020-04-26T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-935-04-19-20-04-25-20-blended/10635"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 936,
+    "title": "After the rain",
+    "slug": "2020-04-26-after-the-rain",
+    "starts_at": "2020-04-26T14:00:00Z",
+    "ends_at": "2020-05-03T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-936-04-26-20-05-02-20-after-the-rain/10636"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 937,
+    "title": "City parks",
+    "slug": "2020-05-03-city-parks",
+    "starts_at": "2020-05-03T14:00:00Z",
+    "ends_at": "2020-05-10T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-937-05-03-20-05-09-20-city-parks/10637"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 938,
+    "title": "Fog",
+    "slug": "2020-05-10-fog",
+    "starts_at": "2020-05-10T14:00:00Z",
+    "ends_at": "2020-05-17T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-938-05-10-20-05-16-20-fog/10638"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 939,
+    "title": "Wildflowers",
+    "slug": "2020-05-17-wildflowers",
+    "starts_at": "2020-05-17T14:00:00Z",
+    "ends_at": "2020-05-24T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-939-05-17-20-05-23-20-wildflowers/10639"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 940,
+    "title": "Paths",
+    "slug": "2020-05-24-paths",
+    "starts_at": "2020-05-24T14:00:00Z",
+    "ends_at": "2020-05-31T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-940-05-24-20-05-30-20-paths/13708"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 941,
+    "title": "High Key",
+    "slug": "2020-05-31-high-key",
+    "starts_at": "2020-05-31T14:00:00Z",
+    "ends_at": "2020-06-07T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-941-05-31-20-06-06-20-high-key/13712"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 942,
+    "title": "Camouflage",
+    "slug": "2020-06-07-camouflage",
+    "starts_at": "2020-06-07T14:00:00Z",
+    "ends_at": "2020-06-14T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-942-06-07-20-06-13-20-camouflage/13714"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 943,
+    "title": "Night Photography",
+    "slug": "2020-06-14-night-photography",
+    "starts_at": "2020-06-14T14:00:00Z",
+    "ends_at": "2020-06-21T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-943-06-14-20-06-20-20-night-photography/13715"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 944,
+    "title": "Wallpaper",
+    "slug": "2020-06-21-wallpaper",
+    "starts_at": "2020-06-21T14:00:00Z",
+    "ends_at": "2020-06-28T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-944-06-21-20-06-27-20-wallpaper/13716"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 945,
+    "title": "Sand",
+    "slug": "2020-06-28-sand",
+    "starts_at": "2020-06-28T14:00:00Z",
+    "ends_at": "2020-07-05T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-945-06-28-20-07-04-20-sand/13717"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 946,
+    "title": "Blurred motion",
+    "slug": "2020-07-05-blurred-motion",
+    "starts_at": "2020-07-05T14:00:00Z",
+    "ends_at": "2020-07-12T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-946-07-05-20-07-11-20-blurred-motion/13718"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 947,
+    "title": "Rainbows",
+    "slug": "2020-07-12-rainbows",
+    "starts_at": "2020-07-12T14:00:00Z",
+    "ends_at": "2020-07-19T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-947-07-12-20-07-18-20-rainbows/13719"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 948,
+    "title": "Long exposure",
+    "slug": "2020-07-19-long-exposure",
+    "starts_at": "2020-07-19T14:00:00Z",
+    "ends_at": "2020-07-26T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-948-07-19-20-07-25-20-long-exposure/13720"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 949,
+    "title": "Fauna Landscapes",
+    "slug": "2020-07-26-fauna-landscapes",
+    "starts_at": "2020-07-26T14:00:00Z",
+    "ends_at": "2020-08-02T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-949-07-26-20-08-01-20-fauna-landscapes/13721"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 950,
+    "title": "Processing challenge",
+    "slug": "2020-08-02-processing-challenge",
+    "starts_at": "2020-08-02T14:00:00Z",
+    "ends_at": "2020-08-09T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-950-08-02-20-08-08-20-processing-challenge/13722"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 951,
+    "title": "Low down",
+    "slug": "2020-08-09-low-down",
+    "starts_at": "2020-08-09T14:00:00Z",
+    "ends_at": "2020-08-16T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-951-08-09-20-08-15-20-low-down/13723"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 952,
+    "title": "Vertical panorama",
+    "slug": "2020-08-16-vertical-panorama",
+    "starts_at": "2020-08-16T14:00:00Z",
+    "ends_at": "2020-08-23T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-952-08-16-20-08-22-20-vertical-panorama/13724"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 953,
+    "title": "Rock Art",
+    "slug": "2020-08-23-rock-art",
+    "starts_at": "2020-08-23T14:00:00Z",
+    "ends_at": "2020-08-30T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-953-08-23-20-08-29-20-rock-art/13725"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 954,
+    "title": "Abandoned",
+    "slug": "2020-08-30-abandoned",
+    "starts_at": "2020-08-30T14:00:00Z",
+    "ends_at": "2020-09-06T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-954-08-30-20-09-05-20-abandoned/13726"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 955,
+    "title": "Rivers and Streams",
+    "slug": "2020-09-06-rivers-and-streams",
+    "starts_at": "2020-09-06T14:00:00Z",
+    "ends_at": "2020-09-13T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-955-09-06-20-09-12-20-rivers-and-streams/13727"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 956,
+    "title": "Minimalism",
+    "slug": "2020-09-13-minimalism",
+    "starts_at": "2020-09-13T14:00:00Z",
+    "ends_at": "2020-09-20T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-956-09-13-20-09-19-20-minimalism/13728"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 957,
+    "title": "Waterlife",
+    "slug": "2020-09-20-waterlife",
+    "starts_at": "2020-09-20T14:00:00Z",
+    "ends_at": "2020-09-27T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-957-09-20-20-09-26-20-waterlife/16697"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 958,
+    "title": "At Home",
+    "slug": "2020-09-27-at-home",
+    "starts_at": "2020-09-27T14:00:00Z",
+    "ends_at": "2020-10-04T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-958-09-27-20-10-03-20-at-home/16699"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 959,
+    "title": "Wind",
+    "slug": "2020-10-04-wind",
+    "starts_at": "2020-10-04T14:00:00Z",
+    "ends_at": "2020-10-11T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-959-10-04-20-10-10-20-wind/16700"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 960,
+    "title": "Spiders",
+    "slug": "2020-10-11-spiders",
+    "starts_at": "2020-10-11T14:00:00Z",
+    "ends_at": "2020-10-18T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-960-10-11-20-10-17-20-spiders/16701"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 961,
+    "title": "Fungi,Lichen&Ferns",
+    "slug": "2020-10-18-fungi-lichen-and-ferns",
+    "starts_at": "2020-10-18T14:00:00Z",
+    "ends_at": "2020-10-25T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-961-10-18-20-10-24-20-fungi-lichen-ferns/16702"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 962,
+    "title": "Isolated",
+    "slug": "2020-10-25-isolated",
+    "starts_at": "2020-10-25T14:00:00Z",
+    "ends_at": "2020-11-01T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-962-10-25-20-10-31-20-isolated/16703"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 963,
+    "title": "Leaves",
+    "slug": "2020-11-01-leaves",
+    "starts_at": "2020-11-01T15:00:00Z",
+    "ends_at": "2020-11-08T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-963-11-01-20-11-07-20-leaves/16704"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 964,
+    "title": "Crops",
+    "slug": "2020-11-08-crops",
+    "starts_at": "2020-11-08T15:00:00Z",
+    "ends_at": "2020-11-15T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-964-11-08-20-11-14-20-crops/16705"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 965,
+    "title": "Fall small scene",
+    "slug": "2020-11-15-fall-small-scene",
+    "starts_at": "2020-11-15T15:00:00Z",
+    "ends_at": "2020-11-22T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-965-11-15-20-11-21-20-fall-small-scene/16706"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 966,
+    "title": "Grass",
+    "slug": "2020-11-22-grass",
+    "starts_at": "2020-11-22T15:00:00Z",
+    "ends_at": "2020-11-29T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-966-11-22-20-11-28-20-grass/16707"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 967,
+    "title": "Big and small",
+    "slug": "2020-11-29-big-and-small",
+    "starts_at": "2020-11-29T15:00:00Z",
+    "ends_at": "2020-12-06T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-967-11-29-20-12-05-20-big-and-small/16708"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 968,
+    "title": "Holiday Greetings",
+    "slug": "2020-12-06-holiday-greetings",
+    "starts_at": "2020-12-06T15:00:00Z",
+    "ends_at": "2020-12-13T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-968-12-06-20-12-12-20-holiday-greetings/16709"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 969,
+    "title": "2020’s Favorites",
+    "slug": "2020-12-13-2020-s-favorites",
+    "starts_at": "2020-12-13T15:00:00Z",
+    "ends_at": "2021-01-03T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-969-12-13-20-01-02-21-2020-s-favorites/16710"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 970,
+    "title": "Evergreen",
+    "slug": "2021-01-03-evergreen",
+    "starts_at": "2021-01-03T15:00:00Z",
+    "ends_at": "2021-01-10T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-970-01-03-21-01-09-21-evergreen/16711"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 971,
+    "title": "Deserts",
+    "slug": "2021-01-10-deserts",
+    "starts_at": "2021-01-10T15:00:00Z",
+    "ends_at": "2021-01-17T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-971-01-10-21-01-16-21-deserts/16712"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 972,
+    "title": "Dusted by snow",
+    "slug": "2021-01-17-dusted-by-snow",
+    "starts_at": "2021-01-17T15:00:00Z",
+    "ends_at": "2021-01-24T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-972-01-17-21-01-23-21/16713"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 973,
+    "title": "Bare",
+    "slug": "2021-01-24-bare",
+    "starts_at": "2021-01-24T15:00:00Z",
+    "ends_at": "2021-01-31T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-973-01-24-21-01-30-21-bare/16714"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 974,
+    "title": "Cold",
+    "slug": "2021-01-31-cold",
+    "starts_at": "2021-01-31T15:00:00Z",
+    "ends_at": "2021-02-07T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-974-01-31-21-02-06-21-cold/16715"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 975,
+    "title": "Invasives",
+    "slug": "2021-02-07-invasives",
+    "starts_at": "2021-02-07T15:00:00Z",
+    "ends_at": "2021-02-14T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/975-02-07-21-02-13-21-invasives/19403"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 976,
+    "title": "Ice Macroscapes",
+    "slug": "2021-02-14-ice-macroscapes",
+    "starts_at": "2021-02-14T15:00:00Z",
+    "ends_at": "2021-02-21T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-976-02-14-21-02-20-21-ice-macroscapes/19381"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 977,
+    "title": "Fences",
+    "slug": "2021-02-21-fences",
+    "starts_at": "2021-02-21T15:00:00Z",
+    "ends_at": "2021-02-28T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-977-02-21-21-02-27-21-fences/19382"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 978,
+    "title": "One color",
+    "slug": "2021-02-28-one-color",
+    "starts_at": "2021-02-28T15:00:00Z",
+    "ends_at": "2021-03-07T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-978-02-28-21-03-06-21-one-color/19383"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 979,
+    "title": "Clouds",
+    "slug": "2021-03-07-clouds",
+    "starts_at": "2021-03-07T15:00:00Z",
+    "ends_at": "2021-03-14T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-979-03-07-21-03-13-21-clouds/19384"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 980,
+    "title": "Mood",
+    "slug": "2021-03-14-mood",
+    "starts_at": "2021-03-14T14:00:00Z",
+    "ends_at": "2021-03-21T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-980-03-14-21-03-20-21-mood/19385"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 981,
+    "title": "New Beginnings",
+    "slug": "2021-03-21-new-beginnings",
+    "starts_at": "2021-03-21T14:00:00Z",
+    "ends_at": "2021-03-28T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-981-03-21-21-03-27-21-new-beginnings/19386"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 982,
+    "title": "Sunrise/sunset",
+    "slug": "2021-03-28-sunrise-sunset",
+    "starts_at": "2021-03-28T14:00:00Z",
+    "ends_at": "2021-04-04T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-982-03-28-21-04-03-21-sunrise-sunset/19387"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 983,
+    "title": "Negative space",
+    "slug": "2021-04-04-negative-space",
+    "starts_at": "2021-04-04T14:00:00Z",
+    "ends_at": "2021-04-11T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-983-04-04-21-04-10-21-negative-space/19388"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 984,
+    "title": "Twilight",
+    "slug": "2021-04-11-twilight",
+    "starts_at": "2021-04-11T14:00:00Z",
+    "ends_at": "2021-04-18T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-984-04-11-21-04-17-21-twilight/19389"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 985,
+    "title": "Local Icons",
+    "slug": "2021-04-18-local-icons",
+    "starts_at": "2021-04-18T14:00:00Z",
+    "ends_at": "2021-04-25T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-985-04-18-21-04-24-21-local-icons/19390"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 986,
+    "title": "Parallel lines",
+    "slug": "2021-04-25-parallel-lines",
+    "starts_at": "2021-04-25T14:00:00Z",
+    "ends_at": "2021-05-02T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-986-04-25-21-05-01-21-parallel-lines/19391"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 987,
+    "title": "Waves",
+    "slug": "2021-05-02-waves",
+    "starts_at": "2021-05-02T14:00:00Z",
+    "ends_at": "2021-05-09T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-987-05-02-21-05-08-21-waves/19392"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 988,
+    "title": "All wet",
+    "slug": "2021-05-09-all-wet",
+    "starts_at": "2021-05-09T14:00:00Z",
+    "ends_at": "2021-05-16T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-988-05-09-21-05-15-21-all-wet/19393"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 989,
+    "title": "Bark",
+    "slug": "2021-05-16-bark",
+    "starts_at": "2021-05-16T14:00:00Z",
+    "ends_at": "2021-05-23T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-989-05-16-21-05-22-21-bark/19394"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 990,
+    "title": "Green",
+    "slug": "2021-05-23-green",
+    "starts_at": "2021-05-23T14:00:00Z",
+    "ends_at": "2021-05-30T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-990-05-23-21-05-29-21-green/19395"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 991,
+    "title": "Changes",
+    "slug": "2021-05-30-changes",
+    "starts_at": "2021-05-30T14:00:00Z",
+    "ends_at": "2021-06-06T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-991-05-30-21-06-05-21-changes/19396"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 992,
+    "title": "Patterns",
+    "slug": "2021-06-06-patterns",
+    "starts_at": "2021-06-06T14:00:00Z",
+    "ends_at": "2021-06-13T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-992-06-06-21-06-12-21-patterns/19397"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 993,
+    "title": "Falling Water",
+    "slug": "2021-06-13-falling-water",
+    "starts_at": "2021-06-13T14:00:00Z",
+    "ends_at": "2021-06-20T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-993-06-13-21-06-19-21-falling-water/19398"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 994,
+    "title": "Favorite Place",
+    "slug": "2021-06-20-favorite-place",
+    "starts_at": "2021-06-20T14:00:00Z",
+    "ends_at": "2021-06-27T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-994-06-20-21-06-26-21-favorite-spot/19399"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 995,
+    "title": "Wind effects",
+    "slug": "2021-06-27-wind-effects",
+    "starts_at": "2021-06-27T14:00:00Z",
+    "ends_at": "2021-07-04T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-995-06-27-21-07-03-21-wind-effects/19400"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 996,
+    "title": "Black&White",
+    "slug": "2021-07-04-black-and-white",
+    "starts_at": "2021-07-04T14:00:00Z",
+    "ends_at": "2021-07-11T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-996-07-04-21-07-10-21-black-white/19401"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 997,
+    "title": "Faces",
+    "slug": "2021-07-11-faces",
+    "starts_at": "2021-07-11T14:00:00Z",
+    "ends_at": "2021-07-18T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-997-07-11-21-07-17-21-faces/19402"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 998,
+    "title": "Trio",
+    "slug": "2021-07-18-trio",
+    "starts_at": "2021-07-18T14:00:00Z",
+    "ends_at": "2021-07-25T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-998-07-18-21-07-24-21-trio/23039"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 999,
+    "title": "Midday light",
+    "slug": "2021-07-25-midday-light",
+    "starts_at": "2021-07-25T14:00:00Z",
+    "ends_at": "2021-08-01T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-999-07-25-21-07-31-21-midday-light/23040"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1000,
+    "title": "Small in the frame",
+    "slug": "2021-08-01-small-in-the-frame",
+    "starts_at": "2021-08-01T14:00:00Z",
+    "ends_at": "2021-08-08T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1000-08-01-21-08-07-21-small-in-the-frame/23041"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1001,
+    "title": "Complementary colors",
+    "slug": "2021-08-08-complementary-colors",
+    "starts_at": "2021-08-08T14:00:00Z",
+    "ends_at": "2021-08-15T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1001-08-08-21-08-14-21-complementary-colors/23042"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1002,
+    "title": "Cacti",
+    "slug": "2021-08-15-cacti",
+    "starts_at": "2021-08-15T14:00:00Z",
+    "ends_at": "2021-08-22T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1002-08-15-21-08-21-21-cacti/23043"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1003,
+    "title": "Wetlands",
+    "slug": "2021-08-22-wetlands",
+    "starts_at": "2021-08-22T14:00:00Z",
+    "ends_at": "2021-08-29T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1003-08-22-21-08-28-21-wetlands/23044"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1004,
+    "title": "Reflections",
+    "slug": "2021-08-29-reflections",
+    "starts_at": "2021-08-29T14:00:00Z",
+    "ends_at": "2021-09-05T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1004-08-29-21-09-04-21-reflections/23045"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1005,
+    "title": "Signs of aging",
+    "slug": "2021-09-05-signs-of-aging",
+    "starts_at": "2021-09-05T14:00:00Z",
+    "ends_at": "2021-09-12T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1005-09-05-21-09-11-21-signs-of-aging/23046"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1006,
+    "title": "Abstracts",
+    "slug": "2021-09-12-abstracts",
+    "starts_at": "2021-09-12T14:00:00Z",
+    "ends_at": "2021-09-19T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1006-09-12-21-09-18-21-abstracts/23047"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1007,
+    "title": "Escaped to",
+    "slug": "2021-09-19-escaped-to",
+    "starts_at": "2021-09-19T14:00:00Z",
+    "ends_at": "2021-09-26T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1007-09-19-21-09-25-21-escaped-to/23048"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1008,
+    "title": "Grasslands",
+    "slug": "2021-09-26-grasslands",
+    "starts_at": "2021-09-26T14:00:00Z",
+    "ends_at": "2021-10-03T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1008-09-26-21-10-02-21-grasslands/23049"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1009,
+    "title": "Bridges",
+    "slug": "2021-10-03-bridges",
+    "starts_at": "2021-10-03T14:00:00Z",
+    "ends_at": "2021-10-10T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1009-10-03-21-10-09-21-bridges/23050"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1010,
+    "title": "Monochrome",
+    "slug": "2021-10-10-monochrome",
+    "starts_at": "2021-10-10T14:00:00Z",
+    "ends_at": "2021-10-17T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1010-10-10-21-10-16-21-monochrome/23051"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1011,
+    "title": "Backlit",
+    "slug": "2021-10-17-backlit",
+    "starts_at": "2021-10-17T14:00:00Z",
+    "ends_at": "2021-10-24T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1011-10-17-21-10-23-21-backlit/23052"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1012,
+    "title": "Moon shot",
+    "slug": "2021-10-24-moon-shot",
+    "starts_at": "2021-10-24T14:00:00Z",
+    "ends_at": "2021-10-31T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1012-10-24-21-10-30-21-moon-shot/23053"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1013,
+    "title": "Just testing",
+    "slug": "2021-10-31-just-testing",
+    "starts_at": "2021-10-31T14:00:00Z",
+    "ends_at": "2021-11-07T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1013-10-31-21-11-06-21-just-testing/23054"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1014,
+    "title": "Long exposure",
+    "slug": "2021-11-07-long-exposure",
+    "starts_at": "2021-11-07T15:00:00Z",
+    "ends_at": "2021-11-14T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1014-11-07-21-11-13-21-long-exposure/23055"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1015,
+    "title": "Geology",
+    "slug": "2021-11-14-geology",
+    "starts_at": "2021-11-14T15:00:00Z",
+    "ends_at": "2021-11-21T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1015-11-14-21-11-20-21-geology/23056"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1016,
+    "title": "Multitudes",
+    "slug": "2021-11-21-multitudes",
+    "starts_at": "2021-11-21T15:00:00Z",
+    "ends_at": "2021-11-28T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1016-11-21-21-11-27-21-multitudes/23057"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1017,
+    "title": "Fall’s finale",
+    "slug": "2021-11-28-fall-s-finale",
+    "starts_at": "2021-11-28T15:00:00Z",
+    "ends_at": "2021-12-05T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1017-11-28-21-12-04-21-fall-s-finale/23058"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1018,
+    "title": "Holiday Greetings",
+    "slug": "2021-12-05-holiday-greetings",
+    "starts_at": "2021-12-05T15:00:00Z",
+    "ends_at": "2021-12-12T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1018-12-05-21-12-11-21-holiday-greetings/23059"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1019,
+    "title": "2021 favorites",
+    "slug": "2021-12-12-2021-favorites",
+    "starts_at": "2021-12-12T15:00:00Z",
+    "ends_at": "2022-01-02T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1019-12-12-21-01-01-22-2021-favorites/23060"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1020,
+    "title": "Winter flora",
+    "slug": "2022-01-02-winter-flora",
+    "starts_at": "2022-01-02T15:00:00Z",
+    "ends_at": "2022-01-09T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1020-01-02-22-01-08-22-winter-flora/23061"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1021,
+    "title": "Frosted",
+    "slug": "2022-01-09-frosted",
+    "starts_at": "2022-01-09T15:00:00Z",
+    "ends_at": "2022-01-16T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1021-01-09-22-01-15-22-frosted/23062"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1022,
+    "title": "Forest",
+    "slug": "2022-01-16-forest",
+    "starts_at": "2022-01-16T15:00:00Z",
+    "ends_at": "2022-01-23T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1022-01-16-22-01-22-22-forest/26385"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1023,
+    "title": "Ice",
+    "slug": "2022-01-23-ice",
+    "starts_at": "2022-01-23T15:00:00Z",
+    "ends_at": "2022-01-30T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1023-01-23-22-01-29-22-ice/26386"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1024,
+    "title": "High Key",
+    "slug": "2022-01-30-high-key",
+    "starts_at": "2022-01-30T15:00:00Z",
+    "ends_at": "2022-02-06T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1024-01-30-22-02-05-22-high-key/26387"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1025,
+    "title": "Serenity",
+    "slug": "2022-02-06-serenity",
+    "starts_at": "2022-02-06T15:00:00Z",
+    "ends_at": "2022-02-13T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1025-02-06-22-02-12-22-serenity/26388"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1026,
+    "title": "Tree Trunks",
+    "slug": "2022-02-13-tree-trunks",
+    "starts_at": "2022-02-13T15:00:00Z",
+    "ends_at": "2022-02-20T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1026-02-13-22-02-19-22-tree-trunks/26389"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1027,
+    "title": "Jigsaw Puzzles",
+    "slug": "2022-02-20-jigsaw-puzzles",
+    "starts_at": "2022-02-20T15:00:00Z",
+    "ends_at": "2022-02-27T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1027-02-20-22-02-26-22-jigsaw-puzzles/26390"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1028,
+    "title": "Blurred motion",
+    "slug": "2022-02-27-blurred-motion",
+    "starts_at": "2022-02-27T15:00:00Z",
+    "ends_at": "2022-03-06T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1028-02-27-22-03-05-22-blurred-motion/26391"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1029,
+    "title": "Blue sky",
+    "slug": "2022-03-06-blue-sky",
+    "starts_at": "2022-03-06T15:00:00Z",
+    "ends_at": "2022-03-13T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1029-03-06-22-03-12-22-blue-sky/26392"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1030,
+    "title": "Paths and Trails",
+    "slug": "2022-03-13-paths-and-trails",
+    "starts_at": "2022-03-13T14:00:00Z",
+    "ends_at": "2022-03-20T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1030-03-13-22-03-19-22-paths-and-trails/26393"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1031,
+    "title": "Long Shadows",
+    "slug": "2022-03-20-long-shadows",
+    "starts_at": "2022-03-20T14:00:00Z",
+    "ends_at": "2022-03-27T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1031-03-20-22-03-26-22-long-shadows/26394"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1032,
+    "title": "Silhouettes",
+    "slug": "2022-03-27-silhouettes",
+    "starts_at": "2022-03-27T14:00:00Z",
+    "ends_at": "2022-04-03T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1032-03-27-22-04-02-22-silhouettes/26395"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1033,
+    "title": "Storms",
+    "slug": "2022-04-03-storms",
+    "starts_at": "2022-04-03T14:00:00Z",
+    "ends_at": "2022-04-10T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1033-04-03-22-04-09-22-storms/26396"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1034,
+    "title": "Primary Colors",
+    "slug": "2022-04-10-primary-colors",
+    "starts_at": "2022-04-10T14:00:00Z",
+    "ends_at": "2022-04-17T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1034-04-10-22-04-16-22-primary-colors/26397"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1035,
+    "title": "Quiet Water",
+    "slug": "2022-04-17-quiet-water",
+    "starts_at": "2022-04-17T14:00:00Z",
+    "ends_at": "2022-04-24T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1035-04-17-22-04-23-22-quiet-water/26398"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1036,
+    "title": "Last Week",
+    "slug": "2022-04-24-last-week",
+    "starts_at": "2022-04-24T14:00:00Z",
+    "ends_at": "2022-05-01T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1036-04-24-22-04-30-22-last-week/26399"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1037,
+    "title": "My Yard",
+    "slug": "2022-05-01-my-yard",
+    "starts_at": "2022-05-01T14:00:00Z",
+    "ends_at": "2022-05-08T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1037-05-01-22-05-07-22-my-yard/26401"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1038,
+    "title": "Spring Arrives",
+    "slug": "2022-05-08-spring-arrives",
+    "starts_at": "2022-05-08T14:00:00Z",
+    "ends_at": "2022-05-15T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1038-05-08-22-05-14-22-spring-arrives/26402"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1039,
+    "title": "Low Contrast",
+    "slug": "2022-05-15-low-contrast",
+    "starts_at": "2022-05-15T14:00:00Z",
+    "ends_at": "2022-05-22T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1039-05-15-22-05-21-22-low-contrast/26403"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1040,
+    "title": "Post Card",
+    "slug": "2022-05-22-post-card",
+    "starts_at": "2022-05-22T14:00:00Z",
+    "ends_at": "2022-05-29T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1040-05-22-22-05-28-22-post-card/26404"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1041,
+    "title": "The Blues",
+    "slug": "2022-05-29-the-blues",
+    "starts_at": "2022-05-29T14:00:00Z",
+    "ends_at": "2022-06-05T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1041-05-29-22-06-04-22-the-blues/26405"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1042,
+    "title": "Close Up",
+    "slug": "2022-06-05-close-up",
+    "starts_at": "2022-06-05T14:00:00Z",
+    "ends_at": "2022-06-12T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1042-06-05-22-06-11-22-close-up/26406"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1043,
+    "title": "Parallel Lines",
+    "slug": "2022-06-12-parallel-lines",
+    "starts_at": "2022-06-12T14:00:00Z",
+    "ends_at": "2022-06-19T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1043-06-12-22-06-18-22-parallel-lines/26407"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1044,
+    "title": "Leaves",
+    "slug": "2022-06-19-leaves",
+    "starts_at": "2022-06-19T14:00:00Z",
+    "ends_at": "2022-06-26T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1044-06-19-22-06-25-22-leaves/26408"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1045,
+    "title": "Fallen Trees",
+    "slug": "2022-06-26-fallen-trees",
+    "starts_at": "2022-06-26T14:00:00Z",
+    "ends_at": "2022-07-03T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1045-06-26-22-07-02-22-fallen-trees/26409"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1046,
+    "title": "Open Spaces",
+    "slug": "2022-07-03-open-spaces",
+    "starts_at": "2022-07-03T14:00:00Z",
+    "ends_at": "2022-07-10T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1046-07-03-22-07-09-22-open-spaces/26410"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1047,
+    "title": "Icons",
+    "slug": "2022-07-10-icons",
+    "starts_at": "2022-07-10T14:00:00Z",
+    "ends_at": "2022-07-17T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1047-07-10-22-07-16-22-icons/26411"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1048,
+    "title": "Sky Phenomena",
+    "slug": "2022-07-17-sky-phenomena",
+    "starts_at": "2022-07-17T14:00:00Z",
+    "ends_at": "2022-07-24T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1048-07-17-22-07-23-22-sky-optics/28985"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1049,
+    "title": "Novel Composition",
+    "slug": "2022-07-24-novel-composition",
+    "starts_at": "2022-07-24T14:00:00Z",
+    "ends_at": "2022-07-31T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1049-07-24-22-07-30-22-novel-composition/28986"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1050,
+    "title": "Mixed Light",
+    "slug": "2022-07-31-mixed-light",
+    "starts_at": "2022-07-31T14:00:00Z",
+    "ends_at": "2022-08-07T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1050-07-31-22-08-06-22-mixed-light/28988"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1051,
+    "title": "Three",
+    "slug": "2022-08-07-three",
+    "starts_at": "2022-08-07T14:00:00Z",
+    "ends_at": "2022-08-14T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1051-08-07-22-08-13-22-three/28989"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1052,
+    "title": "Complementary Colors",
+    "slug": "2022-08-14-complementary-colors",
+    "starts_at": "2022-08-14T14:00:00Z",
+    "ends_at": "2022-08-21T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1052-08-14-22-08-20-22-complementary-colors/28990"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1053,
+    "title": "A Mountain",
+    "slug": "2022-08-21-a-mountain",
+    "starts_at": "2022-08-21T14:00:00Z",
+    "ends_at": "2022-08-28T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1053-08-21-22-08-27-22-a-mountain/28991"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1054,
+    "title": "Rain",
+    "slug": "2022-08-28-rain",
+    "starts_at": "2022-08-28T14:00:00Z",
+    "ends_at": "2022-09-04T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1054-08-28-22-09-03-22-rain/28992"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1055,
+    "title": "Mirage",
+    "slug": "2022-09-04-mirage",
+    "starts_at": "2022-09-04T14:00:00Z",
+    "ends_at": "2022-09-11T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1055-09-04-22-09-10-22-mirage/28993"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1056,
+    "title": "Stopped Action",
+    "slug": "2022-09-11-stopped-action",
+    "starts_at": "2022-09-11T14:00:00Z",
+    "ends_at": "2022-09-18T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1056-09-11-22-09-17-22-stopped-action/28994"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1057,
+    "title": "Natural Tunnels",
+    "slug": "2022-09-18-natural-tunnels",
+    "starts_at": "2022-09-18T14:00:00Z",
+    "ends_at": "2022-09-25T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1057-09-18-22-09-24-22-natural-tunnels/28995"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1058,
+    "title": "After the flood",
+    "slug": "2022-09-25-after-the-flood",
+    "starts_at": "2022-09-25T14:00:00Z",
+    "ends_at": "2022-10-02T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1058-09-25-22-10-01-22-after-the-flood/28996"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1059,
+    "title": "Surprised",
+    "slug": "2022-10-02-surprised",
+    "starts_at": "2022-10-02T14:00:00Z",
+    "ends_at": "2022-10-09T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1059-10-02-22-10-08-22-surprised/28997"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1060,
+    "title": "On the move",
+    "slug": "2022-10-09-on-the-move",
+    "starts_at": "2022-10-09T14:00:00Z",
+    "ends_at": "2022-10-16T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1060-10-09-22-10-15-22-on-the-move/28998"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1061,
+    "title": "Wildlife landscapes",
+    "slug": "2022-10-16-wildlife-landscapes",
+    "starts_at": "2022-10-16T14:00:00Z",
+    "ends_at": "2022-10-23T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1061-10-16-22-10-22-22-wildlife-landscapes/28999"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1062,
+    "title": "Yellow",
+    "slug": "2022-10-23-yellow",
+    "starts_at": "2022-10-23T14:00:00Z",
+    "ends_at": "2022-10-30T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1062-10-23-22-10-29-22-yellow/29000"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1063,
+    "title": "Wild water",
+    "slug": "2022-10-30-wild-water",
+    "starts_at": "2022-10-30T14:00:00Z",
+    "ends_at": "2022-11-06T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1063-10-30-22-11-05-22-wild-water/29001"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1064,
+    "title": "Over the edge",
+    "slug": "2022-11-06-over-the-edge",
+    "starts_at": "2022-11-06T15:00:00Z",
+    "ends_at": "2022-11-13T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1064-11-06-22-11-12-22-over-the-edge/29002"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1065,
+    "title": "Fire",
+    "slug": "2022-11-13-fire",
+    "starts_at": "2022-11-13T15:00:00Z",
+    "ends_at": "2022-11-20T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1065-11-13-22-11-19-22-fire/29003"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1066,
+    "title": "Blooming",
+    "slug": "2022-11-20-blooming",
+    "starts_at": "2022-11-20T15:00:00Z",
+    "ends_at": "2022-11-27T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1066-11-20-22-11-26-22-blooming/29004"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1067,
+    "title": "From the road",
+    "slug": "2022-11-27-from-the-road",
+    "starts_at": "2022-11-27T15:00:00Z",
+    "ends_at": "2022-12-04T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1067-11-27-22-12-03-22-from-the-road/29005"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1068,
+    "title": "Holiday Greetings",
+    "slug": "2022-12-04-holiday-greetings",
+    "starts_at": "2022-12-04T15:00:00Z",
+    "ends_at": "2022-12-11T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1068-12-04-22-12-10-22-holiday-greetings/29006"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1069,
+    "title": "2022 favorites",
+    "slug": "2022-12-11-2022-favorites",
+    "starts_at": "2022-12-11T15:00:00Z",
+    "ends_at": "2023-01-01T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1069-12-11-22-12-31-22-2022-favorites/29007"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1070,
+    "title": "Symmetry",
+    "slug": "2023-01-01-symmetry",
+    "starts_at": "2023-01-01T15:00:00Z",
+    "ends_at": "2023-01-08T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1070-01-01-23-01-07-23-symmetry/29008"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1071,
+    "title": "Ragged",
+    "slug": "2023-01-08-ragged",
+    "starts_at": "2023-01-08T15:00:00Z",
+    "ends_at": "2023-01-15T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1071-01-08-23-01-14-23-ragged/29010"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1072,
+    "title": "Drought",
+    "slug": "2023-01-15-drought",
+    "starts_at": "2023-01-15T15:00:00Z",
+    "ends_at": "2023-01-22T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1072-01-15-23-01-21-23-drought/29011"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1073,
+    "title": "Snowless winter",
+    "slug": "2023-01-22-snowless-winter",
+    "starts_at": "2023-01-22T15:00:00Z",
+    "ends_at": "2023-01-29T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1073-01-22-23-01-28-23-snowless-winter/32627"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1074,
+    "title": "Small Scene",
+    "slug": "2023-01-29-small-scene",
+    "starts_at": "2023-01-29T15:00:00Z",
+    "ends_at": "2023-02-05T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1074-01-29-23-02-04-23-small-scene/32628"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1075,
+    "title": "Screen Saver",
+    "slug": "2023-02-05-screen-saver",
+    "starts_at": "2023-02-05T15:00:00Z",
+    "ends_at": "2023-02-12T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1075-02-05-23-02-11-23-screen-saver/32629"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1076,
+    "title": "In Reflection",
+    "slug": "2023-02-12-in-reflection",
+    "starts_at": "2023-02-12T15:00:00Z",
+    "ends_at": "2023-02-19T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1076-02-12-23-02-18-23-in-reflection/32630"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1077,
+    "title": "Local parks",
+    "slug": "2023-02-19-local-parks",
+    "starts_at": "2023-02-19T15:00:00Z",
+    "ends_at": "2023-02-26T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1077-02-19-23-02-25-23-local-parks/32631"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1078,
+    "title": "Analogous colors",
+    "slug": "2023-02-26-analogous-colors",
+    "starts_at": "2023-02-26T15:00:00Z",
+    "ends_at": "2023-03-05T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1078-02-26-23-03-04-23-analogous-colors/32632"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1079,
+    "title": "Lichen and Moss",
+    "slug": "2023-03-05-lichen-and-moss",
+    "starts_at": "2023-03-05T15:00:00Z",
+    "ends_at": "2023-03-12T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1079-03-05-23-03-11-23-lichen-and-moss/32633"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1080,
+    "title": "Winter Scene",
+    "slug": "2023-03-12-winter-scene",
+    "starts_at": "2023-03-12T14:00:00Z",
+    "ends_at": "2023-03-19T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1080-03-12-23-03-18-23-winter-scene/32634"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1081,
+    "title": "Sunless",
+    "slug": "2023-03-19-sunless",
+    "starts_at": "2023-03-19T14:00:00Z",
+    "ends_at": "2023-03-26T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1081-03-19-23-03-25-23-sunless/32635"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1082,
+    "title": "Textures",
+    "slug": "2023-03-26-textures",
+    "starts_at": "2023-03-26T14:00:00Z",
+    "ends_at": "2023-04-02T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1082-03-26-23-04-01-23-textures/32637"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1083,
+    "title": "Early Spring",
+    "slug": "2023-04-02-early-spring",
+    "starts_at": "2023-04-02T14:00:00Z",
+    "ends_at": "2023-04-09T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1083-04-02-2304-08-23-early-spring/32638"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1084,
+    "title": "Horizontal Panorama",
+    "slug": "2023-04-09-horizontal-panorama",
+    "starts_at": "2023-04-09T14:00:00Z",
+    "ends_at": "2023-04-16T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1084-04-09-2304-15-23-horizontal-panorama/32639"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1085,
+    "title": "Humans in Nature",
+    "slug": "2023-04-16-humans-in-nature",
+    "starts_at": "2023-04-16T14:00:00Z",
+    "ends_at": "2023-04-23T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1085-04-16-23-04-22-23-humans-in-nature/32641"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1086,
+    "title": "What am I",
+    "slug": "2023-04-23-what-am-i",
+    "starts_at": "2023-04-23T14:00:00Z",
+    "ends_at": "2023-04-30T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1086-04-23-23-04-29-23-what-am-i/32642"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1087,
+    "title": "April Showers",
+    "slug": "2023-04-30-april-showers",
+    "starts_at": "2023-04-30T14:00:00Z",
+    "ends_at": "2023-05-07T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1087-04-30-23-05-06-23-april-showers/32643"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1088,
+    "title": "Quiet Beaches",
+    "slug": "2023-05-07-quiet-beaches",
+    "starts_at": "2023-05-07T14:00:00Z",
+    "ends_at": "2023-05-14T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1088-05-07-23-05-13-23-quiet-beaches/32644"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1089,
+    "title": "Starring Stars",
+    "slug": "2023-05-14-starring-stars",
+    "starts_at": "2023-05-14T14:00:00Z",
+    "ends_at": "2023-05-21T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1089-05-14-23-05-20-23-starring-stars/32645"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1090,
+    "title": "Back again",
+    "slug": "2023-05-21-back-again",
+    "starts_at": "2023-05-21T14:00:00Z",
+    "ends_at": "2023-05-28T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1090-05-21-23-05-27-23-back-again/32646"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1091,
+    "title": "From Below",
+    "slug": "2023-05-28-from-below",
+    "starts_at": "2023-05-28T14:00:00Z",
+    "ends_at": "2023-06-04T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1091-05-28-23-06-03-23-from-below/32647"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1092,
+    "title": "Smoke",
+    "slug": "2023-06-04-smoke",
+    "starts_at": "2023-06-04T14:00:00Z",
+    "ends_at": "2023-06-11T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1092-06-04-23-06-10-23-smoke/32648"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1093,
+    "title": "Droplet-oramas",
+    "slug": "2023-06-11-droplet-oramas",
+    "starts_at": "2023-06-11T14:00:00Z",
+    "ends_at": "2023-06-18T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1038-05-08-22-05-14-22-spring-arrives/26402"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1094,
+    "title": "Moonscapes",
+    "slug": "2023-06-18-moonscapes",
+    "starts_at": "2023-06-18T14:00:00Z",
+    "ends_at": "2023-06-25T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1094-06-18-23-06-24-23-moonscapes/32650"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1095,
+    "title": "Garden Scenes",
+    "slug": "2023-06-25-garden-scenes",
+    "starts_at": "2023-06-25T14:00:00Z",
+    "ends_at": "2023-07-02T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1095-06-25-23-07-01-23-garden-scenes/32651"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1096,
+    "title": "Blue and Green",
+    "slug": "2023-07-02-blue-and-green",
+    "starts_at": "2023-07-02T14:00:00Z",
+    "ends_at": "2023-07-09T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1096-07-02-23-07-08-23-blue-and-green/32652"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1097,
+    "title": "Blowing in the Wind",
+    "slug": "2023-07-09-blowing-in-the-wind",
+    "starts_at": "2023-07-09T14:00:00Z",
+    "ends_at": "2023-07-16T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1097-07-09-23-07-15-23-blowing-in-the-wind/32653"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1098,
+    "title": "From the Past",
+    "slug": "2023-07-16-from-the-past",
+    "starts_at": "2023-07-16T14:00:00Z",
+    "ends_at": "2023-07-23T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1098-07-16-23-07-22-23-from-the-past/32654"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1099,
+    "title": "Layers",
+    "slug": "2023-07-23-layers",
+    "starts_at": "2023-07-23T14:00:00Z",
+    "ends_at": "2023-07-30T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1099-07-23-23-07-29-23-layers/32655"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1100,
+    "title": "Hot Weather",
+    "slug": "2023-07-30-hot-weather",
+    "starts_at": "2023-07-30T14:00:00Z",
+    "ends_at": "2023-08-06T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1100-07-30-23-08-05-23-hot-weather/36098"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1101,
+    "title": "Rainbows",
+    "slug": "2023-08-06-rainbows",
+    "starts_at": "2023-08-06T14:00:00Z",
+    "ends_at": "2023-08-13T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1101-08-06-23-08-12-23-rainbows/36099"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1102,
+    "title": "Negative Space",
+    "slug": "2023-08-13-negative-space",
+    "starts_at": "2023-08-13T14:00:00Z",
+    "ends_at": "2023-08-20T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1102-08-13-23-08-19-23-negative-space/36100"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1103,
+    "title": "Along a Stream",
+    "slug": "2023-08-20-along-a-stream",
+    "starts_at": "2023-08-20T14:00:00Z",
+    "ends_at": "2023-08-27T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1103-08-20-23-08-26-23-along-a-stream/36101"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1104,
+    "title": "After the Rain",
+    "slug": "2023-08-27-after-the-rain",
+    "starts_at": "2023-08-27T14:00:00Z",
+    "ends_at": "2023-09-03T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1104-08-27-23-09-02-23-after-the-rain/36105"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1105,
+    "title": "Isolated",
+    "slug": "2023-09-03-isolated",
+    "starts_at": "2023-09-03T14:00:00Z",
+    "ends_at": "2023-09-10T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1105-09-03-23-09-09-23-isolated/36104"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1106,
+    "title": "In a Forest",
+    "slug": "2023-09-10-in-a-forest",
+    "starts_at": "2023-09-10T14:00:00Z",
+    "ends_at": "2023-09-17T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1106-09-10-23-09-16-23-in-a-forest/36102"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1107,
+    "title": "Pond Life",
+    "slug": "2023-09-17-pond-life",
+    "starts_at": "2023-09-17T14:00:00Z",
+    "ends_at": "2023-09-24T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1107-09-17-23-09-23-23-pond-life/36103"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1108,
+    "title": "From the Road",
+    "slug": "2023-09-24-from-the-road",
+    "starts_at": "2023-09-24T14:00:00Z",
+    "ends_at": "2023-10-01T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1108-09-24-23-09-30-23-from-the-road/36108"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1109,
+    "title": "Humanoid",
+    "slug": "2023-10-01-humanoid",
+    "starts_at": "2023-10-01T14:00:00Z",
+    "ends_at": "2023-10-08T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1109-10-01-23-10-07-23-humanoid/36109"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1110,
+    "title": "Animal Landscapes",
+    "slug": "2023-10-08-animal-landscapes",
+    "starts_at": "2023-10-08T14:00:00Z",
+    "ends_at": "2023-10-15T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1110-10-08-23-10-14-23-animal-landscapes/36110"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1111,
+    "title": "Wall Hangers",
+    "slug": "2023-10-15-wall-hangers",
+    "starts_at": "2023-10-15T14:00:00Z",
+    "ends_at": "2023-10-22T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1111-10-15-23-10-21-23-wall-hangers/36112"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1112,
+    "title": "An Icon",
+    "slug": "2023-10-22-an-icon",
+    "starts_at": "2023-10-22T14:00:00Z",
+    "ends_at": "2023-10-29T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1112-10-22-23-10-28-23-an-icon/36113"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1113,
+    "title": "Fog",
+    "slug": "2023-10-29-fog",
+    "starts_at": "2023-10-29T14:00:00Z",
+    "ends_at": "2023-11-05T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1113-10-29-23-11-04-23-fog/36114"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1114,
+    "title": "Fall Scenes",
+    "slug": "2023-11-05-fall-scenes",
+    "starts_at": "2023-11-05T15:00:00Z",
+    "ends_at": "2023-11-12T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1114-11-05-23-11-11-23-fall-scenes/36115"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1115,
+    "title": "Long Exposure",
+    "slug": "2023-11-12-long-exposure",
+    "starts_at": "2023-11-12T15:00:00Z",
+    "ends_at": "2023-11-19T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1115-11-12-23-11-18-23-long-exposure/36116"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1116,
+    "title": "Camouflage",
+    "slug": "2023-11-19-camouflage",
+    "starts_at": "2023-11-19T15:00:00Z",
+    "ends_at": "2023-11-26T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1116-11-19-23-11-25-23-camouflage/36117"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1117,
+    "title": "Eyes",
+    "slug": "2023-11-26-eyes",
+    "starts_at": "2023-11-26T15:00:00Z",
+    "ends_at": "2023-12-03T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1117-11-26-23-12-02-23-eyes/36118"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1118,
+    "title": "Holiday Greetings",
+    "slug": "2023-12-03-holiday-greetings",
+    "starts_at": "2023-12-03T15:00:00Z",
+    "ends_at": "2023-12-10T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1118-12-03-23-12-09-23-holiday-greetings/36119"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1119,
+    "title": "2023 Favorites",
+    "slug": "2023-12-10-2023-favorites",
+    "starts_at": "2023-12-10T15:00:00Z",
+    "ends_at": "2023-12-31T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1119-12-10-23-12-30-23-2023-favorites/36120"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1120,
+    "title": "Flat Light",
+    "slug": "2023-12-31-flat-light",
+    "starts_at": "2023-12-31T15:00:00Z",
+    "ends_at": "2024-01-07T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1120-12-31-23-01-06-24-flat-light/36121"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1121,
+    "title": "Falling Snow",
+    "slug": "2024-01-07-falling-snow",
+    "starts_at": "2024-01-07T15:00:00Z",
+    "ends_at": "2024-01-14T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1121-01-07-24-01-13-24-falling-snow/36122"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1122,
+    "title": "Bare Trees",
+    "slug": "2024-01-14-bare-trees",
+    "starts_at": "2024-01-14T15:00:00Z",
+    "ends_at": "2024-01-21T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1122-01-14-24-01-20-24-bare-trees/36123"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1123,
+    "title": "Emotions",
+    "slug": "2024-01-21-emotions",
+    "starts_at": "2024-01-21T15:00:00Z",
+    "ends_at": "2024-01-28T15:00:00Z",
+    "url": null
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1124,
+    "title": "Unusual Comp.",
+    "slug": "2024-01-28-unusual-comp",
+    "starts_at": "2024-01-28T15:00:00Z",
+    "ends_at": "2024-02-04T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1124-1-28-24-2-3-24-unusual-comp/39313"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1125,
+    "title": "Analogous Colors",
+    "slug": "2024-02-04-analogous-colors",
+    "starts_at": "2024-02-04T15:00:00Z",
+    "ends_at": "2024-02-11T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1125-2-4-24-2-10-24-analogous-colors/39455"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1126,
+    "title": "Dark",
+    "slug": "2024-02-11-dark",
+    "starts_at": "2024-02-11T15:00:00Z",
+    "ends_at": "2024-02-18T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1126-2-11-24-2-17-24-dark/39617"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1127,
+    "title": "Rivers and Streams",
+    "slug": "2024-02-18-rivers-and-streams",
+    "starts_at": "2024-02-18T15:00:00Z",
+    "ends_at": "2024-02-25T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1127-2-18-24-2-24-24-rivers-and-streams/39730"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1128,
+    "title": "Processing challenge",
+    "slug": "2024-02-25-processing-challenge",
+    "starts_at": "2024-02-25T15:00:00Z",
+    "ends_at": "2024-03-03T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1128-2-25-24-3-2-24-processing-challenge/39866"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1129,
+    "title": "Blended",
+    "slug": "2024-03-03-blended",
+    "starts_at": "2024-03-03T15:00:00Z",
+    "ends_at": "2024-03-10T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1129-3-3-24-3-9-24-blended/40015"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1130,
+    "title": "Small in the frame",
+    "slug": "2024-03-10-small-in-the-frame",
+    "starts_at": "2024-03-10T14:00:00Z",
+    "ends_at": "2024-03-17T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1130-3-10-24-3-16-24-small-in-the-frame/40153"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1131,
+    "title": "From the water",
+    "slug": "2024-03-17-from-the-water",
+    "starts_at": "2024-03-17T14:00:00Z",
+    "ends_at": "2024-03-24T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1131-3-17-24-3-23-24-from-the-water/40296"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1132,
+    "title": "Moonlight",
+    "slug": "2024-03-24-moonlight",
+    "starts_at": "2024-03-24T14:00:00Z",
+    "ends_at": "2024-03-31T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1132-3-24-24-3-30-24-moonlight/40430"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1133,
+    "title": "Rock Art",
+    "slug": "2024-03-31-rock-art",
+    "starts_at": "2024-03-31T14:00:00Z",
+    "ends_at": "2024-04-07T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1133-3-31-24-4-6-24-rock-art/40545"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1134,
+    "title": "Minimalism",
+    "slug": "2024-04-07-minimalism",
+    "starts_at": "2024-04-07T14:00:00Z",
+    "ends_at": "2024-04-14T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1134-4-7-24-4-13-24-minimalism/40669"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1135,
+    "title": "Damaged goods",
+    "slug": "2024-04-14-damaged-goods",
+    "starts_at": "2024-04-14T14:00:00Z",
+    "ends_at": "2024-04-21T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1135-4-14-24-4-20-24-damaged-goods/40787"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1136,
+    "title": "Low Down",
+    "slug": "2024-04-21-low-down",
+    "starts_at": "2024-04-21T14:00:00Z",
+    "ends_at": "2024-04-28T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1136-4-21-24-4-27-24-low-down/40933"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1137,
+    "title": "Big and Small",
+    "slug": "2024-04-28-big-and-small",
+    "starts_at": "2024-04-28T14:00:00Z",
+    "ends_at": "2024-05-05T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1137-4-28-24-5-4-24-big-and-small/41032"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1138,
+    "title": "Evergreen trees",
+    "slug": "2024-05-05-evergreen-trees",
+    "starts_at": "2024-05-05T14:00:00Z",
+    "ends_at": "2024-05-12T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1138-5-5-24-5-11-24-evergreen-trees/41107"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1139,
+    "title": "Wildflowers",
+    "slug": "2024-05-12-wildflowers",
+    "starts_at": "2024-05-12T14:00:00Z",
+    "ends_at": "2024-05-19T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1139-5-12-24-5-18-24-wildflowers/41234"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1140,
+    "title": "Fences",
+    "slug": "2024-05-19-fences",
+    "starts_at": "2024-05-19T14:00:00Z",
+    "ends_at": "2024-05-26T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1140-5-19-24-5-25-24-fences/41324"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1141,
+    "title": "Twilight",
+    "slug": "2024-05-26-twilight",
+    "starts_at": "2024-05-26T14:00:00Z",
+    "ends_at": "2024-06-02T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1141-5-26-24-6-1-24-twilight/41410"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1142,
+    "title": "Black & White",
+    "slug": "2024-06-02-black-and-white",
+    "starts_at": "2024-06-02T14:00:00Z",
+    "ends_at": "2024-06-09T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1142-6-2-24-6-8-24-black-and-white/41505"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1143,
+    "title": "City park",
+    "slug": "2024-06-09-city-park",
+    "starts_at": "2024-06-09T14:00:00Z",
+    "ends_at": "2024-06-16T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1143-6-9-24-6-15-24-city-park/41616"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1144,
+    "title": "Grass",
+    "slug": "2024-06-16-grass",
+    "starts_at": "2024-06-16T14:00:00Z",
+    "ends_at": "2024-06-23T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1144-6-16-24-6-22-24-grass/41736"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1145,
+    "title": "Desert scenes",
+    "slug": "2024-06-23-desert-scenes",
+    "starts_at": "2024-06-23T14:00:00Z",
+    "ends_at": "2024-06-30T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1145-6-23-24-6-29-24-desert-scenes/41832"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1146,
+    "title": "Nightlights",
+    "slug": "2024-06-30-nightlights",
+    "starts_at": "2024-06-30T14:00:00Z",
+    "ends_at": "2024-07-07T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1146-6-30-24-7-6-24-nightlights/41960"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1147,
+    "title": "Clouds",
+    "slug": "2024-07-07-clouds",
+    "starts_at": "2024-07-07T14:00:00Z",
+    "ends_at": "2024-07-14T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1147-7-7-24-7-13-24-clouds/42050"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1148,
+    "title": "Parallel lines",
+    "slug": "2024-07-14-parallel-lines",
+    "starts_at": "2024-07-14T14:00:00Z",
+    "ends_at": "2024-07-21T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1148-7-14-24-7-20-24-parallel-lines/42189"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1149,
+    "title": "Shades of Green",
+    "slug": "2024-07-21-shades-of-green",
+    "starts_at": "2024-07-21T14:00:00Z",
+    "ends_at": "2024-07-28T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1149-7-21-24-7-27-24-shades-of-green/42332"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1150,
+    "title": "Reflections in Nature",
+    "slug": "2024-07-28-reflections-in-nature",
+    "starts_at": "2024-07-28T14:00:00Z",
+    "ends_at": "2024-08-04T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1150-7-28-24-8-03-24-reflections-in-nature/42156"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1151,
+    "title": "Macro Textures",
+    "slug": "2024-08-04-macro-textures",
+    "starts_at": "2024-08-04T14:00:00Z",
+    "ends_at": "2024-08-11T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1151-8-4-2024-8-10-2024-macro-textures/42569"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1152,
+    "title": "Golden Hour Landscapes",
+    "slug": "2024-08-11-golden-hour-landscapes",
+    "starts_at": "2024-08-11T14:00:00Z",
+    "ends_at": "2024-08-18T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1152-08-11-24-08-17-24-golden-hour-landscapes/42670"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1153,
+    "title": "Wildlife in Motion",
+    "slug": "2024-08-18-wildlife-in-motion",
+    "starts_at": "2024-08-18T14:00:00Z",
+    "ends_at": "2024-08-25T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1153-08-18-24-08-24-24-wildlife-in-motion/42762"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1154,
+    "title": "Nature's Palette at Twilight",
+    "slug": "2024-08-25-nature-s-palette-at-twilight",
+    "starts_at": "2024-08-25T14:00:00Z",
+    "ends_at": "2024-09-01T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1154-08-25-24-08-31-24-natures-palette-at-twilight/42850"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1155,
+    "title": "Misty Mornings",
+    "slug": "2024-09-01-misty-mornings",
+    "starts_at": "2024-09-01T14:00:00Z",
+    "ends_at": "2024-09-08T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1155-09-01-24-09-07-24-misty-mornings/42952"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1156,
+    "title": "Silhouettes in Nature",
+    "slug": "2024-09-08-silhouettes-in-nature",
+    "starts_at": "2024-09-08T14:00:00Z",
+    "ends_at": "2024-09-15T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1156-09-08-24-09-14-24-silhouettes-in-nature/43051"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1157,
+    "title": "Water in Motion",
+    "slug": "2024-09-15-water-in-motion",
+    "starts_at": "2024-09-15T14:00:00Z",
+    "ends_at": "2024-09-22T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1157-09-15-24-09-21-24-water-in-motion/43148"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1158,
+    "title": "Intimate Landscapes",
+    "slug": "2024-09-22-intimate-landscapes",
+    "starts_at": "2024-09-22T14:00:00Z",
+    "ends_at": "2024-09-29T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1158-08-22-24-08-28-24-intimate-landscapes/43254"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1159,
+    "title": "Nature's Patterns",
+    "slug": "2024-09-29-nature-s-patterns",
+    "starts_at": "2024-09-29T14:00:00Z",
+    "ends_at": "2024-10-06T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1159-08-29-24-09-05-24-natures-patterns/43369"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1160,
+    "title": "Monochromatic Nature",
+    "slug": "2024-10-06-monochromatic-nature",
+    "starts_at": "2024-10-06T14:00:00Z",
+    "ends_at": "2024-10-13T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1160-09-06-24-09-12-24-monochromatic-nature/43485"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1161,
+    "title": "Backlit Beauty",
+    "slug": "2024-10-13-backlit-beauty",
+    "starts_at": "2024-10-13T14:00:00Z",
+    "ends_at": "2024-10-20T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1161-09-13-24-09-19-24-backlit-beauty/43569"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1162,
+    "title": "Autumn Colors",
+    "slug": "2024-10-20-autumn-colors",
+    "starts_at": "2024-10-20T14:00:00Z",
+    "ends_at": "2024-10-27T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1162-10-20-24-10-26-24-autumn-colors/43665"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1163,
+    "title": "Autumn Abstracts",
+    "slug": "2024-10-27-autumn-abstracts",
+    "starts_at": "2024-10-27T14:00:00Z",
+    "ends_at": "2024-11-03T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1163-10-27-24-11-02-24-autumn-abstracts/43751"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1164,
+    "title": "Nature's Symmetry",
+    "slug": "2024-11-03-nature-s-symmetry",
+    "starts_at": "2024-11-03T15:00:00Z",
+    "ends_at": "2024-11-10T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1164-11-03-24-11-09-24-natures-symmetry/43823"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1165,
+    "title": "Weathered Landscapes",
+    "slug": "2024-11-10-weathered-landscapes",
+    "starts_at": "2024-11-10T15:00:00Z",
+    "ends_at": "2024-11-17T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1165-11-10-24-11-16-24-weathered-landscapes/43927"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1166,
+    "title": "Natural Frame",
+    "slug": "2024-11-17-natural-frame",
+    "starts_at": "2024-11-17T15:00:00Z",
+    "ends_at": "2024-11-24T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1166-11-17-24-11-23-24-natural-frame/44036"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1167,
+    "title": "Winter Minimalism",
+    "slug": "2024-11-24-winter-minimalism",
+    "starts_at": "2024-11-24T15:00:00Z",
+    "ends_at": "2024-12-01T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1167-11-24-24-11-30-24-winter-minimalism/44135"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1168,
+    "title": "Nature's Contrasts",
+    "slug": "2024-12-01-nature-s-contrasts",
+    "starts_at": "2024-12-01T15:00:00Z",
+    "ends_at": "2024-12-08T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1168-12-01-24-12-07-27-natures-contrasts/44219"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1169,
+    "title": "Starry Skies",
+    "slug": "2024-12-08-starry-skies",
+    "starts_at": "2024-12-08T15:00:00Z",
+    "ends_at": "2024-12-15T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1169-12-08-24-12-14-27-starry-skies/44310"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1170,
+    "title": "Year-End Showcase",
+    "slug": "2024-12-15-year-end-showcase",
+    "starts_at": "2024-12-15T15:00:00Z",
+    "ends_at": "2025-01-05T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1170-12-15-24-1-5-25-year-end-showcase/44398"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1171,
+    "title": "Frozen Nature",
+    "slug": "2025-01-05-frozen-nature",
+    "starts_at": "2025-01-05T15:00:00Z",
+    "ends_at": "2025-01-12T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1171-01-06-25-01-12-25-frozen-nature/44716"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1172,
+    "title": "Winter Wildlife",
+    "slug": "2025-01-12-winter-wildlife",
+    "starts_at": "2025-01-12T15:00:00Z",
+    "ends_at": "2025-01-19T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1172-01-12-25-01-18-25-winter-wildlife/44840"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1173,
+    "title": "Negative Space in Nature",
+    "slug": "2025-01-19-negative-space-in-nature",
+    "starts_at": "2025-01-19T15:00:00Z",
+    "ends_at": "2025-01-26T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1173-01-20-25-01-26-25-negative-space-in-nature/44944"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1174,
+    "title": "Coastal Landscapes",
+    "slug": "2025-01-26-coastal-landscapes",
+    "starts_at": "2025-01-26T15:00:00Z",
+    "ends_at": "2025-02-02T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1174-01-26-25-02-01-25-coastal-landscapes/45062"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1175,
+    "title": "Nature's Curves",
+    "slug": "2025-02-02-nature-s-curves",
+    "starts_at": "2025-02-02T15:00:00Z",
+    "ends_at": "2025-02-09T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1175-02-02-25-02-08-25-natures-curves/45186"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1176,
+    "title": "Winter Textures",
+    "slug": "2025-02-09-winter-textures",
+    "starts_at": "2025-02-09T15:00:00Z",
+    "ends_at": "2025-02-16T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1176-02-09-25-02-15-25-winter-textures/45293?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1177,
+    "title": "Mood in Nature",
+    "slug": "2025-02-16-mood-in-nature",
+    "starts_at": "2025-02-16T15:00:00Z",
+    "ends_at": "2025-02-23T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1177-02-16-02-22-mood-in-nature/45422?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1178,
+    "title": "Nature's Resilience",
+    "slug": "2025-02-23-nature-s-resilience",
+    "starts_at": "2025-02-23T15:00:00Z",
+    "ends_at": "2025-03-02T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1178-02-23-03-01-natures-resilience/45542?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1179,
+    "title": "Hidden Nature",
+    "slug": "2025-03-02-hidden-nature",
+    "starts_at": "2025-03-02T15:00:00Z",
+    "ends_at": "2025-03-09T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1179-03-02-25-03-08-25-hidden-nature/45671?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1180,
+    "title": "Leading Lines in Landscapes",
+    "slug": "2025-03-09-leading-lines-in-landscapes",
+    "starts_at": "2025-03-09T14:00:00Z",
+    "ends_at": "2025-03-16T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1180-03-09-25-03-15-25-leading-lines-in-landscapes/45762?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1181,
+    "title": "Nature's Abstracts in B&W",
+    "slug": "2025-03-16-nature-s-abstracts-in-b-and-w",
+    "starts_at": "2025-03-16T14:00:00Z",
+    "ends_at": "2025-03-23T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1181-03-16-25-03-22-25-natures-abstracts-in-b-w/45858?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1182,
+    "title": "Panoramic Nature",
+    "slug": "2025-03-23-panoramic-nature",
+    "starts_at": "2025-03-23T14:00:00Z",
+    "ends_at": "2025-03-30T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1182-03-23-25-03-29-25-panoramic-nature/45960?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1183,
+    "title": "Nature's Geometry",
+    "slug": "2025-03-30-nature-s-geometry",
+    "starts_at": "2025-03-30T14:00:00Z",
+    "ends_at": "2025-04-06T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1183-03-30-25-04-05-25-natures-geometry/46063?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1184,
+    "title": "Waterfall Wonders",
+    "slug": "2025-04-06-waterfall-wonders",
+    "starts_at": "2025-04-06T14:00:00Z",
+    "ends_at": "2025-04-13T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1184-04-06-25-04-12-25-waterfall-wonders/46148?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1185,
+    "title": "Spring Awakening",
+    "slug": "2025-04-13-spring-awakening",
+    "starts_at": "2025-04-13T14:00:00Z",
+    "ends_at": "2025-04-20T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1185-04-13-25-04-19-25-spring-awakening/46222?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1186,
+    "title": "Macro World",
+    "slug": "2025-04-20-macro-world",
+    "starts_at": "2025-04-20T14:00:00Z",
+    "ends_at": "2025-04-27T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1186-04-20-25-04-26-25-macro-world/46309?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1187,
+    "title": "Nature's Color Palette",
+    "slug": "2025-04-27-nature-s-color-palette",
+    "starts_at": "2025-04-27T14:00:00Z",
+    "ends_at": "2025-05-04T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1187-04-27-25-05-03-25-natures-color-palette/46382?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1188,
+    "title": "Aerial Perspectives",
+    "slug": "2025-05-04-aerial-perspectives",
+    "starts_at": "2025-05-04T14:00:00Z",
+    "ends_at": "2025-05-11T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1188-05-04-25-05-10-25-aerial-perspectives/46464?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1189,
+    "title": "Spring Reflections",
+    "slug": "2025-05-11-spring-reflections",
+    "starts_at": "2025-05-11T14:00:00Z",
+    "ends_at": "2025-05-18T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1189-05-11-25-05-17-25-spring-reflections/46545?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1190,
+    "title": "Natural Light Play",
+    "slug": "2025-05-18-natural-light-play",
+    "starts_at": "2025-05-18T14:00:00Z",
+    "ends_at": "2025-05-25T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1190-05-18-25-05-24-25-natural-light-play/46630?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1191,
+    "title": "Nature's Textures in B&W",
+    "slug": "2025-05-25-nature-s-textures-in-b-and-w",
+    "starts_at": "2025-05-25T14:00:00Z",
+    "ends_at": "2025-06-01T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1191-05-25-25-05-31-25-natures-textures-in-b-w/46699?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1192,
+    "title": "Woodland Wonders",
+    "slug": "2025-06-01-woodland-wonders",
+    "starts_at": "2025-06-01T14:00:00Z",
+    "ends_at": "2025-06-08T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1192-05-25-25-05-31-25-woodland-wonders/46790?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1193,
+    "title": "Dramatic Skies",
+    "slug": "2025-06-08-dramatic-skies",
+    "starts_at": "2025-06-08T14:00:00Z",
+    "ends_at": "2025-06-15T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1193-06-08-25-06-14-25-dramatic-skies/46888?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1194,
+    "title": "Insect Macro",
+    "slug": "2025-06-15-insect-macro",
+    "starts_at": "2025-06-15T14:00:00Z",
+    "ends_at": "2025-06-22T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1194-06-15-25-06-21-25-insect-macro/46990?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1195,
+    "title": "Summer Solstice Light",
+    "slug": "2025-06-22-summer-solstice-light",
+    "starts_at": "2025-06-22T14:00:00Z",
+    "ends_at": "2025-06-29T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1195-06-22-25-06-28-25-summer-solstice-light/47066?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1196,
+    "title": "Nature's Abstracts in Color",
+    "slug": "2025-06-29-nature-s-abstracts-in-color",
+    "starts_at": "2025-06-29T14:00:00Z",
+    "ends_at": "2025-07-06T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1195-06-22-25-06-28-25-natures-abstracts-in-color/47177?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1197,
+    "title": "Alpine Landscapes",
+    "slug": "2025-07-06-alpine-landscapes",
+    "starts_at": "2025-07-06T14:00:00Z",
+    "ends_at": "2025-07-13T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1197-07-06-25-07-12-25-alpine-landscapes/47276?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1198,
+    "title": "Water Droplets",
+    "slug": "2025-07-13-water-droplets",
+    "starts_at": "2025-07-13T14:00:00Z",
+    "ends_at": "2025-07-20T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1198-07-13-25-07-19-25-water-droplets/47361?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1199,
+    "title": "Nature at Night",
+    "slug": "2025-07-20-nature-at-night",
+    "starts_at": "2025-07-20T14:00:00Z",
+    "ends_at": "2025-07-27T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1199-07-20-25-07-26-25-nature-at-night/47450?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1200,
+    "title": "Shadows in Nature",
+    "slug": "2025-07-27-shadows-in-nature",
+    "starts_at": "2025-07-27T14:00:00Z",
+    "ends_at": "2025-08-03T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1200-07-27-25-08-02-25-shadows-in-nature/47536?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1201,
+    "title": "Pollinators in Action",
+    "slug": "2025-08-03-pollinators-in-action",
+    "starts_at": "2025-08-03T14:00:00Z",
+    "ends_at": "2025-08-10T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1201-08-03-25-08-09-25-pollinators-in-action/47606?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1202,
+    "title": "Coastal Patterns",
+    "slug": "2025-08-10-coastal-patterns",
+    "starts_at": "2025-08-10T14:00:00Z",
+    "ends_at": "2025-08-17T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1202-08-10-25-08-16-25-coastal-patterns/47702?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1203,
+    "title": "The Forest Floor",
+    "slug": "2025-08-17-the-forest-floor",
+    "starts_at": "2025-08-17T14:00:00Z",
+    "ends_at": "2025-08-24T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1203-08-17-25-08-23-25-the-forest-floor/47772?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1204,
+    "title": "Desert After Dark",
+    "slug": "2025-08-24-desert-after-dark",
+    "starts_at": "2025-08-24T14:00:00Z",
+    "ends_at": "2025-08-31T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1204-08-24-25-08-30-25-desert-after-dark/47876?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1205,
+    "title": "Seasonal Transition: Summer to Autumn",
+    "slug": "2025-08-31-seasonal-transition-summer-to-autumn",
+    "starts_at": "2025-08-31T14:00:00Z",
+    "ends_at": "2025-09-07T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1205-08-31-25-09-06-25-seasonal-transition-summer-to-autumn/47951?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1206,
+    "title": "The Hidden World of Fungi",
+    "slug": "2025-09-07-the-hidden-world-of-fungi",
+    "starts_at": "2025-09-07T14:00:00Z",
+    "ends_at": "2025-09-14T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1206-09-07-25-09-13-25-the-hidden-world-of-fungi/48042?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1207,
+    "title": "Nature's Mosaics",
+    "slug": "2025-09-14-nature-s-mosaics",
+    "starts_at": "2025-09-14T14:00:00Z",
+    "ends_at": "2025-09-21T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1207-09-14-25-09-20-25-natures-mosaics/48111?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1208,
+    "title": "Stories in the Sand/Snow/Mud",
+    "slug": "2025-09-21-stories-in-the-sand-snow-mud",
+    "starts_at": "2025-09-21T14:00:00Z",
+    "ends_at": "2025-09-28T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1208-09-21-25-09-27-25-stories-in-the-sand-snow-mud/48173?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1209,
+    "title": "Autumn's Golden Palette",
+    "slug": "2025-09-28-autumn-s-golden-palette",
+    "starts_at": "2025-09-28T14:00:00Z",
+    "ends_at": "2025-10-05T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1209-09-28-25-10-04-25-autumns-golden-palette/48226?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1210,
+    "title": "Weathered Wood",
+    "slug": "2025-10-05-weathered-wood",
+    "starts_at": "2025-10-05T14:00:00Z",
+    "ends_at": "2025-10-12T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1210-10-05-25-10-11-25-weathered-wood/48303?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1211,
+    "title": "Mammal Moments",
+    "slug": "2025-10-12-mammal-moments",
+    "starts_at": "2025-10-12T14:00:00Z",
+    "ends_at": "2025-10-19T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1212-10-19-25-10-25-25-ethereal-fog-mist/48430?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1212,
+    "title": "Ethereal Fog & Mist",
+    "slug": "2025-10-19-ethereal-fog-and-mist",
+    "starts_at": "2025-10-19T14:00:00Z",
+    "ends_at": "2025-10-26T14:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1211-10-12-25-10-18-25-mammal-moments/48370?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1213,
+    "title": "Roots and Branches",
+    "slug": "2025-10-26-roots-and-branches",
+    "starts_at": "2025-10-26T14:00:00Z",
+    "ends_at": "2025-11-02T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1213-10-26-25-11-01-25-roots-and-branches/48528?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1214,
+    "title": "Life in a Dead Tree",
+    "slug": "2025-11-02-life-in-a-dead-tree",
+    "starts_at": "2025-11-02T15:00:00Z",
+    "ends_at": "2025-11-09T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1214-11-02-25-11-08-25-life-in-a-dead-tree/48597?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1215,
+    "title": "Mountain Moods",
+    "slug": "2025-11-09-mountain-moods",
+    "starts_at": "2025-11-09T15:00:00Z",
+    "ends_at": "2025-11-16T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1215-11-09-25-11-015-25-mountain-moods/48672?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1216,
+    "title": "Creative Focus: Depth of Field Play",
+    "slug": "2025-11-16-creative-focus-depth-of-field-play",
+    "starts_at": "2025-11-16T15:00:00Z",
+    "ends_at": "2025-11-23T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1216-11-16-25-11-22-25-creative-focus-depth-of-field-play/48739?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1217,
+    "title": "Nature's Smallest Survivors",
+    "slug": "2025-11-23-nature-s-smallest-survivors",
+    "starts_at": "2025-11-23T15:00:00Z",
+    "ends_at": "2025-11-30T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1217-11-23-25-11-29-25-natures-smallest-survivors/48816?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1218,
+    "title": "Holiday Greetings",
+    "slug": "2025-11-30-holiday-greetings",
+    "starts_at": "2025-11-30T15:00:00Z",
+    "ends_at": "2025-12-07T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1218-11-20-25-12-06-25-holiday-greetings/48887?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1219,
+    "title": "Frozen Abstracts",
+    "slug": "2025-12-07-frozen-abstracts",
+    "starts_at": "2025-12-07T15:00:00Z",
+    "ends_at": "2025-12-14T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1219-12-07-25-12-13-25-frozen-abstracts/48968?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1220,
+    "title": "Year-End Showcase",
+    "slug": "2025-12-14-year-end-showcase",
+    "starts_at": "2025-12-14T15:00:00Z",
+    "ends_at": "2026-01-04T15:00:00Z",
+    "url": "https://community.naturephotographers.network/t/weekly-challenge-1220-12-14-25-01-03-26-year-end-showcase/49035?u=mark_seaver"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1221,
+    "title": "Fresh Snowfall",
+    "slug": "2026-01-04-fresh-snowfall",
+    "starts_at": "2026-01-04T15:00:00Z",
+    "ends_at": "2026-01-11T15:00:00Z",
+    "url": null
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1222,
+    "title": "Black and White Wildlife",
+    "slug": "2026-01-11-black-and-white-wildlife",
+    "starts_at": "2026-01-11T15:00:00Z",
+    "ends_at": "2026-01-18T15:00:00Z",
+    "url": null
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1223,
+    "title": "The Beauty of Bark",
+    "slug": "2026-01-18-the-beauty-of-bark",
+    "starts_at": "2026-01-18T15:00:00Z",
+    "ends_at": "2026-01-25T15:00:00Z",
+    "url": null
+  },
+  {
+    "wordpress_challenge_id": "21403",
+    "number": 1224,
+    "title": "Light Beams & Crepuscular Rays",
+    "slug": "2026-01-25-light-beams-and-crepuscular-rays",
+    "starts_at": "2026-01-25T15:00:00Z",
+    "ends_at": "2026-02-01T15:00:00Z",
+    "url": "https://www.naturephotographers.network/weekly-challenge/10456/"
+  },
+  {
+    "wordpress_challenge_id": "21408",
+    "number": 1225,
+    "title": "Reptiles & Amphibians",
+    "slug": "2026-02-01-reptiles-and-amphibians",
+    "starts_at": "2026-02-01T15:00:00Z",
+    "ends_at": "2026-02-08T15:00:00Z",
+    "url": "https://www.naturephotographers.network/weekly-challenge/1225/"
+  },
+  {
+    "wordpress_challenge_id": "21409",
+    "number": 1226,
+    "title": "Nature's Architecture",
+    "slug": "2026-02-08-nature-s-architecture",
+    "starts_at": "2026-02-08T15:00:00Z",
+    "ends_at": "2026-02-15T15:00:00Z",
+    "url": "https://www.naturephotographers.network/weekly-challenge/1226/"
+  },
+  {
+    "wordpress_challenge_id": "21410",
+    "number": 1227,
+    "title": "Shadow Play in Macro",
+    "slug": "2026-02-15-shadow-play-in-macro",
+    "starts_at": "2026-02-15T15:00:00Z",
+    "ends_at": "2026-02-22T15:00:00Z",
+    "url": "https://www.naturephotographers.network/weekly-challenge/1227/"
+  },
+  {
+    "wordpress_challenge_id": "21411",
+    "number": 1228,
+    "title": "Sculpted by Water",
+    "slug": "2026-02-22-sculpted-by-water",
+    "starts_at": "2026-02-22T15:00:00Z",
+    "ends_at": "2026-03-01T15:00:00Z",
+    "url": "https://www.naturephotographers.network/weekly-challenge/1228/"
+  },
+  {
+    "wordpress_challenge_id": "21412",
+    "number": 1229,
+    "title": "Seasonal Transition: Winter to Spring",
+    "slug": "2026-03-01-seasonal-transition-winter-to-spring",
+    "starts_at": "2026-03-01T15:00:00Z",
+    "ends_at": "2026-03-08T14:00:00Z",
+    "url": "https://www.naturephotographers.network/weekly-challenge/1229/"
+  },
+  {
+    "wordpress_challenge_id": "21413",
+    "number": 1230,
+    "title": "Avian Behavior",
+    "slug": "2026-03-08-avian-behavior",
+    "starts_at": "2026-03-08T14:00:00Z",
+    "ends_at": "2026-03-15T14:00:00Z",
+    "url": "https://www.naturephotographers.network/weekly-challenge/1230/"
+  },
+  {
+    "wordpress_challenge_id": "21414",
+    "number": 1231,
+    "title": "The Unseen Garden: Mosses & Lichens",
+    "slug": "2026-03-15-the-unseen-garden-mosses-and-lichens",
+    "starts_at": "2026-03-15T14:00:00Z",
+    "ends_at": "2026-03-22T14:00:00Z",
+    "url": "https://www.naturephotographers.network/weekly-challenge/1231/"
+  },
+  {
+    "wordpress_challenge_id": "21415",
+    "number": 1232,
+    "title": "Dappled Light in the Woods",
+    "slug": "2026-03-22-dappled-light-in-the-woods",
+    "starts_at": "2026-03-22T14:00:00Z",
+    "ends_at": "2026-03-29T14:00:00Z",
+    "url": "https://www.naturephotographers.network/weekly-challenge/1232/"
+  },
+  {
+    "wordpress_challenge_id": "21416",
+    "number": 1233,
+    "title": "Spring's First Blooms (Macro Focus)",
+    "slug": "2026-03-29-spring-s-first-blooms-macro-focus",
+    "starts_at": "2026-03-29T14:00:00Z",
+    "ends_at": "2026-04-05T14:00:00Z",
+    "url": "https://www.naturephotographers.network/weekly-challenge/1233/"
+  },
+  {
+    "wordpress_challenge_id": "21417",
+    "number": 1234,
+    "title": "The World Underfoot (Looking Down)",
+    "slug": "2026-04-05-the-world-underfoot-looking-down",
+    "starts_at": "2026-04-05T14:00:00Z",
+    "ends_at": "2026-04-12T14:00:00Z",
+    "url": "https://www.naturephotographers.network/weekly-challenge/1234/"
+  },
+  {
+    "wordpress_challenge_id": "21418",
+    "number": 1235,
+    "title": "Urban Wildlife Encounters",
+    "slug": "2026-04-12-urban-wildlife-encounters",
+    "starts_at": "2026-04-12T14:00:00Z",
+    "ends_at": "2026-04-19T14:00:00Z",
+    "url": "https://www.naturephotographers.network/weekly-challenge/1235/"
+  },
+  {
+    "wordpress_challenge_id": "21419",
+    "number": 1236,
+    "title": "Nature's Rhythms",
+    "slug": "2026-04-19-nature-s-rhythms",
+    "starts_at": "2026-04-19T14:00:00Z",
+    "ends_at": "2026-04-26T14:00:00Z",
+    "url": "https://www.naturephotographers.network/weekly-challenge/1236/"
+  },
+  {
+    "wordpress_challenge_id": "21420",
+    "number": 1237,
+    "title": "Botanical Close-Ups",
+    "slug": "2026-04-26-botanical-close-ups",
+    "starts_at": "2026-04-26T14:00:00Z",
+    "ends_at": "2026-05-03T14:00:00Z",
+    "url": "https://www.naturephotographers.network/weekly-challenge/1237/"
+  },
+  {
+    "wordpress_challenge_id": "21421",
+    "number": 1238,
+    "title": "Ecosystem Edges (Transition Zones)",
+    "slug": "2026-05-03-ecosystem-edges-transition-zones",
+    "starts_at": "2026-05-03T14:00:00Z",
+    "ends_at": "2026-05-10T14:00:00Z",
+    "url": "https://www.naturephotographers.network/weekly-challenge/1238/"
+  },
+  {
+    "wordpress_challenge_id": "21422",
+    "number": 1239,
+    "title": "The Power of Wind (Visual Evidence)",
+    "slug": "2026-05-10-the-power-of-wind-visual-evidence",
+    "starts_at": "2026-05-10T14:00:00Z",
+    "ends_at": "2026-05-17T14:00:00Z",
+    "url": "https://www.naturephotographers.network/weekly-challenge/1239/"
+  },
+  {
+    "wordpress_challenge_id": "21423",
+    "number": 1240,
+    "title": "Tidal Treasures",
+    "slug": "2026-05-17-tidal-treasures",
+    "starts_at": "2026-05-17T14:00:00Z",
+    "ends_at": "2026-05-24T14:00:00Z",
+    "url": "https://www.naturephotographers.network/weekly-challenge/1240/"
+  },
+  {
+    "wordpress_challenge_id": "21424",
+    "number": 1241,
+    "title": "Celebrating Biodiversity",
+    "slug": "2026-05-24-celebrating-biodiversity",
+    "starts_at": "2026-05-24T14:00:00Z",
+    "ends_at": "2026-05-31T14:00:00Z",
+    "url": "https://www.naturephotographers.network/weekly-challenge/1241/"
+  },
+  {
+    "wordpress_challenge_id": "21425",
+    "number": 1242,
+    "title": "Under the Canopy",
+    "slug": "2026-05-31-under-the-canopy",
+    "starts_at": "2026-05-31T14:00:00Z",
+    "ends_at": "2026-06-07T14:00:00Z",
+    "url": "https://www.naturephotographers.network/weekly-challenge/1242/"
+  },
+  {
+    "wordpress_challenge_id": "21426",
+    "number": 1243,
+    "title": "Silhouettes with Color",
+    "slug": "2026-06-07-silhouettes-with-color",
+    "starts_at": "2026-06-07T14:00:00Z",
+    "ends_at": "2026-06-14T14:00:00Z",
+    "url": "https://www.naturephotographers.network/weekly-challenge/1243/"
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1244,
+    "title": "Insect Portraits",
+    "slug": "2026-06-14-insect-portraits",
+    "starts_at": "2026-06-14T14:00:00Z",
+    "ends_at": "2026-06-21T14:00:00Z",
+    "url": null
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1245,
+    "title": "Summer Skies",
+    "slug": "2026-06-21-summer-skies",
+    "starts_at": "2026-06-21T14:00:00Z",
+    "ends_at": "2026-06-28T14:00:00Z",
+    "url": null
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1246,
+    "title": "Reclaimed by Nature",
+    "slug": "2026-06-28-reclaimed-by-nature",
+    "starts_at": "2026-06-28T14:00:00Z",
+    "ends_at": "2026-07-05T14:00:00Z",
+    "url": null
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1247,
+    "title": "Aquatic Life (Freshwater Focus)",
+    "slug": "2026-07-05-aquatic-life-freshwater-focus",
+    "starts_at": "2026-07-05T14:00:00Z",
+    "ends_at": "2026-07-12T14:00:00Z",
+    "url": null
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1248,
+    "title": "Geological Wonders",
+    "slug": "2026-07-12-geological-wonders",
+    "starts_at": "2026-07-12T14:00:00Z",
+    "ends_at": "2026-07-19T14:00:00Z",
+    "url": null
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1249,
+    "title": "Environmental Storytelling",
+    "slug": "2026-07-19-environmental-storytelling",
+    "starts_at": "2026-07-19T14:00:00Z",
+    "ends_at": "2026-07-26T14:00:00Z",
+    "url": null
+  },
+  {
+    "wordpress_challenge_id": null,
+    "number": 1250,
+    "title": "The Sound of Silence",
+    "slug": "2026-07-26-the-sound-of-silence",
+    "starts_at": "2026-07-26T14:00:00Z",
+    "ends_at": "2026-08-02T14:00:00Z",
+    "url": null
+  }
+]

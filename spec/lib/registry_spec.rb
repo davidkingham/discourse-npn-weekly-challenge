@@ -3,7 +3,13 @@
 require "rails_helper"
 
 describe DiscourseNpnWeeklyChallenge::Registry do
-  before { described_class.clear_cache }
+  before do
+    described_class.clear_cache
+    # Isolate the manual-override layer: most specs here exercise the JSON
+    # setting, so neutralize the shipped seed and the WordPress store.
+    allow(described_class).to receive(:seed_challenges).and_return([])
+    allow(DiscourseNpnWeeklyChallenge::ChallengeStore).to receive(:all).and_return([])
+  end
   after { described_class.clear_cache }
 
   def set_registry(entries)
@@ -104,6 +110,64 @@ describe DiscourseNpnWeeklyChallenge::Registry do
       expect(bare.wordpress_challenge_id).to be_nil
       expect(bare.ends_at).to be_nil
       expect(bare.url).to be_nil
+    end
+  end
+
+  describe "merging seed, store, and manual layers" do
+    def challenge(slug:, starts_at:, title: "A Challenge")
+      DiscourseNpnWeeklyChallenge::Challenge.from_hash(
+        "title" => title,
+        "slug" => slug,
+        "starts_at" => starts_at,
+      )
+    end
+
+    it "combines all three sources, newest first" do
+      allow(described_class).to receive(:seed_challenges).and_return(
+        [challenge(slug: "seed-week", starts_at: "2026-01-01T00:00:00Z")],
+      )
+      allow(DiscourseNpnWeeklyChallenge::ChallengeStore).to receive(:all).and_return(
+        [{ "title" => "Stored", "slug" => "store-week", "starts_at" => "2026-03-01T00:00:00Z" }],
+      )
+      set_registry([entry(slug: "manual-week", starts_at: "2026-02-01T00:00:00Z")])
+
+      expect(described_class.all.map(&:slug)).to eq(%w[store-week manual-week seed-week])
+    end
+
+    it "lets the store override the seed on the same slug, and manual override both" do
+      allow(described_class).to receive(:seed_challenges).and_return(
+        [challenge(slug: "shared", starts_at: "2026-01-01T00:00:00Z", title: "From seed")],
+      )
+      allow(DiscourseNpnWeeklyChallenge::ChallengeStore).to receive(:all).and_return(
+        [{ "title" => "From store", "slug" => "shared", "starts_at" => "2026-01-01T00:00:00Z" }],
+      )
+
+      expect(described_class.all.map(&:title)).to eq(["From store"])
+
+      set_registry(
+        [entry(slug: "shared", starts_at: "2026-01-01T00:00:00Z", title: "From manual")],
+      )
+
+      expect(described_class.all.map(&:title)).to eq(["From manual"])
+    end
+
+    it "still serves the seed when the manual JSON is malformed" do
+      allow(described_class).to receive(:seed_challenges).and_return(
+        [challenge(slug: "seed-week", starts_at: "2026-01-01T00:00:00Z")],
+      )
+      set_registry("[{not json")
+
+      expect(described_class.all.map(&:slug)).to eq(["seed-week"])
+    end
+
+    it "picks up new store contents without a setting change" do
+      allow(DiscourseNpnWeeklyChallenge::ChallengeStore).to receive(:all).and_return([])
+      expect(described_class.all).to eq([])
+
+      allow(DiscourseNpnWeeklyChallenge::ChallengeStore).to receive(:all).and_return(
+        [{ "title" => "New", "slug" => "fresh", "starts_at" => "2026-04-01T00:00:00Z" }],
+      )
+      expect(described_class.all.map(&:slug)).to eq(["fresh"])
     end
   end
 

@@ -1,2 +1,9 @@
 inherit_gem:
   rubocop-discourse: stree-compat.yml
+
+# scripts/ holds one-off maintenance scripts (the seed generator) that run
+# standalone, not as loaded plugin code, so the plugin-namespacing cops and
+# frozen-string requirement don't apply.
+AllCops:
+  Exclude:
+    - "scripts/**/*"

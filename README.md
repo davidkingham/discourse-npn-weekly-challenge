@@ -35,13 +35,56 @@ no changes to existing topics.
 | `npn_weekly_challenges_enabled` | off | Master switch; all routes 404 when off |
 | `npn_weekly_challenge_tag_name` | `weekly-challenge` | Tag(s) identifying legacy challenge topics (topics with any of them match) |
 | `npn_weekly_challenge_category_ids` | _(blank)_ | Optional category allowlist; blank = all categories |
-| `npn_weekly_challenge_registry_json` | `[]` | The challenge registry (see below) |
+| `npn_weekly_challenge_wordpress_api_url` | _(blank)_ | WordPress Weekly Challenge REST endpoint; blank disables the sync |
+| `npn_weekly_challenge_registry_json` | `[]` | Manual overrides merged on top of the seed and sync (see below) |
 | `npn_weekly_challenge_page_size` | 30 | Entries per page on a challenge page |
 
-## Challenge registry
+## Where challenge data comes from
 
-v1 sources challenge data from the `npn_weekly_challenge_registry_json` site
-setting — a JSON array, one object per challenge:
+`DiscourseNpnWeeklyChallenge::Registry` is the only code that knows where
+challenges come from. It merges three layers, deduped by `slug` (a later layer
+wins on a conflict):
+
+1. **Shipped seed** — `config/weekly_challenge_seed.json`, the historical
+   baseline (challenge #855 → mid-2026) backfilled from the community's "Past
+   and future challenges" topic. Regenerate it with `scripts/generate_seed.rb`
+   (see that file's header). This is the source of truth for everything that
+   predates the WordPress feed.
+2. **WordPress sync** — `DiscourseNpnWeeklyChallenge::ChallengeStore`, a durable
+   `PluginStore` the daily job fills from WordPress (see below). The WordPress
+   feed only exposes a rolling window of recent challenges, so the sync
+   accumulates them: once a challenge is stored it stays in the archive even
+   after WordPress drops it.
+3. **Manual override** — the `npn_weekly_challenge_registry_json` setting, a JSON
+   array for corrections and one-offs that wins over the other two.
+
+Any layer that can't be read (missing seed, corrupt store, malformed JSON)
+degrades to "contributes nothing", logs a warning, and never errors the site.
+
+### WordPress sync
+
+When `npn_weekly_challenge_wordpress_api_url` points at the Weekly Challenge
+post type (e.g. `https://example.com/wp-json/wp/v2/weekly-challenge`), the
+`Jobs::NpnWeeklyChallengeSync` scheduled job runs daily, fetches the collection
+(SSRF-protected, short timeout, never raises), and upserts each challenge into
+the store. Weeks already covered by the shipped seed are skipped, so the store
+only holds genuine deltas. Each post maps as: `acf.wc_title` → title,
+`acf.wc_dates` → start/end timestamps, `id` →
+`wordpress_challenge_id` (which is what new submission topics carry, so modern
+entries match by custom field), `link` → url.
+
+### Challenge timing
+
+A challenge starts on its (Sunday) start date at **08:00 America/Denver** and
+runs until the next challenge begins. `DiscourseNpnWeeklyChallenge::ChallengeTime`
+turns the WordPress display dates into DST-aware UTC timestamps, matching how
+the seed was generated. The 8am-local anchor is deliberate: legacy entries are
+matched by date window, so it keeps a Sunday-morning submission inside its own
+week.
+
+### Override / entry format
+
+Each object in `npn_weekly_challenge_registry_json` (and each seed record) uses:
 
 ```json
 [
@@ -49,45 +92,38 @@ setting — a JSON array, one object per challenge:
     "wordpress_challenge_id": "123",
     "title": "Nature's Architecture",
     "slug": "2026-06-09-natures-architecture",
-    "starts_at": "2026-06-09T00:00:00Z",
-    "ends_at": "2026-06-16T00:00:00Z",
+    "starts_at": "2026-06-09T14:00:00Z",
+    "ends_at": "2026-06-16T14:00:00Z",
     "url": "https://example.com/weekly-challenge/natures-architecture"
   }
 ]
 ```
 
-Field notes:
-
 - `title`, `slug`, and `starts_at` are required; entries missing any of them
   are skipped (with a warning in the logs).
-- `slug` must be lowercase letters, digits, and hyphens — it becomes the URL.
-- `wordpress_challenge_id` is the WordPress post id of the challenge (the
-  same id discourse-npn-submissions stores on new submission topics). Omit it
+- `slug` must be lowercase letters, digits, and hyphens — it becomes the URL,
+  and it's the key layers merge on (use the seed's `YYYY-MM-DD-title` slug to
+  override a specific week).
+- `wordpress_challenge_id` is the WordPress post id of the challenge. Omit it
   for old challenges that predate the submission plugin; those match by date
   only.
-- `starts_at` / `ends_at` are ISO 8601 timestamps; use UTC (`Z`) unless the
-  challenge genuinely rolls over in another timezone.
+- `starts_at` / `ends_at` are ISO 8601 timestamps; use UTC (`Z`).
 - `url` links to the original challenge prompt; omit if there isn't one.
-- Malformed JSON disables the archive list (it renders empty) and logs a
-  warning — it never errors the site.
-
-The registry is parsed and cached per-process and re-parsed whenever the
-setting changes.
-
-`DiscourseNpnWeeklyChallenge::Registry` is the only code that knows where
-challenge data comes from. A future WordPress sync replaces the inside of
-`Registry.all` (e.g. with a cached HTTP fetch like the one in
-discourse-npn-submissions' `WeeklyChallengeInfo`) without touching the
-controller, query, or frontend.
+- Malformed JSON disables only the override layer (it logs a warning); the seed
+  and sync still render.
 
 ## Local testing
 
-1. Enable `npn_weekly_challenges_enabled`.
-2. Paste a registry array into `npn_weekly_challenge_registry_json` (the
-   example above works — adjust dates to bracket some existing tagged topics).
-3. Ensure the `weekly-challenge` tag exists and matches
-   `npn_weekly_challenge_tag_name`.
-4. Visit `/weekly-challenges`.
+1. Enable `npn_weekly_challenges_enabled`. The shipped seed already populates
+   `/weekly-challenges` with the full challenge history — no setup needed to see
+   the list.
+2. Ensure the `weekly-challenge` tag exists and matches
+   `npn_weekly_challenge_tag_name` so legacy tagged topics match by date window.
+3. To test the sync, set `npn_weekly_challenge_wordpress_api_url` and run the job
+   from the rails console:
+   `Jobs::NpnWeeklyChallengeSync.new.execute({})` (or
+   `DiscourseNpnWeeklyChallenge::WordpressSync.refresh`).
+4. For ad-hoc challenges, add an override to `npn_weekly_challenge_registry_json`.
 
 To exercise the custom-field path without the submission plugin, attach the
 field to a topic from the rails console:
@@ -115,8 +151,12 @@ LOAD_PLUGINS=1 bin/rspec plugins/discourse-npn-weekly-challenge/spec
   its own `ends_at` is earlier, so no topic can fall between two challenges
   (or into two at once). Anything tagged during a hiatus attaches to the
   challenge before it.
-- **The registry is manual.** Challenges appear only after being added to the
-  setting. The structure is designed to be replaced by a WordPress sync.
+- **The seed has a horizon.** It covers through its generation date; beyond that
+  the archive depends on the WordPress sync (or manual overrides). Regenerate the
+  seed periodically, or keep the sync configured.
+- **Sync needs WordPress.** New challenges appear automatically only while
+  `npn_weekly_challenge_wordpress_api_url` is set and reachable; otherwise add
+  them via the manual override.
 - **Entry counts are per-viewer.** The count reflects what the current user
   may see, so staff may see higher counts than anonymous visitors.
 
