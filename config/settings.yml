@@ -6,7 +6,7 @@ plugins:
   npn_weekly_challenge_tag_name:
     default: "weekly-challenge"
     type: tag_list
-    client: false
+    client: true
 
   npn_weekly_challenge_category_ids:
     default: ""

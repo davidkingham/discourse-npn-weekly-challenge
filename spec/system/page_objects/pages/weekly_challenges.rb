@@ -13,6 +13,38 @@ module PageObjects
         self
       end
 
+      def visit_tag(name)
+        page.visit("/tag/#{name}")
+        self
+      end
+
+      def visit_tag_intersection(name, additional_name)
+        page.visit("/tags/intersection/#{name}/#{additional_name}")
+        self
+      end
+
+      def select_challenge(title)
+        page.find(".npn-challenge-selector select").select(title)
+        self
+      end
+
+      # The first option is the placeholder; the rest are challenges.
+      def challenge_selector_options
+        page.all(".npn-challenge-selector option").drop(1).map(&:text)
+      end
+
+      def has_tag_page?
+        page.has_css?("body.tags-page")
+      end
+
+      def has_challenge_selector?
+        page.has_css?(".npn-challenge-selector")
+      end
+
+      def has_no_challenge_selector?
+        page.has_no_css?(".npn-challenge-selector")
+      end
+
       def open_challenge(title)
         page.find(".npn-weekly-challenges__link", text: title).click
         self

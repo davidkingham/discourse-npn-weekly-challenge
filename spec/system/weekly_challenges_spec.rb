@@ -83,4 +83,54 @@ describe "Weekly challenges" do
     expect(weekly_challenges_page).to have_challenge_title("Empty Week")
     expect(weekly_challenges_page).to have_empty_state
   end
+
+  describe "challenge selector on the tag page" do
+    fab!(:other_tag) { Fabricate(:tag, name: "landscape") }
+
+    it "lists challenges newest first and navigates to the chosen challenge" do
+      weekly_challenges_page.visit_tag("weekly-challenge")
+
+      expect(weekly_challenges_page).to have_challenge_selector
+      expect(weekly_challenges_page.challenge_selector_options).to eq(
+        ["Quiet Geometry", "Empty Week"],
+      )
+
+      weekly_challenges_page.select_challenge("Quiet Geometry")
+
+      expect(weekly_challenges_page).to have_challenge_title("Quiet Geometry")
+      expect(page).to have_current_path("/weekly-challenges/2026-06-01-quiet-geometry")
+    end
+
+    it "does not show the selector on unrelated tag pages" do
+      weekly_challenges_page.visit_tag("landscape")
+
+      expect(weekly_challenges_page).to have_tag_page
+      expect(weekly_challenges_page).to have_no_challenge_selector
+    end
+
+    it "does not show the selector on tag intersection pages" do
+      weekly_challenges_page.visit_tag_intersection("weekly-challenge", "landscape")
+
+      expect(weekly_challenges_page).to have_tag_page
+      expect(weekly_challenges_page).to have_no_challenge_selector
+    end
+
+    it "does not show the selector when the plugin is disabled" do
+      SiteSetting.npn_weekly_challenges_enabled = false
+
+      weekly_challenges_page.visit_tag("weekly-challenge")
+
+      expect(weekly_challenges_page).to have_tag_page
+      expect(weekly_challenges_page).to have_no_challenge_selector
+    end
+
+    it "does not show the selector when no challenges are published" do
+      SiteSetting.npn_weekly_challenge_registry_json = "[]"
+
+      weekly_challenges_page.visit_tag("weekly-challenge")
+
+      expect(weekly_challenges_page).to have_tag_page
+      expect(weekly_challenges_page).to have_no_challenge_selector
+    end
+  end
 end

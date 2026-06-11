@@ -12,3 +12,6 @@ en:
       no_challenges: "No weekly challenges have been published yet."
       load_more: "Load more"
       back_to_list: "All weekly challenges"
+      challenge_selector:
+        label: "View a challenge"
+        placeholder: "Select a challenge"
