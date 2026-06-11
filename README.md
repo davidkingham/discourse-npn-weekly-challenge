@@ -114,7 +114,12 @@ Each object in `npn_weekly_challenge_registry_json` (and each seed record) uses:
   for old challenges that predate the submission plugin; those match by date
   only.
 - `starts_at` / `ends_at` are ISO 8601 timestamps; use UTC (`Z`).
-- `url` links to the original challenge prompt; omit if there isn't one.
+- `description` is the challenge prompt shown on the challenge page. The
+  WordPress sync pulls it from `acf.wc_description`; the seed uses WordPress's
+  text where available and the topic's one-liner otherwise (the oldest
+  challenges have none and fall back to showing the `url` link).
+- `url` links to the original challenge prompt; shown only when there's no
+  `description`. Omit if there isn't one.
 - Malformed JSON disables only the override layer (it logs a warning); the seed
   and sync still render.
 

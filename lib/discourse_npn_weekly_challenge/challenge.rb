@@ -7,8 +7,9 @@ module DiscourseNpnWeeklyChallenge
   class Challenge
     SLUG_PATTERN = /\A[a-z0-9][a-z0-9\-]*\z/
     DEFAULT_DURATION = 7.days
+    MAX_DESCRIPTION = 2000
 
-    attr_reader :wordpress_challenge_id, :title, :slug, :starts_at, :ends_at, :url
+    attr_reader :wordpress_challenge_id, :title, :slug, :starts_at, :ends_at, :url, :description
 
     # Build a Challenge from one parsed registry entry, or return nil when the
     # entry is unusable (missing/invalid title, slug, or starts_at). Optional
@@ -29,7 +30,14 @@ module DiscourseNpnWeeklyChallenge
         starts_at: starts_at,
         ends_at: parse_time(hash["ends_at"]),
         url: normalize_url(hash["url"]),
+        description: normalize_description(hash["description"]),
       )
+    end
+
+    def self.normalize_description(value)
+      text = value.to_s.strip
+      return nil if text.blank?
+      text.length > MAX_DESCRIPTION ? "#{text[0, MAX_DESCRIPTION].rstrip}…" : text
     end
 
     def self.parse_time(value)
@@ -58,13 +66,14 @@ module DiscourseNpnWeeklyChallenge
       nil
     end
 
-    def initialize(wordpress_challenge_id:, title:, slug:, starts_at:, ends_at:, url:)
+    def initialize(wordpress_challenge_id:, title:, slug:, starts_at:, ends_at:, url:, description:)
       @wordpress_challenge_id = wordpress_challenge_id
       @title = title
       @slug = slug
       @starts_at = starts_at
       @ends_at = ends_at
       @url = url
+      @description = description
       freeze
     end
 

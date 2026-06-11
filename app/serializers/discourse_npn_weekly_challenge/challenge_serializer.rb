@@ -2,6 +2,6 @@
 
 module DiscourseNpnWeeklyChallenge
   class ChallengeSerializer < ApplicationSerializer
-    attributes :wordpress_challenge_id, :title, :slug, :starts_at, :ends_at, :url
+    attributes :wordpress_challenge_id, :title, :slug, :starts_at, :ends_at, :url, :description
   end
 end

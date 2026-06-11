@@ -30,6 +30,10 @@ describe "weekly challenge seed file" do # rubocop:disable RSpec/DescribeClass
     starts.each_cons(2) { |a, b| expect(b).to be > a }
   end
 
+  it "carries descriptions for the recent challenges" do
+    expect(challenges.count { |c| c.description.present? }).to be > 100
+  end
+
   it "anchors every start at 08:00 America/Denver" do
     zone = DiscourseNpnWeeklyChallenge::ChallengeTime.zone
     offenders =

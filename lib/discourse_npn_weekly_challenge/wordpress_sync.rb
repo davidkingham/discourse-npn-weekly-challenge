@@ -20,6 +20,7 @@ module DiscourseNpnWeeklyChallenge
     HTTP_TIMEOUT = 5
     PER_PAGE = 100
     MAX_TITLE = 200
+    MAX_DESCRIPTION = 2000
     # The real feed (a few dozen challenges) is well under 100KB; this only
     # bounds memory if a wrong URL or misbehaving upstream streams something huge.
     MAX_BYTES = 5.megabytes
@@ -79,7 +80,8 @@ module DiscourseNpnWeeklyChallenge
         "slug" => "#{date.strftime('%Y-%m-%d')}-#{slugify(title)}",
         "starts_at" => starts_at.utc.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "ends_at" => ChallengeTime.default_end(starts_at)&.utc&.strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "url" => clean_url(post["link"])
+        "url" => clean_url(post["link"]),
+        "description" => clean(acf["wc_description"], MAX_DESCRIPTION)
       }
     end
 

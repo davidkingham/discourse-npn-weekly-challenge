@@ -35,6 +35,23 @@ def slugify(str)
   str.downcase.gsub("&", " and ").gsub(/[^a-z0-9]+/, "-").gsub(/\A-+|-+\z/, "")
 end
 
+# Decode the handful of HTML entities WordPress/Discourse emit in challenge
+# descriptions and collapse whitespace. Stdlib only, so this covers the common
+# cases rather than every named entity. Returns nil for blank input.
+ENTITIES = {
+  "&amp;" => "&", "&#038;" => "&", "&#38;" => "&",
+  "&lt;" => "<", "&gt;" => ">", "&quot;" => '"',
+  "&#8217;" => "’", "&#8216;" => "‘", "&#8211;" => "–", "&#8212;" => "—",
+  "&#8230;" => "…", "&nbsp;" => " ", "&#160;" => " "
+}.freeze
+
+def clean_text(value)
+  text = value.to_s
+  ENTITIES.each { |entity, char| text = text.gsub(entity, char) }
+  text = text.gsub(/\s+/, " ").strip
+  text.empty? ? nil : text
+end
+
 # "12/14/25" -> Date. Two-digit year -> 2000s.
 def parse_md_y(str)
   m, d, y = str.strip.split("/").map(&:to_i)
@@ -67,22 +84,27 @@ lines.each do |line|
     start_token = cells[0].split(/[–-]/).first
     entries << {
       number: nil, title: cells[1].strip,
-      start_date: parse_mon_day(start_token, 2026), url: nil
+      start_date: parse_mon_day(start_token, 2026), url: nil,
+      description: clean_text(cells[2])
     }
   elsif line.start_with?("|")
-    # Format B: |Dates | Challenge | [num](/tag/..) | [desc](url)|  (4 columns)
+    # Format B: |Dates | Challenge | [num](/tag/..) | [desc text](url)|  (4 columns)
     cells = line.split("|").map(&:strip).reject(&:empty?)
     next if cells.size < 4
     next if cells[0].downcase == "dates" || cells[0].start_with?("-")
     start_token = cells[0].split(/[–-]/).first
     num = cells[2][/\[(\d+)\]/, 1]
     url = cells[3][/\((https?:\/\/[^)]+|\/t\/[^)]+)\)/, 1]
+    # The description cell's link *text* is the actual description.
     entries << {
       number: num&.to_i, title: cells[1].strip,
-      start_date: parse_md_y(start_token), url: url
+      start_date: parse_md_y(start_token), url: url,
+      description: clean_text(cells[3][/\[([^\]]*)\]/, 1])
     }
   elsif line.start_with?("[#")
     # Format C: [# 1069 (12/11/22 - 12/31/22) Title](/tags/..) - [description](url)
+    # Here the link text is the literal word "description", not real text, so
+    # these (the 2018–2023 challenges) carry no description.
     m = line.match(/\[#\s*(\d+)\s*\(([^)]+)\)\s*([^\]]*)\]/)
     next unless m
     num = m[1].to_i
@@ -90,7 +112,8 @@ lines.each do |line|
     title = m[3].strip
     url = line[/-\s*\[[Dd]escription\]\((https?:\/\/[^)]+|\/t\/[^)]+)\)/, 1]
     entries << {
-      number: num, title: title, start_date: parse_md_y(start_token), url: url
+      number: num, title: title, start_date: parse_md_y(start_token), url: url,
+      description: nil
     }
   end
 end
@@ -131,7 +154,11 @@ if File.exist?(WP)
     start_token = dates.split(/[–-]/).first
     next if start_token.to_s.strip.empty?
     begin
-      wp_by_date[parse_md_y(start_token)] = { id: post["id"], link: post["link"] }
+      wp_by_date[parse_md_y(start_token)] = {
+        id: post["id"],
+        link: post["link"],
+        description: clean_text(post.dig("acf", "wc_description"))
+      }
     rescue StandardError
       next
     end
@@ -158,7 +185,9 @@ deduped.each_with_index do |e, i|
     "slug" => "#{e[:start_date].strftime('%Y-%m-%d')}-#{slugify(e[:title])}",
     "starts_at" => starts.strftime("%Y-%m-%dT%H:%M:%SZ"),
     "ends_at" => ends.strftime("%Y-%m-%dT%H:%M:%SZ"),
-    "url" => url
+    "url" => url,
+    # WordPress carries the fuller prompt; fall back to the topic's one-liner.
+    "description" => wp&.dig(:description) || e[:description]
   }
   seed << rec
 end
@@ -173,6 +202,7 @@ dups.each { |d| warn "  dup week #{d[:start_date]} -> ##{d[:number]} #{d[:title]
 warn "final records:      #{seed.size}"
 warn "date range:         #{deduped.first[:start_date]} .. #{deduped.last[:start_date]}"
 warn "with WP post id:    #{seed.count { |r| r['wordpress_challenge_id'] }}"
+warn "with description:   #{seed.count { |r| r['description'] }}"
 warn "missing number:     #{seed.count { |r| r['number'].nil? }}"
 warn "numbers assigned:   #{assigned.size}#{assigned.empty? ? '' : " (#{assigned.min}..#{assigned.max})"}"
 

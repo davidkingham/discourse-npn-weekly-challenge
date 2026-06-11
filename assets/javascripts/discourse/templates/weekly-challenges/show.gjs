@@ -26,17 +26,22 @@ export default <template>
             count=@controller.model.entryCount
           }}
         </span>
-        {{#if @controller.model.challenge.url}}
-          <a
-            href={{@controller.model.challenge.url}}
-            class="npn-weekly-challenge__prompt-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {{i18n "npn_weekly_challenge.view_prompt"}}
-          </a>
-        {{/if}}
       </div>
+
+      {{#if @controller.model.challenge.description}}
+        <p class="npn-weekly-challenge__description">
+          {{@controller.model.challenge.description}}
+        </p>
+      {{else if @controller.model.challenge.url}}
+        <a
+          href={{@controller.model.challenge.url}}
+          class="npn-weekly-challenge__prompt-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{i18n "npn_weekly_challenge.view_prompt"}}
+        </a>
+      {{/if}}
     </header>
 
     <NpnChallengeEntries

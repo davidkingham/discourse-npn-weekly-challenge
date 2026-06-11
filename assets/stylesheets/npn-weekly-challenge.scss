@@ -59,6 +59,13 @@
     color: var(--primary-medium);
   }
 
+  &__description {
+    margin: var(--space-3) 0 0;
+    max-width: 40em;
+    white-space: pre-line;
+    line-height: var(--line-height-large);
+  }
+
   &__nav {
     display: flex;
     flex-wrap: wrap;

@@ -23,6 +23,7 @@ describe DiscourseNpnWeeklyChallenge::ChallengesController do
         slug: "2026-06-01-quiet-geometry",
         starts_at: "2026-06-01T00:00:00Z",
         ends_at: "2026-06-08T00:00:00Z",
+        description: "Find calm, geometric order in nature.",
       },
     ]
   end
@@ -92,6 +93,7 @@ describe DiscourseNpnWeeklyChallenge::ChallengesController do
       expect(response.status).to eq(200)
       body = response.parsed_body
       expect(body["challenge"]["slug"]).to eq("2026-06-01-quiet-geometry")
+      expect(body["challenge"]["description"]).to eq("Find calm, geometric order in nature.")
       expect(body["entry_count"]).to eq(2)
       expect(body["topic_list"]["topics"].map { |t| t["id"] }).to contain_exactly(
         field_topic.id,

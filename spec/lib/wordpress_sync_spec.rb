@@ -5,11 +5,13 @@ require "rails_helper"
 describe DiscourseNpnWeeklyChallenge::WordpressSync do
   let(:store) { DiscourseNpnWeeklyChallenge::ChallengeStore }
 
-  def wp_post(id: 21_426, title: "Silhouettes with Color", dates: "6/7/26 - 6/13/26", **over)
+  def wp_post(id: 21_426, title: "Silhouettes with Color", dates: "6/7/26 - 6/13/26", description: nil, **over)
+    acf = { "wc_title" => title, "wc_dates" => dates }
+    acf["wc_description"] = description if description
     {
       "id" => id,
       "link" => "https://example.com/weekly-challenge/1243/",
-      "acf" => { "wc_title" => title, "wc_dates" => dates },
+      "acf" => acf,
     }.merge(over.transform_keys(&:to_s))
   end
 
@@ -32,7 +34,13 @@ describe DiscourseNpnWeeklyChallenge::WordpressSync do
         "starts_at" => "2026-06-07T14:00:00Z",
         "ends_at" => "2026-06-14T14:00:00Z",
         "url" => "https://example.com/weekly-challenge/1243/",
+        "description" => nil,
       )
+    end
+
+    it "cleans the description to plain text" do
+      record = described_class.normalize(wp_post(description: "<p>Create bold silhouettes &amp; shapes.</p>"))
+      expect(record["description"]).to eq("Create bold silhouettes & shapes.")
     end
 
     it "decodes entities and builds a matching slug" do
