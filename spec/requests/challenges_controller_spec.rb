@@ -185,4 +185,31 @@ describe DiscourseNpnWeeklyChallenge::ChallengesController do
       expect(response.media_type).to eq("text/html")
     end
   end
+
+  describe "upcoming challenges that have not started" do
+    before do
+      SiteSetting.npn_weekly_challenge_registry_json = [
+        { title: "Started Week", slug: "2026-06-01-started-week", starts_at: "2026-06-01T00:00:00Z" },
+        { title: "Upcoming Week", slug: "2999-01-06-upcoming-week", starts_at: "2999-01-06T00:00:00Z" },
+      ].to_json
+      DiscourseNpnWeeklyChallenge::Registry.clear_cache
+    end
+
+    it "omits them from the challenge list" do
+      get "/weekly-challenges.json"
+      expect(response.parsed_body["challenges"].map { |c| c["slug"] }).to eq(
+        %w[2026-06-01-started-week],
+      )
+    end
+
+    it "returns 404 on direct access" do
+      get "/weekly-challenges/2999-01-06-upcoming-week.json"
+      expect(response.status).to eq(404)
+    end
+
+    it "does not link forward to one from the current challenge" do
+      get "/weekly-challenges/2026-06-01-started-week.json"
+      expect(response.parsed_body["next_challenge"]).to be_nil
+    end
+  end
 end

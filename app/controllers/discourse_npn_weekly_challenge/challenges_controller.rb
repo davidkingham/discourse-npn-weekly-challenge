@@ -10,7 +10,8 @@ module DiscourseNpnWeeklyChallenge
       respond_to do |format|
         format.html { render html: nil, layout: true }
         format.json do
-          render json: { challenges: serialize_data(Registry.all, ChallengeSerializer) }
+          challenges = Registry.all.select { |challenge| published?(challenge) }
+          render json: { challenges: serialize_data(challenges, ChallengeSerializer) }
         end
       end
     end
@@ -20,7 +21,9 @@ module DiscourseNpnWeeklyChallenge
     # challenges, the visible entry count, and one page of entry topics.
     def show
       challenge = Registry.find_by_slug(params[:slug])
-      raise Discourse::NotFound if challenge.nil?
+      # Future challenges are seeded ahead of time (the published schedule) but
+      # only join the archive once they have started.
+      raise Discourse::NotFound if challenge.nil? || !published?(challenge)
 
       respond_to do |format|
         format.html { render html: nil, layout: true }
@@ -38,7 +41,7 @@ module DiscourseNpnWeeklyChallenge
             serialize_data(list, TopicListSerializer).merge(
               challenge: serialize_challenge(challenge),
               previous_challenge: serialize_challenge(Registry.previous_challenge(challenge)),
-              next_challenge: serialize_challenge(Registry.next_challenge(challenge)),
+              next_challenge: serialize_challenge(published_next_challenge(challenge)),
               entry_count: TopicFinder.count(challenge, user: current_user),
             ),
           )
@@ -47,6 +50,17 @@ module DiscourseNpnWeeklyChallenge
     end
 
     private
+
+    # The next challenge for navigation, but only once it has started — so the
+    # current week never links forward to an unpublished one.
+    def published_next_challenge(challenge)
+      nxt = Registry.next_challenge(challenge)
+      nxt if nxt && published?(nxt)
+    end
+
+    def published?(challenge)
+      challenge.starts_at <= Time.zone.now
+    end
 
     def serialize_challenge(challenge)
       return nil if challenge.nil?

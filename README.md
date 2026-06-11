@@ -61,6 +61,12 @@ wins on a conflict):
 Any layer that can't be read (missing seed, corrupt store, malformed JSON)
 degrades to "contributes nothing", logs a warning, and never errors the site.
 
+Challenges whose `starts_at` is in the future are part of the published
+schedule but are hidden from the archive — they don't appear in the list, 404
+on direct access, and the current challenge never links forward to them — until
+the week actually begins. (The full set, including the upcoming week, is still
+used internally so the current challenge's date window bounds correctly.)
+
 ### WordPress sync
 
 When `npn_weekly_challenge_wordpress_api_url` points at the Weekly Challenge
