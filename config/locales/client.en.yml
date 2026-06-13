@@ -3,6 +3,7 @@ en:
     npn_weekly_challenge:
       title: "Weekly challenges"
       list_description: "Browse entries from past weekly challenges."
+      current_badge: "Current challenge"
       view_prompt: "View challenge prompt"
       date_range: "%{start} – %{end}"
       entry_count:

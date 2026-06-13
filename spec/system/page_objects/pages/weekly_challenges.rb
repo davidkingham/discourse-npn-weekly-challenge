@@ -59,6 +59,17 @@ module PageObjects
         page.has_css?(".npn-weekly-challenges__item-title", text: title)
       end
 
+      def has_current_badge_on?(title)
+        page.has_css?(
+          ".npn-weekly-challenges__item-title:has(.npn-weekly-challenges__current-badge)",
+          text: title,
+        )
+      end
+
+      def current_badge_count
+        page.all(".npn-weekly-challenges__current-badge").size
+      end
+
       def has_challenge_title?(title)
         page.has_css?(".npn-weekly-challenge__title", text: title)
       end

@@ -1,4 +1,5 @@
 import { LinkTo } from "@ember/routing";
+import { eq } from "discourse/truth-helpers";
 import { i18n } from "discourse-i18n";
 import challengeDateRange from "../../lib/challenge-date-range";
 
@@ -24,6 +25,11 @@ export default <template>
             >
               <span class="npn-weekly-challenges__item-title">
                 {{challenge.title}}
+                {{#if (eq challenge.slug @controller.model.current_slug)}}
+                  <span class="npn-weekly-challenges__current-badge">
+                    {{i18n "npn_weekly_challenge.current_badge"}}
+                  </span>
+                {{/if}}
               </span>
               <span class="npn-weekly-challenges__item-dates">
                 {{challengeDateRange challenge}}

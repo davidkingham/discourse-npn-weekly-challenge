@@ -34,6 +34,20 @@
     font-weight: 700;
   }
 
+  &__current-badge {
+    margin-left: var(--space-2);
+    padding: 0 var(--space-1);
+    border-radius: var(--d-border-radius);
+    background: var(--tertiary);
+    color: var(--secondary);
+    font-size: var(--font-down-2);
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
   &__item-dates {
     color: var(--primary-medium);
   }

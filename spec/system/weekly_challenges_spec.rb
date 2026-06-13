@@ -84,6 +84,13 @@ describe "Weekly challenges" do
     expect(weekly_challenges_page).to have_empty_state
   end
 
+  it "marks only the most recent challenge as current in the list" do
+    weekly_challenges_page.visit_index
+
+    expect(weekly_challenges_page).to have_current_badge_on("Quiet Geometry")
+    expect(weekly_challenges_page.current_badge_count).to eq(1)
+  end
+
   describe "challenge selector on the tag page" do
     fab!(:other_tag) { Fabricate(:tag, name: "landscape") }
 

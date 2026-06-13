@@ -51,6 +51,15 @@ module DiscourseNpnWeeklyChallenge
       all.find { |challenge| challenge.slug == slug }
     end
 
+    # The active challenge: the most recently started one. `all` is newest
+    # first and a started challenge is one whose window has opened, so the
+    # first entry that has started is the current week's challenge. Returns nil
+    # before any challenge has started (e.g. an empty or all-future registry).
+    def current
+      now = Time.zone.now
+      all.find { |challenge| challenge.starts_at <= now }
+    end
+
     # Chronologically adjacent challenges (`all` is sorted newest first).
     def next_challenge(challenge)
       index = all.index(challenge)

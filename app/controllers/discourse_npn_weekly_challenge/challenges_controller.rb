@@ -11,7 +11,10 @@ module DiscourseNpnWeeklyChallenge
         format.html { render html: nil, layout: true }
         format.json do
           challenges = Registry.all.select { |challenge| published?(challenge) }
-          render json: { challenges: serialize_data(challenges, ChallengeSerializer) }
+          render json: {
+                   challenges: serialize_data(challenges, ChallengeSerializer),
+                   current_slug: Registry.current&.slug,
+                 }
         end
       end
     end

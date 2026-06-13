@@ -59,6 +59,12 @@ describe DiscourseNpnWeeklyChallenge::ChallengesController do
       expect(challenges.first["url"]).to eq("https://example.com/weekly-challenge/light-and-shadow")
     end
 
+    it "flags the most recently started challenge as current" do
+      get "/weekly-challenges.json"
+
+      expect(response.parsed_body["current_slug"]).to eq("2026-06-08-light-and-shadow")
+    end
+
     it "returns an empty list for an invalid registry" do
       SiteSetting.npn_weekly_challenge_registry_json = "{nope"
       get "/weekly-challenges.json"
@@ -210,6 +216,11 @@ describe DiscourseNpnWeeklyChallenge::ChallengesController do
       expect(response.parsed_body["challenges"].map { |c| c["slug"] }).to eq(
         %w[2026-06-01-started-week],
       )
+    end
+
+    it "never treats an unstarted challenge as current" do
+      get "/weekly-challenges.json"
+      expect(response.parsed_body["current_slug"]).to eq("2026-06-01-started-week")
     end
 
     it "returns 404 on direct access" do
