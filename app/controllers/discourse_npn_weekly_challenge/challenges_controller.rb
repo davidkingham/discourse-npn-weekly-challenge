@@ -4,6 +4,12 @@ module DiscourseNpnWeeklyChallenge
   class ChallengesController < ::ApplicationController
     requires_plugin DiscourseNpnWeeklyChallenge::PLUGIN_NAME
 
+    # #current is a server-side redirect, not an Ember entry point, so it must
+    # run for a plain browser navigation. ApplicationController#check_xhr would
+    # otherwise preempt non-XHR HTML requests with the SPA bootstrap shell and
+    # the redirect would never fire.
+    skip_before_action :check_xhr, only: :current
+
     # GET /weekly-challenges
     # HTML renders the Ember app; JSON returns the challenge list.
     def index
@@ -17,6 +23,23 @@ module DiscourseNpnWeeklyChallenge
                  }
         end
       end
+    end
+
+    # GET /weekly-challenges/current
+    # A stable entry point (e.g. a fixed link from the WordPress site) that
+    # 302-redirects to whichever challenge is active right now, resolved per
+    # request so the link tracks the weekly rollover on its own. Falls back to
+    # the archive index when none has started yet. Never a 301 — the
+    # destination changes every week.
+    def current
+      # The anonymous cache only stores 200s, but be explicit so no browser or
+      # CDN pins this redirect to one week's challenge.
+      response.headers["Cache-Control"] = "no-store"
+
+      challenge = Registry.current
+      return redirect_to(path("/weekly-challenges")) if challenge.nil?
+
+      redirect_to path("/weekly-challenges/#{challenge.slug}")
     end
 
     # GET /weekly-challenges/:slug

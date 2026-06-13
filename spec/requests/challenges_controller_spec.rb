@@ -80,6 +80,42 @@ describe DiscourseNpnWeeklyChallenge::ChallengesController do
     end
   end
 
+  describe "#current" do
+    it "redirects to the most recently started challenge" do
+      get "/weekly-challenges/current"
+
+      expect(response).to redirect_to("/weekly-challenges/2026-06-08-light-and-shadow")
+      expect(response.status).to eq(302)
+      expect(response.headers["Cache-Control"]).to eq("no-store")
+    end
+
+    it "wins over the :slug route" do
+      # "current" matches the slug constraint, so the action must take priority.
+      get "/weekly-challenges/current"
+      expect(response).to redirect_to("/weekly-challenges/2026-06-08-light-and-shadow")
+    end
+
+    it "falls back to the archive index when nothing has started" do
+      SiteSetting.npn_weekly_challenge_registry_json = [
+        {
+          title: "Upcoming Week",
+          slug: "2999-01-06-upcoming-week",
+          starts_at: "2999-01-06T00:00:00Z",
+        },
+      ].to_json
+      DiscourseNpnWeeklyChallenge::Registry.clear_cache
+
+      get "/weekly-challenges/current"
+      expect(response).to redirect_to("/weekly-challenges")
+    end
+
+    it "returns 404 when the plugin is disabled" do
+      SiteSetting.npn_weekly_challenges_enabled = false
+      get "/weekly-challenges/current"
+      expect(response.status).to eq(404)
+    end
+  end
+
   describe "#show" do
     fab!(:field_topic) { Fabricate(:topic, category: category) }
     fab!(:tagged_topic) do
