@@ -18,6 +18,10 @@ module DiscourseNpnWeeklyChallenge
   # raises. A failure is logged and leaves the store untouched.
   module WordpressSync
     HTTP_TIMEOUT = 5
+    # Overall wall-clock ceiling on the body read. HTTP_TIMEOUT is per-socket-read
+    # only, so a server that trickles one small chunk every <5s stays under it
+    # indefinitely; this bounds the total time a dripping upstream can pin the job.
+    MAX_READ_SECONDS = 15
     PER_PAGE = 100
     MAX_TITLE = 200
     MAX_DESCRIPTION = 2000
@@ -44,10 +48,23 @@ module DiscourseNpnWeeklyChallenge
       posts = fetch_collection(api_url)
       return false if posts.blank?
 
+      normalized = posts.map { |post| normalize(post) }
+      skipped = normalized.count(&:nil?)
+      # A challenge-typed feed shouldn't contain posts we can't normalize; when
+      # every post drops out it almost always means the payload shape changed
+      # (ACF-in-REST disabled, wc_dates format changed, etc.). Surface it so the
+      # archive silently ceasing to grow is diagnosable.
+      if skipped.positive? && normalized.compact.empty?
+        log_failure(
+          "no posts normalized",
+          StandardError.new("#{skipped}/#{posts.length} skipped — possible schema drift"),
+        )
+      end
+
       seed_starts = Registry.seed_challenges.map(&:starts_at).to_set
       records =
-        posts
-          .filter_map { |post| normalize(post) }
+        normalized
+          .compact
           .reject { |record| seed_starts.include?(Time.zone.parse(record["starts_at"])) }
 
       changed = ChallengeStore.upsert_all(records)
@@ -146,12 +163,20 @@ module DiscourseNpnWeeklyChallenge
     # hostile endpoint can't balloon memory. Returns the body, or nil on a
     # non-2xx response or when the cap is hit.
     def read_capped_body(http, request)
+      deadline = Process.clock_gettime(Process::CLOCK_MONOTONIC) + MAX_READ_SECONDS
       http.request(request) do |response|
         return nil unless response.is_a?(Net::HTTPSuccess)
         return nil if response["Content-Length"].to_i > MAX_BYTES
 
         buffer = +""
         response.read_body do |chunk|
+          if Process.clock_gettime(Process::CLOCK_MONOTONIC) > deadline
+            log_failure(
+              "read deadline exceeded",
+              StandardError.new("exceeded #{MAX_READ_SECONDS}s"),
+            )
+            return nil
+          end
           buffer << chunk
           if buffer.bytesize > MAX_BYTES
             log_failure("response too large", StandardError.new("exceeded #{MAX_BYTES} bytes"))

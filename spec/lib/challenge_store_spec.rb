@@ -32,6 +32,29 @@ describe DiscourseNpnWeeklyChallenge::ChallengeStore do
       expect(described_class.upsert("title" => "No slug")).to eq(false)
       expect(described_class.all).to eq([])
     end
+
+    it "updates in place by WordPress id when an edited title/date changes the slug" do
+      described_class.upsert(record("2026-06-07-old-title", title: "Old Title").merge(
+        "wordpress_challenge_id" => "42",
+      ))
+
+      # Same WP post, title edited → new slug. Must replace, not duplicate.
+      changed =
+        described_class.upsert(record("2026-06-07-new-title", title: "New Title").merge(
+          "wordpress_challenge_id" => "42",
+        ))
+
+      expect(changed).to eq(true)
+      expect(described_class.all.size).to eq(1)
+      expect(described_class.all.first["title"]).to eq("New Title")
+      expect(described_class.all.first["slug"]).to eq("2026-06-07-new-title")
+    end
+
+    it "keeps records with different WordPress ids separate" do
+      described_class.upsert(record("week-1").merge("wordpress_challenge_id" => "1"))
+      described_class.upsert(record("week-2").merge("wordpress_challenge_id" => "2"))
+      expect(described_class.all.size).to eq(2)
+    end
   end
 
   describe ".upsert_all" do

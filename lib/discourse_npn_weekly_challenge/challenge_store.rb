@@ -21,15 +21,25 @@ module DiscourseNpnWeeklyChallenge
       value.is_a?(Array) ? value : []
     end
 
-    # Insert or replace by slug. Returns true when the stored set changed, false
-    # when the record was identical to what was already there (so the sync can
-    # avoid needless cache busting). Records without a slug are ignored.
+    # Insert or replace. Returns true when the stored set changed, false when the
+    # record was identical to what was already there (so the sync can avoid
+    # needless cache busting). Records without a slug are ignored.
+    #
+    # Matching prefers the stable WordPress challenge id over the slug: the slug
+    # is derived from the (mutable) title and start date, so editing either in
+    # WordPress would otherwise strand the old row and insert a duplicate. When
+    # the id is present we replace the row that already carries it, even if its
+    # slug changed; only records with no id fall back to slug matching.
     def upsert(record)
       slug = record && record["slug"]
       return false if slug.blank?
 
+      wp_id = record["wordpress_challenge_id"].presence
+
       records = all
-      existing = records.index { |r| r["slug"] == slug }
+      existing = nil
+      existing = records.index { |r| r["wordpress_challenge_id"].to_s == wp_id.to_s } if wp_id
+      existing ||= records.index { |r| r["slug"] == slug }
       return false if existing && records[existing] == record
 
       if existing
