@@ -34,15 +34,17 @@ describe DiscourseNpnWeeklyChallenge::ChallengeStore do
     end
 
     it "updates in place by WordPress id when an edited title/date changes the slug" do
-      described_class.upsert(record("2026-06-07-old-title", title: "Old Title").merge(
-        "wordpress_challenge_id" => "42",
-      ))
+      described_class.upsert(
+        record("2026-06-07-old-title", title: "Old Title").merge("wordpress_challenge_id" => "42"),
+      )
 
       # Same WP post, title edited → new slug. Must replace, not duplicate.
       changed =
-        described_class.upsert(record("2026-06-07-new-title", title: "New Title").merge(
-          "wordpress_challenge_id" => "42",
-        ))
+        described_class.upsert(
+          record("2026-06-07-new-title", title: "New Title").merge(
+            "wordpress_challenge_id" => "42",
+          ),
+        )
 
       expect(changed).to eq(true)
       expect(described_class.all.size).to eq(1)

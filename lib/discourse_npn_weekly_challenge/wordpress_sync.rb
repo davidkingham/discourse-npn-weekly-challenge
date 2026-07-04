@@ -63,9 +63,9 @@ module DiscourseNpnWeeklyChallenge
 
       seed_starts = Registry.seed_challenges.map(&:starts_at).to_set
       records =
-        normalized
-          .compact
-          .reject { |record| seed_starts.include?(Time.zone.parse(record["starts_at"])) }
+        normalized.compact.reject do |record|
+          seed_starts.include?(Time.zone.parse(record["starts_at"]))
+        end
 
       changed = ChallengeStore.upsert_all(records)
       Registry.clear_cache if changed
