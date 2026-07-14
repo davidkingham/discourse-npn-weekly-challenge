@@ -68,6 +68,101 @@ describe DiscourseNpnWeeklyChallenge::WordpressSync do
     it "drops a non-positive post id" do
       expect(described_class.normalize(wp_post(id: 0))["wordpress_challenge_id"]).to be_nil
     end
+
+    it "keeps the url for a published post" do
+      expect(described_class.normalize(wp_post(status: "publish"))["url"]).to eq(
+        "https://example.com/weekly-challenge/1243/",
+      )
+    end
+
+    it "omits the url of a scheduled post, whose permalink 404s until it publishes" do
+      record = described_class.normalize(wp_post(status: "future"))
+
+      expect(record["url"]).to be_nil
+      expect(record["title"]).to eq("Silhouettes with Color")
+    end
+  end
+
+  describe "authentication" do
+    let(:endpoint) { "https://example.com/wp-json/wp/v2/weekly-challenge" }
+
+    def set_credentials
+      SiteSetting.npn_weekly_challenge_wordpress_username = "sync-bot"
+      SiteSetting.npn_weekly_challenge_wordpress_app_password = "abcd efgh ijkl"
+    end
+
+    describe ".collection_uri" do
+      it "asks for scheduled challenges when credentials are configured" do
+        set_credentials
+
+        expect(described_class.collection_uri(endpoint).query).to eq(
+          "per_page=100&status=publish%2Cfuture",
+        )
+      end
+
+      it "stays anonymous without credentials" do
+        expect(described_class.collection_uri(endpoint).query).to eq("per_page=100")
+      end
+
+      it "stays anonymous when only one half of the credential is set" do
+        SiteSetting.npn_weekly_challenge_wordpress_username = "sync-bot"
+
+        expect(described_class.collection_uri(endpoint).query).to eq("per_page=100")
+      end
+
+      it "does not request scheduled posts over plain HTTP, where the password would leak" do
+        set_credentials
+
+        uri = described_class.collection_uri("http://example.com/wp-json/wp/v2/weekly-challenge")
+
+        expect(uri.query).to eq("per_page=100")
+      end
+
+      it "preserves a status the admin already set" do
+        set_credentials
+
+        expect(described_class.collection_uri("#{endpoint}?status=draft").query).to eq(
+          "status=draft&per_page=100",
+        )
+      end
+    end
+
+    describe ".fetch_remote" do
+      it "sends the application password as basic auth over HTTPS" do
+        set_credentials
+        stub =
+          stub_request(:get, "#{endpoint}?per_page=100&status=publish,future").with(
+            basic_auth: %w[sync-bot abcd\ efgh\ ijkl],
+          ).to_return(status: 200, body: "[]")
+
+        described_class.fetch_remote(described_class.collection_uri(endpoint))
+
+        expect(stub).to have_been_requested
+      end
+
+      it "sends no credentials when none are configured" do
+        stub = stub_request(:get, "#{endpoint}?per_page=100").to_return(status: 200, body: "[]")
+
+        described_class.fetch_remote(described_class.collection_uri(endpoint))
+
+        expect(stub).to have_been_requested
+        expect(WebMock).to have_requested(:get, /weekly-challenge/).with { |req|
+          req.headers["Authorization"].nil?
+        }
+      end
+
+      it "never sends credentials over plain HTTP" do
+        set_credentials
+        http_endpoint = "http://example.com/wp-json/wp/v2/weekly-challenge"
+        stub_request(:get, "#{http_endpoint}?per_page=100").to_return(status: 200, body: "[]")
+
+        described_class.fetch_remote(described_class.collection_uri(http_endpoint))
+
+        expect(WebMock).to have_requested(:get, /weekly-challenge/).with { |req|
+          req.headers["Authorization"].nil?
+        }
+      end
+    end
   end
 
   describe ".refresh" do

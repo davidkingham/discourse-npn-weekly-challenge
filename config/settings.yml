@@ -18,6 +18,15 @@ plugins:
     default: ""
     client: false
 
+  npn_weekly_challenge_wordpress_username:
+    default: ""
+    client: false
+
+  npn_weekly_challenge_wordpress_app_password:
+    default: ""
+    client: false
+    secret: true
+
   npn_weekly_challenge_registry_json:
     default: "[]"
     textarea: true

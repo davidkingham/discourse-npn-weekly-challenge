@@ -12,11 +12,23 @@ module DiscourseNpnWeeklyChallenge
   # deltas and avoids any chance of a WordPress title drift creating a duplicate
   # week alongside the seed's copy.
   #
+  # WordPress hides scheduled posts (status "future") from anonymous REST
+  # requests — asking for them without credentials is rejected outright with
+  # rest_forbidden_status — so an unauthenticated sync can only ever see
+  # challenges that have already gone live, and the upcoming schedule stays
+  # invisible. When a username and application password are configured we
+  # authenticate and ask for the scheduled ones too. Credentials are only ever
+  # sent over HTTPS.
+  #
   # Like the submissions plugin's WeeklyChallengeInfo, the fetch is deliberately
   # defensive: server-side only, short timeouts, SSRF-protected
   # (FinalDestination::HTTP), tolerant of the ACF-in-REST shape, and it NEVER
   # raises. A failure is logged and leaves the store untouched.
   module WordpressSync
+    # Published challenges plus the scheduled ones. Only sent when authenticated:
+    # WordPress 400s the whole request if an anonymous caller asks for "future",
+    # which would take the sync down rather than just narrowing it.
+    AUTHENTICATED_STATUSES = "publish,future"
     HTTP_TIMEOUT = 5
     # Overall wall-clock ceiling on the body read. HTTP_TIMEOUT is per-socket-read
     # only, so a server that trickles one small chunk every <5s stays under it
@@ -37,6 +49,35 @@ module DiscourseNpnWeeklyChallenge
 
     def api_url
       SiteSetting.npn_weekly_challenge_wordpress_api_url.to_s.strip
+    end
+
+    def username
+      SiteSetting.npn_weekly_challenge_wordpress_username.to_s.strip
+    end
+
+    def app_password
+      SiteSetting.npn_weekly_challenge_wordpress_app_password.to_s.strip
+    end
+
+    # Authenticate only when we have both halves of the credential and the
+    # endpoint is HTTPS — an application password on a plaintext connection is a
+    # credential handed to anyone on the path. Falling back to the anonymous
+    # (published-only) sync degrades the archive; leaking the password doesn't
+    # degrade, it compromises.
+    def authenticated?(uri)
+      return false if username.blank? || app_password.blank?
+
+      unless uri.is_a?(URI::HTTPS)
+        log_failure(
+          "credentials not sent",
+          StandardError.new(
+            "#{uri.scheme} endpoint is not HTTPS; syncing published challenges only",
+          ),
+        )
+        return false
+      end
+
+      true
     end
 
     # Fetch the collection and upsert any weeks the seed doesn't already cover.
@@ -75,6 +116,16 @@ module DiscourseNpnWeeklyChallenge
       false
     end
 
+    # A scheduled post's "link" is its future permalink: it 404s until WordPress
+    # publishes it, so don't record it yet. The next sync after publication
+    # upserts the same post (matched on its WordPress id) and fills the url in.
+    # An absent status means an anonymous fetch, which only ever returns
+    # published posts.
+    def published_in_wordpress?(post)
+      status = post["status"].to_s
+      status.blank? || status == "publish"
+    end
+
     # Map one WordPress post to a seed-shaped hash, or nil when it lacks the data
     # we need. Title and start date are required; the WordPress numeric post
     # "title" is ignored — the real challenge title lives in acf.wc_title.
@@ -97,7 +148,7 @@ module DiscourseNpnWeeklyChallenge
         "slug" => "#{date.strftime("%Y-%m-%d")}-#{slugify(title)}",
         "starts_at" => starts_at.utc.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "ends_at" => ChallengeTime.default_end(starts_at)&.utc&.strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "url" => clean_url(post["link"]),
+        "url" => (clean_url(post["link"]) if published_in_wordpress?(post)),
         "description" => clean(acf["wc_description"], MAX_DESCRIPTION),
       }
     end
@@ -121,11 +172,15 @@ module DiscourseNpnWeeklyChallenge
     end
 
     # Ensure a bounded per_page so a misconfigured endpoint can't stream the
-    # entire post type. Preserves any query the admin already put on the URL.
+    # entire post type, and ask for scheduled challenges when we can see them.
+    # Preserves any query the admin already put on the URL.
     def collection_uri(url)
       uri = URI.parse(url)
       params = URI.decode_www_form(uri.query.to_s)
       params << ["per_page", PER_PAGE.to_s] unless params.any? { |k, _| k == "per_page" }
+      if authenticated?(uri) && params.none? { |k, _| k == "status" }
+        params << ["status", AUTHENTICATED_STATUSES]
+      end
       uri.query = URI.encode_www_form(params)
       uri
     end
@@ -148,6 +203,7 @@ module DiscourseNpnWeeklyChallenge
             uri.request_uri,
             { "Accept" => "application/json", "User-Agent" => "Discourse NPN Weekly Challenge" },
           )
+        request.basic_auth(username, app_password) if authenticated?(uri)
         body = read_capped_body(http, request)
       end
       body

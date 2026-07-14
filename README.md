@@ -6,7 +6,10 @@ Weekly Challenges and view the entries submitted for each one.
 
 ## What it does
 
-- `/weekly-challenges` — lists all configured challenges, newest first.
+- `/weekly-challenges` — lists all started challenges, newest first.
+- `/weekly-challenges/upcoming` — the published schedule: the challenges that
+  have not started yet, soonest first, with title, date range and description.
+  Nothing on this page is a link — those challenges have no page yet.
 - `/weekly-challenges/:slug` — one challenge: title, date range, link to the
   original prompt, entry count, a paginated topic list, and previous/next
   challenge navigation.
@@ -36,6 +39,8 @@ no changes to existing topics.
 | `npn_weekly_challenge_tag_name` | `weekly-challenge` | Tag(s) identifying legacy challenge topics (topics with any of them match) |
 | `npn_weekly_challenge_category_ids` | _(blank)_ | Optional category allowlist; blank = all categories |
 | `npn_weekly_challenge_wordpress_api_url` | _(blank)_ | WordPress Weekly Challenge REST endpoint; blank disables the sync |
+| `npn_weekly_challenge_wordpress_username` | _(blank)_ | WordPress user the sync authenticates as; needed to see scheduled challenges |
+| `npn_weekly_challenge_wordpress_app_password` | _(blank)_ | Application password for that user; only ever sent over HTTPS |
 | `npn_weekly_challenge_registry_json` | `[]` | Manual overrides merged on top of the seed and sync (see below) |
 | `npn_weekly_challenge_page_size` | 30 | Entries per page on a challenge page |
 
@@ -61,11 +66,11 @@ wins on a conflict):
 Any layer that can't be read (missing seed, corrupt store, malformed JSON)
 degrades to "contributes nothing", logs a warning, and never errors the site.
 
-Challenges whose `starts_at` is in the future are part of the published
-schedule but are hidden from the archive — they don't appear in the list, 404
-on direct access, and the current challenge never links forward to them — until
-the week actually begins. (The full set, including the upcoming week, is still
-used internally so the current challenge's date window bounds correctly.)
+Challenges whose `starts_at` is in the future are hidden from the archive —
+they don't appear in the list, 404 on direct access, and the current challenge
+never links forward to them — until the week actually begins. They are listed,
+unlinked, on `/weekly-challenges/upcoming` (`Registry.upcoming`, the exact
+complement of the archive's published filter).
 
 ### WordPress sync
 
@@ -78,6 +83,19 @@ only holds genuine deltas. Each post maps as: `acf.wc_title` → title,
 `acf.wc_dates` → start/end timestamps, `id` →
 `wordpress_challenge_id` (which is what new submission topics carry, so modern
 entries match by custom field), `link` → url.
+
+**Scheduled challenges.** WordPress serves only published posts to anonymous
+REST callers; scheduled posts have status `future` and asking for them without
+credentials is rejected (`rest_forbidden_status`). So an unauthenticated sync
+can never see the upcoming schedule. Set
+`npn_weekly_challenge_wordpress_username` and
+`npn_weekly_challenge_wordpress_app_password` (WordPress → Users → Profile →
+Application Passwords) and the sync authenticates with basic auth and requests
+`status=publish,future`, pulling scheduled challenges in so they appear on
+`/weekly-challenges/upcoming`. Credentials are only sent over HTTPS — over plain
+HTTP the sync logs a warning and falls back to published-only. A scheduled
+post's `link` is withheld until it publishes (the permalink 404s until then);
+the next sync after publication fills it in, matched on the WordPress post id.
 
 ### Challenge timing
 
