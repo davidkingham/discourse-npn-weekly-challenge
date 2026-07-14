@@ -183,6 +183,41 @@ describe DiscourseNpnWeeklyChallenge::Registry do
     end
   end
 
+  describe ".current and .upcoming" do
+    before do
+      freeze_time Time.zone.parse("2026-06-10T00:00:00Z")
+      set_registry(
+        [
+          entry(slug: "past", starts_at: "2026-06-01T00:00:00Z"),
+          entry(slug: "started", starts_at: "2026-06-08T00:00:00Z"),
+          entry(slug: "next-week", starts_at: "2026-06-15T00:00:00Z"),
+          entry(slug: "week-after", starts_at: "2026-06-22T00:00:00Z"),
+        ],
+      )
+    end
+
+    it "treats the most recently started challenge as current" do
+      expect(described_class.current.slug).to eq("started")
+    end
+
+    it "returns the unstarted challenges soonest first" do
+      expect(described_class.upcoming.map(&:slug)).to eq(%w[next-week week-after])
+    end
+
+    it "excludes a challenge from .upcoming the moment it starts" do
+      freeze_time Time.zone.parse("2026-06-15T00:00:00Z")
+
+      expect(described_class.upcoming.map(&:slug)).to eq(["week-after"])
+      expect(described_class.current.slug).to eq("next-week")
+    end
+
+    it "returns an empty array when every challenge has started" do
+      set_registry([entry(slug: "past", starts_at: "2026-06-01T00:00:00Z")])
+
+      expect(described_class.upcoming).to eq([])
+    end
+  end
+
   describe "adjacent challenges and windows" do
     before do
       set_registry(

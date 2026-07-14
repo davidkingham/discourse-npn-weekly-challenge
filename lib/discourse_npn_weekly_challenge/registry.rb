@@ -60,6 +60,14 @@ module DiscourseNpnWeeklyChallenge
       all.find { |challenge| challenge.starts_at <= now }
     end
 
+    # The challenges whose window has not opened yet, soonest first. `all` is
+    # newest first, so the future slice reverses into chronological order —
+    # a schedule reads forwards, unlike the archive.
+    def upcoming
+      now = Time.zone.now
+      all.select { |challenge| challenge.starts_at > now }.reverse
+    end
+
     # Chronologically adjacent challenges (`all` is sorted newest first).
     def next_challenge(challenge)
       index = all.index(challenge)

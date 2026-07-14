@@ -91,6 +91,51 @@ describe "Weekly challenges" do
     expect(weekly_challenges_page.current_badge_count).to eq(1)
   end
 
+  describe "upcoming challenges page" do
+    before do
+      SiteSetting.npn_weekly_challenge_registry_json = [
+        {
+          title: "Quiet Geometry",
+          slug: "2026-06-01-quiet-geometry",
+          starts_at: "2026-06-01T00:00:00Z",
+        },
+        {
+          title: "The Sound of Silence",
+          slug: "2999-01-06-the-sound-of-silence",
+          starts_at: "2999-01-06T00:00:00Z",
+          ends_at: "2999-01-13T00:00:00Z",
+          description: "Make a photograph that feels quiet.",
+        },
+      ].to_json
+      DiscourseNpnWeeklyChallenge::Registry.clear_cache
+    end
+
+    it "lists unstarted challenges with their description and no links" do
+      weekly_challenges_page.visit_index
+
+      expect(weekly_challenges_page).to have_challenge_listed("Quiet Geometry")
+
+      weekly_challenges_page.go_to_upcoming
+
+      expect(page).to have_current_path("/weekly-challenges/upcoming")
+      expect(weekly_challenges_page).to have_upcoming_heading
+      expect(weekly_challenges_page).to have_challenge_listed("The Sound of Silence")
+      expect(weekly_challenges_page).to have_challenge_description(
+        "Make a photograph that feels quiet.",
+      )
+      # Started challenges belong to the archive, not the schedule.
+      expect(page).to have_no_css(".npn-weekly-challenges__item-title", text: "Quiet Geometry")
+      expect(weekly_challenges_page).to have_no_challenge_links
+    end
+
+    it "serves the page on a full browser navigation, not as a challenge slug" do
+      weekly_challenges_page.visit_upcoming
+
+      expect(weekly_challenges_page).to have_upcoming_heading
+      expect(weekly_challenges_page).to have_challenge_listed("The Sound of Silence")
+    end
+  end
+
   describe "challenge selector on the tag page" do
     fab!(:other_tag) { Fabricate(:tag, name: "landscape") }
 

@@ -13,6 +13,32 @@ module PageObjects
         self
       end
 
+      def visit_upcoming
+        page.visit("/weekly-challenges/upcoming")
+        self
+      end
+
+      def go_to_upcoming
+        page.find(".npn-weekly-challenges__header-link").click
+        self
+      end
+
+      def has_upcoming_heading?
+        page.has_css?(
+          ".npn-weekly-challenges__title",
+          text: I18n.t("js.npn_weekly_challenge.upcoming.title"),
+        )
+      end
+
+      def has_challenge_description?(text)
+        page.has_css?(".npn-weekly-challenges__item-description", text: text)
+      end
+
+      # The upcoming challenges have no page to link to yet.
+      def has_no_challenge_links?
+        page.has_no_css?(".npn-weekly-challenges__list a")
+      end
+
       def visit_tag(name)
         page.visit("/tag/#{name}")
         self

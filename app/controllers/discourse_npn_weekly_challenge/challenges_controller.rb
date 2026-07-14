@@ -25,6 +25,20 @@ module DiscourseNpnWeeklyChallenge
       end
     end
 
+    # GET /weekly-challenges/upcoming
+    # The published schedule: challenges that have been announced but have not
+    # started. The complement of #index, which lists only what has started.
+    # Nothing here is linkable — #show 404s until a challenge starts — so the
+    # JSON carries no current_slug and the page renders no links.
+    def upcoming
+      respond_to do |format|
+        format.html { render html: nil, layout: true }
+        format.json do
+          render json: { challenges: serialize_data(Registry.upcoming, ChallengeSerializer) }
+        end
+      end
+    end
+
     # GET /weekly-challenges/current
     # A stable entry point (e.g. a fixed link from the WordPress site) that
     # 302-redirects to whichever challenge is active right now, resolved per

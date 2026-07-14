@@ -116,6 +116,75 @@ describe DiscourseNpnWeeklyChallenge::ChallengesController do
     end
   end
 
+  describe "#upcoming" do
+    let(:registry) do
+      [
+        {
+          title: "Started Week",
+          slug: "2026-06-01-started-week",
+          starts_at: "2026-06-01T00:00:00Z",
+        },
+        { title: "Later Week", slug: "2999-01-13-later-week", starts_at: "2999-01-13T00:00:00Z" },
+        {
+          title: "Sooner Week",
+          slug: "2999-01-06-sooner-week",
+          starts_at: "2999-01-06T00:00:00Z",
+          ends_at: "2999-01-13T00:00:00Z",
+          description: "Photograph the quiet hour before sunrise.",
+        },
+      ]
+    end
+
+    it "lists only unstarted challenges, soonest first" do
+      get "/weekly-challenges/upcoming.json"
+
+      expect(response.status).to eq(200)
+      challenges = response.parsed_body["challenges"]
+      expect(challenges.map { |c| c["slug"] }).to eq(
+        %w[2999-01-06-sooner-week 2999-01-13-later-week],
+      )
+    end
+
+    it "includes the title, dates and description each row renders" do
+      get "/weekly-challenges/upcoming.json"
+
+      challenge = response.parsed_body["challenges"].first
+      expect(challenge["title"]).to eq("Sooner Week")
+      expect(challenge["starts_at"]).to be_present
+      expect(challenge["ends_at"]).to be_present
+      expect(challenge["description"]).to eq("Photograph the quiet hour before sunrise.")
+    end
+
+    it "wins over the :slug route" do
+      # "upcoming" matches the slug constraint, so the action must take priority.
+      get "/weekly-challenges/upcoming"
+      expect(response.status).to eq(200)
+      expect(response.media_type).to eq("text/html")
+    end
+
+    it "returns an empty list when every challenge has started" do
+      SiteSetting.npn_weekly_challenge_registry_json = [
+        {
+          title: "Started Week",
+          slug: "2026-06-01-started-week",
+          starts_at: "2026-06-01T00:00:00Z",
+        },
+      ].to_json
+      DiscourseNpnWeeklyChallenge::Registry.clear_cache
+
+      get "/weekly-challenges/upcoming.json"
+
+      expect(response.status).to eq(200)
+      expect(response.parsed_body["challenges"]).to eq([])
+    end
+
+    it "returns 404 when the plugin is disabled" do
+      SiteSetting.npn_weekly_challenges_enabled = false
+      get "/weekly-challenges/upcoming.json"
+      expect(response.status).to eq(404)
+    end
+  end
+
   describe "#show" do
     fab!(:field_topic) { Fabricate(:topic, category: category) }
     fab!(:tagged_topic) do

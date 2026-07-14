@@ -13,6 +13,11 @@ en:
       no_challenges: "No weekly challenges have been published yet."
       load_more: "Load more"
       back_to_list: "All weekly challenges"
+      upcoming:
+        title: "Upcoming challenges"
+        description: "A preview of the challenges coming up in the weeks ahead. They aren't open for entries yet."
+        link: "See upcoming challenges"
+        none: "No upcoming challenges have been scheduled yet."
       challenge_selector:
         label: "View a challenge"
         placeholder: "Select a challenge"
