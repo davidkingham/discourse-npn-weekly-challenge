@@ -40,6 +40,39 @@ describe DiscourseNpnWeeklyChallenge::ChallengeTime do
     end
   end
 
+  describe ".display_range" do
+    # ends_at is the exclusive end of the window — the moment the next challenge
+    # starts — so the last day people can enter is the day before it. This is
+    # the real 2026-07-12 challenge, which the moderator announces as "July 12–18".
+    it "prints the last day people can enter, not the exclusive window end" do
+      expect(
+        described_class.display_range(
+          Time.zone.parse("2026-07-12T14:00:00Z"),
+          Time.zone.parse("2026-07-19T14:00:00Z"),
+        ),
+      ).to eq("July 12–18")
+    end
+
+    it "spells out the month again when the week crosses a boundary" do
+      expect(
+        described_class.display_range(
+          Time.zone.parse("2026-07-26T14:00:00Z"),
+          Time.zone.parse("2026-08-02T14:00:00Z"),
+        ),
+      ).to eq("July 26–August 1")
+    end
+
+    it "assumes a one-week window when there is no ends_at" do
+      expect(described_class.display_range(Time.zone.parse("2026-07-12T14:00:00Z"))).to eq(
+        "July 12–18",
+      )
+    end
+
+    it "returns nil without a start" do
+      expect(described_class.display_range(nil)).to be_nil
+    end
+  end
+
   describe ".parse_mdy" do
     it "expands two-digit years into the 2000s" do
       expect(described_class.parse_mdy("12/31/23")).to eq(Date.new(2023, 12, 31))

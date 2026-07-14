@@ -62,6 +62,19 @@ describe DiscourseNpnWeeklyChallenge::TopicFinder do
     expect(found_ids).to be_empty
   end
 
+  it "excludes the challenge's own announcement topic from its entries" do
+    entry = create_tagged_topic(created_at: Time.zone.parse("2026-06-03T00:00:00Z"))
+    # The announcement is tagged and posted inside the window, so it matches the
+    # legacy path — but it is the prompt, not an entry.
+    announcement = create_tagged_topic(created_at: Time.zone.parse("2026-06-01T14:00:00Z"))
+    announcement.upsert_custom_fields(
+      DiscourseNpnWeeklyChallenge::TopicPublisher::TOPIC_SLUG_FIELD => challenge.slug,
+    )
+
+    expect(found_ids).to contain_exactly(entry.id)
+    expect(described_class.count(challenge, user: user)).to eq(1)
+  end
+
   it "returns a topic matching both paths exactly once" do
     topic = create_tagged_topic(created_at: Time.zone.parse("2026-06-03T00:00:00Z"))
     topic.upsert_custom_fields(described_class::WP_CHALLENGE_ID_FIELD => "123")

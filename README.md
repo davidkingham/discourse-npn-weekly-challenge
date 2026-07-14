@@ -28,8 +28,10 @@ query (a topic matching both ways appears once):
 
 All results go through Discourse's standard topic query security (secured
 categories, unlisted and deleted topics), so users only ever see topics they
-are allowed to see. The plugin writes nothing — no migrations, no backfills,
-no changes to existing topics.
+are allowed to see. The plugin has no migrations and never modifies existing
+topics. The one thing it writes is the weekly announcement topic, and only when
+`npn_weekly_challenge_auto_topic_enabled` is turned on (see
+[Auto-published challenge topic](#auto-published-challenge-topic)).
 
 ## Settings
 
@@ -43,6 +45,12 @@ no changes to existing topics.
 | `npn_weekly_challenge_wordpress_app_password` | _(blank)_ | Application password for that user; only ever sent over HTTPS |
 | `npn_weekly_challenge_registry_json` | `[]` | Manual overrides merged on top of the seed and sync (see below) |
 | `npn_weekly_challenge_page_size` | 30 | Entries per page on a challenge page |
+| `npn_weekly_challenge_auto_topic_enabled` | off | Auto-create and pin the weekly challenge topic (see below) |
+| `npn_weekly_challenge_auto_topic_category` | _(blank)_ | Category the topic is created in; required |
+| `npn_weekly_challenge_auto_topic_author` | `system` | User the topic is posted as |
+| `npn_weekly_challenge_auto_topic_tags` | _(blank)_ | Tags applied to the topic |
+| `npn_weekly_challenge_auto_topic_title` | `Weekly Challenge: %{title}` | Title template |
+| `npn_weekly_challenge_auto_topic_body` | _(see below)_ | Body template |
 
 ## Where challenge data comes from
 
@@ -96,6 +104,39 @@ Application Passwords) and the sync authenticates with basic auth and requests
 HTTP the sync logs a warning and falls back to published-only. A scheduled
 post's `link` is withheld until it publishes (the permalink 404s until then);
 the next sync after publication fills it in, matched on the WordPress post id.
+
+### Auto-published challenge topic
+
+With `npn_weekly_challenge_auto_topic_enabled` on, `Jobs::NpnWeeklyChallengePublish`
+creates the week's announcement topic when a challenge starts, pins it in
+`npn_weekly_challenge_auto_topic_category`, and unpins the previous week's. The
+topic is rendered from the title/body templates; available placeholders are
+`%{title}`, `%{description}`, `%{date_range}`, `%{challenge_url}` (this forum's
+page for the challenge), `%{prompt_url}` (the WordPress prompt, may be blank)
+and `%{slug}`. The weekly banner image is site-specific, so it isn't in the
+default body — append the `![…](upload://…)` line to the body setting once.
+
+The job polls every 15 minutes (`Jobs::Scheduled` has no cron, so it can't fire
+"Sundays at 08:00" directly) and does nothing on almost every run.
+
+Three behaviours are deliberate and worth knowing:
+
+- **It never backfills.** Only the challenge that started within the last 24
+  hours is ever published. The registry holds hundreds of past challenges; a
+  publisher that asked "which of these lack a topic?" would post them all. A
+  side effect is that **enabling the setting mid-week publishes nothing** — the
+  first automatic topic appears when the next challenge begins, so it can't
+  duplicate one a moderator already posted by hand.
+- **Titles are disambiguated.** Challenge titles repeat over the years ("Fog"
+  has run three times) and Discourse rejects a duplicate topic title even with
+  validations skipped. When the rendered title is already taken, the date range
+  is appended.
+- **The announcement is not an entry.** It carries a
+  `npn_weekly_challenge_slug` topic custom field, which marks it as published
+  and keeps `TopicFinder` from listing it among its own challenge's entries.
+
+One-time step when switching over: the previous-week unpin only finds topics the
+plugin created, so the last hand-made topic stays pinned. Unpin it by hand once.
 
 ### Challenge timing
 

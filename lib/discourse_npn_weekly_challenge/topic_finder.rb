@@ -61,6 +61,12 @@ module DiscourseNpnWeeklyChallenge
 
       results = results.where(clauses.join(" OR "), **params)
 
+      # The auto-published announcement topic is tagged and lives inside its own
+      # challenge's window, so it matches the legacy path above — it would list
+      # itself as an entry and inflate the count. It is the prompt, not an entry.
+      announcement = TopicPublisher.topic_for(challenge)
+      results = results.where.not(id: announcement.id) if announcement
+
       category_ids = scoped_category_ids
       results = results.where(category_id: category_ids) if category_ids.present?
       results

@@ -24,10 +24,20 @@ after_initialize do
   require_relative "lib/discourse_npn_weekly_challenge/registry"
   require_relative "lib/discourse_npn_weekly_challenge/wordpress_sync"
   require_relative "lib/discourse_npn_weekly_challenge/topic_finder"
+  require_relative "lib/discourse_npn_weekly_challenge/topic_publisher"
   require_relative "lib/discourse_npn_weekly_challenge/topic_query_extension"
   require_relative "app/serializers/discourse_npn_weekly_challenge/challenge_serializer"
   require_relative "app/controllers/discourse_npn_weekly_challenge/challenges_controller"
   require_relative "app/jobs/scheduled/npn_weekly_challenge_sync"
+  require_relative "app/jobs/scheduled/npn_weekly_challenge_publish"
+
+  # Marks a topic as the announcement for one challenge (value = the slug). It is
+  # how TopicPublisher knows a week is already published, and how TopicFinder
+  # knows to keep the announcement out of the challenge's own entry list.
+  register_topic_custom_field_type(
+    DiscourseNpnWeeklyChallenge::TopicPublisher::TOPIC_SLUG_FIELD,
+    :string,
+  )
 
   reloadable_patch { TopicQuery.prepend(DiscourseNpnWeeklyChallenge::TopicQueryExtension) }
 

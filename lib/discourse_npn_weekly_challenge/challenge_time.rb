@@ -46,6 +46,23 @@ module DiscourseNpnWeeklyChallenge
       start_of_day(starts_at_utc.in_time_zone(zone).to_date + 7)
     end
 
+    # The human display range for a challenge, e.g. "July 12–18" (same month) or
+    # "July 26–August 1" (across a boundary). Rendered in the club's timezone.
+    #
+    # `ends_at` is the *exclusive* end of the window — the moment the next
+    # challenge starts — so the last day people can enter is the day before it.
+    # Printing ends_at directly would advertise a week that runs a day long.
+    def display_range(starts_at, ends_at = nil)
+      return nil if starts_at.nil?
+
+      first = starts_at.in_time_zone(zone).to_date
+      last = (ends_at ? ends_at.in_time_zone(zone).to_date - 1 : first + 6)
+      return first.strftime("%B %-d") if last <= first
+
+      tail = last.month == first.month ? last.strftime("%-d") : last.strftime("%B %-d")
+      "#{first.strftime("%B %-d")}–#{tail}"
+    end
+
     def to_date(value)
       return value if value.is_a?(Date)
       return value.to_date if value.respond_to?(:to_date) && !value.is_a?(String)

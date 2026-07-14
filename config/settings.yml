@@ -32,6 +32,41 @@ plugins:
     textarea: true
     client: false
 
+  npn_weekly_challenge_auto_topic_enabled:
+    default: false
+    client: false
+
+  npn_weekly_challenge_auto_topic_category:
+    default: ""
+    type: category
+    client: false
+
+  npn_weekly_challenge_auto_topic_author:
+    default: "system"
+    type: username
+    client: false
+
+  npn_weekly_challenge_auto_topic_tags:
+    default: ""
+    type: tag_list
+    client: false
+
+  npn_weekly_challenge_auto_topic_title:
+    default: "Weekly Challenge: %{title}"
+    client: false
+
+  npn_weekly_challenge_auto_topic_body:
+    default: |
+      %{date_range}
+
+      %{description}
+
+      [Post to this week's challenge](/submit?type=weekly_challenge)
+
+      [See this week's entries](%{challenge_url})
+    textarea: true
+    client: false
+
   npn_weekly_challenge_page_size:
     default: 30
     type: integer
