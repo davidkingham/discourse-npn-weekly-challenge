@@ -4,20 +4,20 @@ require "rails_helper"
 
 describe DiscourseNpnWeeklyChallenge::ChallengeTime do
   describe ".parse_start" do
-    it "treats a winter date as 08:00 MST (15:00 UTC)" do
+    it "treats a winter date as midnight PST (08:00 UTC)" do
       expect(described_class.parse_start("1/25/26 - 1/31/26")).to eq_time(
-        Time.utc(2026, 1, 25, 15, 0, 0),
+        Time.utc(2026, 1, 25, 8, 0, 0),
       )
     end
 
-    it "treats a summer date as 08:00 MDT (14:00 UTC)" do
+    it "treats a summer date as midnight PDT (07:00 UTC)" do
       expect(described_class.parse_start("6/7/26 - 6/13/26")).to eq_time(
-        Time.utc(2026, 6, 7, 14, 0, 0),
+        Time.utc(2026, 6, 7, 7, 0, 0),
       )
     end
 
     it "accepts a single date without a range" do
-      expect(described_class.parse_start("6/7/26")).to eq_time(Time.utc(2026, 6, 7, 14, 0, 0))
+      expect(described_class.parse_start("6/7/26")).to eq_time(Time.utc(2026, 6, 7, 7, 0, 0))
     end
 
     it "returns nil for blank or unparseable input" do
@@ -29,10 +29,12 @@ describe DiscourseNpnWeeklyChallenge::ChallengeTime do
 
   describe ".default_end" do
     it "is the same local time one week later, DST-aware across the spring change" do
-      # 3/1/26 is MST (15:00Z); a week later is past the 3/8 DST change, so the
-      # next 08:00 local is MDT (14:00Z) — 6 days and 23 hours apart, not 7×24.
-      start = described_class.parse_start("3/1/26")
-      expect(described_class.default_end(start)).to eq_time(Time.utc(2026, 3, 8, 14, 0, 0))
+      # DST flips at 02:00 local, so midnight on the 3/8 change day itself is
+      # still PST (08:00Z); the week containing the change ends at the next
+      # midnight in PDT (07:00Z) — 6 days and 23 hours apart, not 7×24.
+      start = described_class.parse_start("3/8/26")
+      expect(start).to eq_time(Time.utc(2026, 3, 8, 8, 0, 0))
+      expect(described_class.default_end(start)).to eq_time(Time.utc(2026, 3, 15, 7, 0, 0))
     end
 
     it "returns nil when given nil" do

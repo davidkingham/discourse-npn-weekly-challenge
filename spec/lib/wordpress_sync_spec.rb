@@ -35,8 +35,8 @@ describe DiscourseNpnWeeklyChallenge::WordpressSync do
         "wordpress_challenge_id" => "21426",
         "title" => "Silhouettes with Color",
         "slug" => "2026-06-07-silhouettes-with-color",
-        "starts_at" => "2026-06-07T14:00:00Z",
-        "ends_at" => "2026-06-14T14:00:00Z",
+        "starts_at" => "2026-06-07T07:00:00Z",
+        "ends_at" => "2026-06-14T07:00:00Z",
         "url" => "https://example.com/weekly-challenge/1243/",
         "description" => nil,
       )
@@ -178,7 +178,7 @@ describe DiscourseNpnWeeklyChallenge::WordpressSync do
         DiscourseNpnWeeklyChallenge::Challenge.from_hash(
           "title" => "Silhouettes with Color",
           "slug" => "2026-06-07-silhouettes-with-color",
-          "starts_at" => "2026-06-07T14:00:00Z",
+          "starts_at" => "2026-06-07T07:00:00Z",
         )
       allow(DiscourseNpnWeeklyChallenge::Registry).to receive(:seed_challenges).and_return(
         [seed_week],

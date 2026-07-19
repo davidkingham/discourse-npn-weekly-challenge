@@ -35,7 +35,12 @@ describe "weekly challenge seed file" do # rubocop:disable RSpec/DescribeClass
   end
 
   it "anchors every start at 08:00 America/Denver" do
-    zone = DiscourseNpnWeeklyChallenge::ChallengeTime.zone
+    # Deliberately NOT ChallengeTime.zone: the seed predates the move to
+    # midnight-Pacific boundaries and keeps its original 08:00 Denver anchors,
+    # because legacy entries are matched against these stored windows.
+    # Regenerating the seed under the new convention would shift every
+    # historical window and silently reassign old submissions across weeks.
+    zone = ActiveSupport::TimeZone["America/Denver"]
     offenders =
       challenges.reject do |c|
         local = c.starts_at.in_time_zone(zone)

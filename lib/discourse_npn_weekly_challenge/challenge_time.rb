@@ -2,18 +2,26 @@
 
 module DiscourseNpnWeeklyChallenge
   # The Weekly Challenge calendar convention. A challenge starts on its (Sunday)
-  # start date at 08:00 in the club's local timezone and runs until the next
-  # challenge begins. WordPress publishes only a display date string
-  # (acf.wc_dates, e.g. "6/7/26 - 6/13/26"); this turns that into the canonical
-  # UTC timestamps the rest of the plugin uses, matching how the shipped seed
-  # (config/weekly_challenge_seed.json) was generated.
+  # start date at midnight Pacific and runs until the next challenge begins.
+  # WordPress publishes only a display date string (acf.wc_dates, e.g.
+  # "6/7/26 - 6/13/26"); this turns that into the canonical UTC timestamps the
+  # rest of the plugin uses.
   #
-  # The timezone matters: legacy entries are matched purely by date window, so an
-  # 8am-local start is what keeps a Sunday-morning submission inside its own week
-  # rather than the previous one. ActiveSupport handles DST (MST/MDT) for us.
+  # Why midnight Pacific: the boundary is both the entry deadline and the theme
+  # reveal for a primarily-US, worldwide audience. Pacific midnight means no US
+  # timezone loses any of its Saturday night (Eastern gets until 3am as free
+  # grace), and everyone wakes up Sunday with the new theme already live —
+  # before sunrise, which is when nature photographers shoot. ActiveSupport
+  # handles DST (PST/PDT) for us.
+  #
+  # The shipped seed (config/weekly_challenge_seed.json) predates this
+  # convention and is anchored at 08:00 America/Denver. It intentionally keeps
+  # those timestamps: legacy entries are matched purely by stored date window,
+  # so rewriting history would silently reassign old submissions across weeks.
+  # Only timestamps computed from here on use the new convention.
   module ChallengeTime
-    ZONE = "America/Denver"
-    START_HOUR = 8
+    ZONE = "America/Los_Angeles"
+    START_HOUR = 0
     DEFAULT_DURATION = 7.days
 
     module_function
@@ -22,8 +30,8 @@ module DiscourseNpnWeeklyChallenge
       @zone ||= ActiveSupport::TimeZone[ZONE]
     end
 
-    # 08:00 local on the given date, as a UTC Time. Accepts a Date or anything
-    # Date.parse handles; returns nil when unparseable.
+    # Midnight local on the given date, as a UTC Time. Accepts a Date or
+    # anything Date.parse handles; returns nil when unparseable.
     def start_of_day(date)
       date = to_date(date)
       return nil if date.nil?
@@ -38,8 +46,9 @@ module DiscourseNpnWeeklyChallenge
       start_of_day(parse_mdy(token))
     end
 
-    # The exclusive end of a one-week window from the given start (next Sunday at
-    # 08:00 local), DST-aware. Used as the fallback window end / display end for
+    # The exclusive end of a one-week window from the given start (next Sunday
+    # at midnight local), DST-aware. Used as the fallback window end / display
+    # end for
     # the most recent challenge, before a following challenge exists to bound it.
     def default_end(starts_at_utc)
       return nil if starts_at_utc.nil?
