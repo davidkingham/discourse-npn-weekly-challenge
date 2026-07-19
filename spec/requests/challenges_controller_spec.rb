@@ -208,7 +208,10 @@ describe DiscourseNpnWeeklyChallenge::ChallengesController do
 
       expect(response.status).to eq(200)
       expect(response.media_type).to eq("application/rss+xml")
-      expect(response.body).to include(announcement_topic.title)
+      # The item title is the bare registry title, not the topic's prefixed one:
+      # the consuming email template adds its own prefix.
+      expect(response.body).to include("<title>Quiet Geometry</title>")
+      expect(response.body).not_to include(announcement_topic.title)
       expect(response.body).to include(announcement_topic.url)
       expect(response.body).not_to include(entry_topic.title)
 
@@ -230,6 +233,8 @@ describe DiscourseNpnWeeklyChallenge::ChallengesController do
 
       # Once in the description fallback, once in content:encoded.
       expect(response.body.scan("Create images of light and shadow.").length).to eq(2)
+      # The title also falls back, to the topic's own.
+      expect(response.body).to include(announcement_topic.title)
     end
 
     it "excludes announcements anonymous users cannot see, even for a signed-in viewer" do
@@ -250,7 +255,7 @@ describe DiscourseNpnWeeklyChallenge::ChallengesController do
       get "/weekly-challenges/announcements.rss"
 
       expect(response.status).to eq(200)
-      expect(response.body).to include(announcement_topic.title)
+      expect(response.body).to include(announcement_topic.url)
       expect(response.body).not_to include(secret_topic.title)
     end
 

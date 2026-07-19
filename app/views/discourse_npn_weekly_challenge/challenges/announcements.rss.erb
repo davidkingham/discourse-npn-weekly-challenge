@@ -13,7 +13,12 @@
         <% challenge = @challenges[topic.id] -%>
         <% first_post = topic.first_post -%>
         <item>
-          <title><%= topic.title %></title>
+          <%# The bare challenge title ("Fog"), not the topic's prefixed one
+              ("Weekly Challenge: Fog"): the consuming email template adds its
+              own heading and subject-line prefix, and Kit's documented Liquid
+              filters don't include the string filters needed to strip a prefix
+              on their side. %>
+          <title><%= challenge ? challenge.title : topic.title %></title>
           <dc:creator><![CDATA[<%= rss_creator(topic.user) -%>]]></dc:creator>
           <% if topic.category %><category><%= topic.category.name %></category><% end %>
           <%# The summary is built from the registry, not the forum post: the
