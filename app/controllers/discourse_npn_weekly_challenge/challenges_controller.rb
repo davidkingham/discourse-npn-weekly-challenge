@@ -79,9 +79,18 @@ module DiscourseNpnWeeklyChallenge
           .visible
           .joins(:_custom_fields)
           .where(topic_custom_fields: { name: TopicPublisher::TOPIC_SLUG_FIELD })
+          .select("topics.*", "topic_custom_fields.value AS npn_challenge_slug")
           .includes(:user, :category, :first_post)
           .order(created_at: :desc)
           .limit(ANNOUNCEMENTS_FEED_SIZE)
+
+      # Each item's registry challenge, for the email-friendly <description>
+      # (date range + prompt text). The custom field value is the slug, so a
+      # topic maps straight back to its challenge record.
+      @challenges =
+        @topics.each_with_object({}) do |topic, map|
+          map[topic.id] = Registry.find_by_slug(topic[:npn_challenge_slug])
+        end
 
       render formats: [:rss]
     end

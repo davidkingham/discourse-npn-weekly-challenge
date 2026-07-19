@@ -199,19 +199,37 @@ describe DiscourseNpnWeeklyChallenge::ChallengesController do
     before do
       announcement_topic.upsert_custom_fields(
         DiscourseNpnWeeklyChallenge::TopicPublisher::TOPIC_SLUG_FIELD =>
-          "2026-06-08-light-and-shadow",
+          "2026-06-01-quiet-geometry",
       )
     end
 
-    it "returns an RSS feed of announcement topics only, with the first post as content" do
+    it "returns an RSS feed of announcement topics only, with a registry summary and the post as content" do
       get "/weekly-challenges/announcements.rss"
 
       expect(response.status).to eq(200)
       expect(response.media_type).to eq("application/rss+xml")
       expect(response.body).to include(announcement_topic.title)
-      expect(response.body).to include("Create images of light and shadow.")
       expect(response.body).to include(announcement_topic.url)
       expect(response.body).not_to include(entry_topic.title)
+
+      # The summary comes from the registry (the fixture challenge's dates
+      # render as this range in the club's timezone), while the post content
+      # appears only in content:encoded — once in the whole document.
+      expect(response.body).to include("May 31–June 6")
+      expect(response.body).to include("Find calm, geometric order in nature.")
+      expect(response.body.scan("Create images of light and shadow.").length).to eq(1)
+      expect(response.body).to include("<content:encoded>")
+    end
+
+    it "falls back to the post content as summary when the slug is missing from the registry" do
+      announcement_topic.upsert_custom_fields(
+        DiscourseNpnWeeklyChallenge::TopicPublisher::TOPIC_SLUG_FIELD => "2020-01-01-vanished",
+      )
+
+      get "/weekly-challenges/announcements.rss"
+
+      # Once in the description fallback, once in content:encoded.
+      expect(response.body.scan("Create images of light and shadow.").length).to eq(2)
     end
 
     it "excludes announcements anonymous users cannot see, even for a signed-in viewer" do

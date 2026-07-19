@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title><%= SiteSetting.title %> - <%= t("npn_weekly_challenge.announcements_feed.title") %></title>
     <link><%= Discourse.base_url %>/weekly-challenges</link>
@@ -10,15 +10,32 @@
       <atom:link href="<%= Discourse.base_url %>/weekly-challenges/announcements.rss" rel="self" type="application/rss+xml" />
       <% @topics.each do |topic| %>
         <% topic_url = topic.url -%>
+        <% challenge = @challenges[topic.id] -%>
+        <% first_post = topic.first_post -%>
         <item>
           <title><%= topic.title %></title>
           <dc:creator><![CDATA[<%= rss_creator(topic.user) -%>]]></dc:creator>
           <% if topic.category %><category><%= topic.category.name %></category><% end %>
+          <%# The summary is built from the registry, not the forum post: the
+              consuming email template supplies its own heading, CTA button and
+              branding, so the post's submit/entries links and challenge graphic
+              would all render twice. Date range and prompt text are the only
+              parts the email needs. The full post lives in content:encoded. %>
           <description><![CDATA[
-            <%- if first_post = topic.first_post %>
+            <%- if challenge %>
+            <h2><%= DiscourseNpnWeeklyChallenge::ChallengeTime.display_range(challenge.starts_at, challenge.ends_at) %></h2>
+            <%- if challenge.description.present? %>
+            <p><%= challenge.description %></p>
+            <%- end %>
+            <%- elsif first_post %>
             <%= PrettyText.format_for_email(first_post.cooked, first_post).html_safe %>
             <%- end %>
           ]]></description>
+          <% if first_post %>
+          <content:encoded><![CDATA[
+            <%= PrettyText.format_for_email(first_post.cooked, first_post).html_safe %>
+          ]]></content:encoded>
+          <% end %>
           <link><%= topic_url %></link>
           <pubDate><%= topic.created_at.rfc2822 %></pubDate>
           <guid isPermaLink="false"><%= Discourse.current_hostname %>-topic-<%= topic.id %></guid>
