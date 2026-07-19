@@ -8,7 +8,7 @@ module Jobs
   # publisher is a no-op except in the window right after a challenge begins, so
   # nearly every run does nothing but a registry read.
   class NpnWeeklyChallengePublish < ::Jobs::Scheduled
-    every 15.minutes
+    every 5.minutes
 
     def execute(_args)
       DiscourseNpnWeeklyChallenge::TopicPublisher.publish_due
