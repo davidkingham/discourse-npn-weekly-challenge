@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title><%= SiteSetting.title %> - <%= t("npn_weekly_challenge.announcements_feed.title") %></title>
+    <link><%= Discourse.base_url %>/weekly-challenges</link>
+    <description><%= t("npn_weekly_challenge.announcements_feed.description") %></description>
+    <language><%= SiteSetting.default_locale.sub("_", "-") %></language>
+    <% if @topics.present? %>
+      <lastBuildDate><%= @topics.first.created_at.rfc2822 %></lastBuildDate>
+      <atom:link href="<%= Discourse.base_url %>/weekly-challenges/announcements.rss" rel="self" type="application/rss+xml" />
+      <% @topics.each do |topic| %>
+        <% topic_url = topic.url -%>
+        <item>
+          <title><%= topic.title %></title>
+          <dc:creator><![CDATA[<%= rss_creator(topic.user) -%>]]></dc:creator>
+          <% if topic.category %><category><%= topic.category.name %></category><% end %>
+          <description><![CDATA[
+            <%- if first_post = topic.first_post %>
+            <%= PrettyText.format_for_email(first_post.cooked, first_post).html_safe %>
+            <%- end %>
+          ]]></description>
+          <link><%= topic_url %></link>
+          <pubDate><%= topic.created_at.rfc2822 %></pubDate>
+          <guid isPermaLink="false"><%= Discourse.current_hostname %>-topic-<%= topic.id %></guid>
+        </item>
+      <% end %>
+    <% end %>
+  </channel>
+</rss>

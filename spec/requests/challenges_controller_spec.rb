@@ -185,6 +185,64 @@ describe DiscourseNpnWeeklyChallenge::ChallengesController do
     end
   end
 
+  describe "#announcements" do
+    fab!(:announcement_topic) do
+      Fabricate(:topic, category: category, title: "Weekly Challenge: Light and Shadow")
+    end
+    fab!(:announcement_post) do
+      Fabricate(:post, topic: announcement_topic, raw: "Create images of light and shadow.")
+    end
+    fab!(:entry_topic) do
+      Fabricate(:topic, category: category, tags: [Tag.find_by(name: "weekly-challenge")])
+    end
+
+    before do
+      announcement_topic.upsert_custom_fields(
+        DiscourseNpnWeeklyChallenge::TopicPublisher::TOPIC_SLUG_FIELD =>
+          "2026-06-08-light-and-shadow",
+      )
+    end
+
+    it "returns an RSS feed of announcement topics only, with the first post as content" do
+      get "/weekly-challenges/announcements.rss"
+
+      expect(response.status).to eq(200)
+      expect(response.media_type).to eq("application/rss+xml")
+      expect(response.body).to include(announcement_topic.title)
+      expect(response.body).to include("Create images of light and shadow.")
+      expect(response.body).to include(announcement_topic.url)
+      expect(response.body).not_to include(entry_topic.title)
+    end
+
+    it "excludes announcements anonymous users cannot see, even for a signed-in viewer" do
+      group = Fabricate(:group)
+      secret_topic =
+        Fabricate(
+          :topic,
+          category: Fabricate(:private_category, group: group),
+          title: "Weekly Challenge: Hidden Week",
+        )
+      Fabricate(:post, topic: secret_topic)
+      secret_topic.upsert_custom_fields(
+        DiscourseNpnWeeklyChallenge::TopicPublisher::TOPIC_SLUG_FIELD => "2026-06-15-hidden-week",
+      )
+
+      group.add(user)
+      sign_in(user)
+      get "/weekly-challenges/announcements.rss"
+
+      expect(response.status).to eq(200)
+      expect(response.body).to include(announcement_topic.title)
+      expect(response.body).not_to include(secret_topic.title)
+    end
+
+    it "returns 404 when the plugin is disabled" do
+      SiteSetting.npn_weekly_challenges_enabled = false
+      get "/weekly-challenges/announcements.rss"
+      expect(response.status).to eq(404)
+    end
+  end
+
   describe "#show" do
     fab!(:field_topic) { Fabricate(:topic, category: category) }
     fab!(:tagged_topic) do

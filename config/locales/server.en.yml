@@ -1,4 +1,8 @@
 en:
+  npn_weekly_challenge:
+    announcements_feed:
+      title: "Weekly challenge announcements"
+      description: "The weekly challenge announcement topics, newest first."
   site_settings:
     npn_weekly_challenges_enabled: "Enable the Weekly Challenge archive pages at /weekly-challenges."
     npn_weekly_challenge_tag_name: "Tags that identify Weekly Challenge submission topics. Topics with any of these tags match."
