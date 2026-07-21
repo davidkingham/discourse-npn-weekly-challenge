@@ -13,6 +13,9 @@ Weekly Challenges and view the entries submitted for each one.
 - `/weekly-challenges/:slug` — one challenge: title, date range, link to the
   original prompt, entry count, a paginated topic list, and previous/next
   challenge navigation.
+- `/weekly-challenges/announcements.rss` — RSS feed of the auto-published
+  announcement topics only, built for external automations (the weekly
+  announcement email). See [Announcements feed](#announcements-feed).
 
 For each challenge, entry topics are found two ways and combined in a single
 query (a topic matching both ways appears once):
@@ -116,8 +119,9 @@ page for the challenge), `%{prompt_url}` (the WordPress prompt, may be blank)
 and `%{slug}`. The weekly banner image is site-specific, so it isn't in the
 default body — append the `![…](upload://…)` line to the body setting once.
 
-The job polls every 15 minutes (`Jobs::Scheduled` has no cron, so it can't fire
-"Sundays at 08:00" directly) and does nothing on almost every run.
+The job polls every 5 minutes (`Jobs::Scheduled` has no cron, so it can't fire
+"Sundays at midnight Pacific" directly) and does nothing on almost every run,
+so the topic appears within about 5 minutes of the challenge starting.
 
 Three behaviours are deliberate and worth knowing:
 
@@ -138,14 +142,52 @@ Three behaviours are deliberate and worth knowing:
 One-time step when switching over: the previous-week unpin only finds topics the
 plugin created, so the last hand-made topic stays pinned. Unpin it by hand once.
 
+### Announcements feed
+
+`/weekly-challenges/announcements.rss` exists so an external mailer (the Kit
+RSS automation that sends the Sunday-morning announcement email) can watch for
+new challenges without ever emailing members' entry posts. It deliberately does
+**not** key off the `weekly-challenge` tag — entries carry that tag too — but
+off the `npn_weekly_challenge_slug` custom field, so it contains exactly the
+topics this plugin created and nothing a human can add by mis-tagging.
+
+Feed items are shaped for an email template that supplies its own heading,
+CTA button and branding:
+
+- `<title>` is the **bare** challenge title ("Fog"), not the topic's prefixed
+  one — the email adds its own "Weekly Challenge:" prefix, and Kit's Liquid
+  filters can't strip one.
+- `<description>` (Kit's `post.summary`) is built from the registry record: a
+  date-range heading plus the prompt text. The forum post itself isn't used
+  here because its submit/entries links and banner image would render twice in
+  the email.
+- `<content:encoded>` (Kit's `post.content`) carries the full first-post HTML,
+  with links absolutized, for consumers that want fidelity.
+- When an item's slug is no longer in the registry, title and description fall
+  back to the topic itself.
+
+The response is always secured as an anonymous viewer — it is publicly
+cacheable (1 minute) and consumed by logged-out services, so it must never
+widen to a signed-in viewer's visibility.
+
 ### Challenge timing
 
-A challenge starts on its (Sunday) start date at **08:00 America/Denver** and
-runs until the next challenge begins. `DiscourseNpnWeeklyChallenge::ChallengeTime`
-turns the WordPress display dates into DST-aware UTC timestamps, matching how
-the seed was generated. The 8am-local anchor is deliberate: legacy entries are
-matched by date window, so it keeps a Sunday-morning submission inside its own
-week.
+A challenge starts on its (Sunday) start date at **midnight
+America/Los_Angeles** and runs until the next challenge begins.
+`DiscourseNpnWeeklyChallenge::ChallengeTime` turns the WordPress display dates
+into DST-aware UTC timestamps. Midnight Pacific is deliberate: the boundary is
+both the entry deadline and the theme reveal, so it means no US timezone loses
+any of its Saturday night (Eastern gets until 3am as grace) and the new theme
+is live before Sunday sunrise everywhere in the US — when nature photographers
+shoot. The WordPress posts are scheduled to publish at the same moment.
+
+**The shipped seed predates this convention** and keeps its original
+08:00 America/Denver anchors on purpose: legacy entries are matched purely by
+stored date window, so regenerating the seed under the new convention would
+shift every historical window and silently reassign old submissions across
+weeks. Store records still present in the WordPress feed are rewritten to the
+new convention by the next daily sync; older store records keep the timestamps
+they were synced with.
 
 ### Override / entry format
 
@@ -156,9 +198,9 @@ Each object in `npn_weekly_challenge_registry_json` (and each seed record) uses:
   {
     "wordpress_challenge_id": "123",
     "title": "Nature's Architecture",
-    "slug": "2026-06-09-natures-architecture",
-    "starts_at": "2026-06-09T14:00:00Z",
-    "ends_at": "2026-06-16T14:00:00Z",
+    "slug": "2026-06-07-natures-architecture",
+    "starts_at": "2026-06-07T07:00:00Z",
+    "ends_at": "2026-06-14T07:00:00Z",
     "url": "https://example.com/weekly-challenge/natures-architecture"
   }
 ]
